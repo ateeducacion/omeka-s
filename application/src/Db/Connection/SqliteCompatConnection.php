@@ -11,7 +11,7 @@ use Doctrine\DBAL\Connection;
  */
 class SqliteCompatConnection extends Connection
 {
-    private const TRANSLATABLE_KEYWORDS = ['SHOW', 'SET', 'TRUNCATE', 'DESCRIBE', 'DESC'];
+    private const TRANSLATABLE_KEYWORDS = ['SHOW', 'SET', 'TRUNCATE', 'DESCRIBE', 'DESC', 'CREATE'];
 
     public function exec($sql): int
     {
@@ -78,8 +78,8 @@ class SqliteCompatConnection extends Connection
      *
      * Returns null to suppress execution entirely (e.g. SET NAMES).
      * Returns a single-element array for direct translations.
-     * Returns a multi-element array for compound statements where all but the
-     * last are executed as leading statements.
+     * Returns a multi-element array for compound statements (e.g. CREATE TABLE
+     * followed by CREATE INDEX statements).
      *
      * @return string[]|null
      */
@@ -118,6 +118,11 @@ class SqliteCompatConnection extends Connection
             return ['DELETE FROM ' . $m[1]];
         }
 
+        // Translate MySQL CREATE TABLE to SQLite-compatible DDL.
+        if (preg_match('/^CREATE\s+TABLE\s+/i', $trimmed)) {
+            return $this->translateCreateTable($trimmed);
+        }
+
         // Compound statements like "SET FOREIGN_KEY_CHECKS=0; DROP TABLE x".
         if (str_contains($trimmed, ';')) {
             $parts = array_filter(array_map('trim', explode(';', $trimmed)));
@@ -134,5 +139,123 @@ class SqliteCompatConnection extends Connection
         }
 
         return [$sql];
+    }
+
+    /**
+     * Translate a MySQL CREATE TABLE statement to SQLite-compatible DDL.
+     *
+     * Extracts inline INDEX/KEY definitions into separate CREATE INDEX
+     * statements and strips MySQL-specific column options (AUTO_INCREMENT,
+     * COMMENT, COLLATE, ENGINE, CHARSET, etc.).
+     *
+     * @return string[]
+     */
+    private function translateCreateTable(string $sql): array
+    {
+        // Extract table name.
+        if (!preg_match('/^CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?[`"\']?(\w+)[`"\']?\s*\(/i', $sql, $m)) {
+            return [$sql];
+        }
+        $tableName = $m[1];
+
+        // Find the body between the outermost parentheses.
+        $openParen = strpos($sql, '(');
+        $closeParen = strrpos($sql, ')');
+        if ($openParen === false || $closeParen === false) {
+            return [$sql];
+        }
+        $body = substr($sql, $openParen + 1, $closeParen - $openParen - 1);
+
+        // Split body into lines by comma, respecting parenthesized expressions.
+        $lines = $this->splitByComma($body);
+
+        $columns = [];
+        $createIndexes = [];
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if ($line === '') {
+                continue;
+            }
+
+            // Skip FULLTEXT KEY/INDEX (handled in application code).
+            if (preg_match('/^\s*FULLTEXT\s+(KEY|INDEX)\s+/i', $line)) {
+                continue;
+            }
+
+            // Extract KEY/INDEX into separate CREATE INDEX statements.
+            if (preg_match('/^\s*(?:UNIQUE\s+)?(?:KEY|INDEX)\s+[`"\']?(\w+)[`"\']?\s*(\(.*\))/i', $line, $km)) {
+                $isUnique = preg_match('/^\s*UNIQUE/i', $line) ? 'UNIQUE ' : '';
+                $indexName = $km[1];
+                // Strip prefix lengths like col(191) → col (SQLite doesn't support them).
+                $indexCols = preg_replace('/(\w)`?\s*\(\d+\)/', '$1`', $km[2]);
+                $createIndexes[] = "CREATE {$isUnique}INDEX `{$indexName}` ON `{$tableName}` {$indexCols}";
+                continue;
+            }
+
+            // Keep CONSTRAINT, PRIMARY KEY, and column definitions.
+            // Apply column-level translations.
+            $line = $this->translateColumnDef($line);
+            $columns[] = $line;
+        }
+
+        $ifNotExists = preg_match('/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS/i', $sql) ? 'IF NOT EXISTS ' : '';
+        $columnsStr = implode(",\n  ", $columns);
+        $result = ["CREATE TABLE {$ifNotExists}`{$tableName}` (\n  {$columnsStr}\n)"];
+
+        // Append CREATE INDEX statements.
+        foreach ($createIndexes as $idx) {
+            $result[] = $idx;
+        }
+
+        return $result;
+    }
+
+    /**
+     * Translate a single column definition or constraint from MySQL to SQLite.
+     */
+    private function translateColumnDef(string $line): string
+    {
+        $line = preg_replace('/\b(?:TINY|SMALL|MEDIUM|BIG)?INT\b(?:\s*\(\d+\))?/i', 'INTEGER', $line);
+        $line = preg_replace('/\b(?:LONG|MEDIUM|TINY)TEXT\b/i', 'TEXT', $line);
+        $line = preg_replace('/\b(?:VAR)?BINARY\b(?:\s*\(\d+\))?/i', 'BLOB', $line);
+        $line = preg_replace('/\b(?:LONG|MEDIUM|TINY)BLOB\b/i', 'BLOB', $line);
+        $line = preg_replace('/\s+AUTO_INCREMENT/i', '', $line);
+        $line = preg_replace('/\s+COLLATE\s+[`"\']?\w+[`"\']?/i', '', $line);
+        $line = preg_replace('/\s+COMMENT\s+(?:\'[^\']*\'|"[^"]*")/i', '', $line);
+        $line = preg_replace('/\s+CHARACTER\s+SET\s+\w+/i', '', $line);
+        $line = preg_replace('/^(\s*)UNIQUE\s+KEY\s+[`"\']?\w+[`"\']?\s*/i', '$1UNIQUE ', $line);
+
+        return $line;
+    }
+
+    /**
+     * Split a string by commas, respecting parenthesized expressions.
+     *
+     * @return string[]
+     */
+    private function splitByComma(string $body): array
+    {
+        $parts = [];
+        $current = '';
+        $depth = 0;
+
+        for ($i = 0, $len = strlen($body); $i < $len; $i++) {
+            $char = $body[$i];
+            if ($char === '(') {
+                $depth++;
+            } elseif ($char === ')') {
+                $depth--;
+            } elseif ($char === ',' && $depth === 0) {
+                $parts[] = $current;
+                $current = '';
+                continue;
+            }
+            $current .= $char;
+        }
+        if (trim($current) !== '') {
+            $parts[] = $current;
+        }
+        return $parts;
     }
 }
