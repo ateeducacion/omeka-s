@@ -5,6 +5,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Platforms\MySqlPlatform;
 use Doctrine\DBAL\Platforms\SqlitePlatform;
+use Omeka\Db\Connection\SqliteCompatConnection;
 use Omeka\Db\Logging\FileSqlLogger;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
@@ -40,6 +41,7 @@ class ConnectionFactory implements FactoryInterface
             $config['connection']['platform'] = $platform;
             // Remove MySQL-specific options that don't apply to SQLite
             unset($config['connection']['charset']);
+            $config['connection']['wrapperClass'] = SqliteCompatConnection::class;
             $connection = DriverManager::getConnection($config['connection']);
             $platform->setEventManager($connection->getEventManager());
             // Enable foreign keys and WAL mode for better performance
