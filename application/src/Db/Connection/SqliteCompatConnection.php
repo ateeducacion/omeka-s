@@ -11,7 +11,7 @@ use Doctrine\DBAL\Connection;
  */
 class SqliteCompatConnection extends Connection
 {
-    private const TRANSLATABLE_KEYWORDS = ['SHOW', 'SET', 'TRUNCATE', 'DESCRIBE', 'DESC', 'CREATE'];
+    private const TRANSLATABLE_KEYWORDS = ['SHOW', 'SET', 'TRUNCATE', 'DESCRIBE', 'DESC', 'CREATE', 'ALTER'];
 
     public function exec($sql): int
     {
@@ -121,6 +121,12 @@ class SqliteCompatConnection extends Connection
         // Translate MySQL CREATE TABLE to SQLite-compatible DDL.
         if (preg_match('/^CREATE\s+TABLE\s+/i', $trimmed)) {
             return $this->translateCreateTable($trimmed);
+        }
+
+        // SQLite doesn't support ALTER TABLE ADD CONSTRAINT FOREIGN KEY.
+        // Skip these since FKs are already defined inline in CREATE TABLE.
+        if (preg_match('/^ALTER\s+TABLE\s+.+\s+ADD\s+CONSTRAINT\s+.+\s+FOREIGN\s+KEY/i', $trimmed)) {
+            return null;
         }
 
         // Compound statements like "SET FOREIGN_KEY_CHECKS=0; DROP TABLE x".
