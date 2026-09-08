@@ -165,7 +165,7 @@ class SettingForm extends Form implements EventManagerAwareInterface
             'options' => [
                 'element_group' => 'general',
                 'label' => 'Server URL', // @translate
-                'info' => 'Server URL for the installation. The URL will be autodetected if left blank, but this can be less secure.'
+                'info' => 'Server URL for the installation. The URL will be autodetected if left blank, but this can be less secure.', // @translate
             ],
             'attributes' => [
                 'value' => $this->settings->get('server_url'),
