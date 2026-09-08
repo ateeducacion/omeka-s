@@ -160,6 +160,20 @@ class SettingForm extends Form implements EventManagerAwareInterface
         ]);
 
         $this->add([
+            'name' => 'server_url',
+            'type' => 'Url',
+            'options' => [
+                'element_group' => 'general',
+                'label' => 'Server URL', // @translate
+                'info' => 'Server URL for the installation. The URL will be autodetected if left blank, but this can be less secure.'
+            ],
+            'attributes' => [
+                'value' => $this->settings->get('server_url'),
+                'id' => 'server-url',
+            ],
+        ]);
+
+        $this->add([
             'name' => 'locale',
             'type' => 'Omeka\Form\Element\LocaleSelect',
             'options' => [
@@ -522,6 +536,28 @@ class SettingForm extends Form implements EventManagerAwareInterface
                             $extensions = array_filter($extensions); // remove empty
                             $extensions = array_unique($extensions); // remove duplicate
                             return $extensions;
+                        },
+                    ],
+                ],
+            ],
+        ]);
+        $inputFilter->add([
+            'name' => 'server_url',
+            'required' => false,
+            'filters' => [
+                [
+                    'name' => 'callback',
+                    'options' => [
+                        'callback' => function ($serverUrl) {
+                            $parts = parse_url($serverUrl);
+                            if (!isset($parts['scheme'], $parts['host'])) {
+                                return '';
+                            }
+                            $url = "{$parts['scheme']}://{$parts['host']}";
+                            if (isset($parts['port'])) {
+                                $url .= ":{$parts['port']}";
+                            }
+                            return $url;
                         },
                     ],
                 ],

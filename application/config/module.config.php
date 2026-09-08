@@ -497,6 +497,7 @@ return [
             'browse' => Service\ViewHelper\BrowseFactory::class,
             'linkedResources' => Service\ViewHelper\LinkedResourcesFactory::class,
             'config' => Service\ViewHelper\ConfigFactory::class,
+            \Laminas\View\Helper\ServerUrl::class => Service\ViewHelper\ServerUrlFactory::class,
         ],
         'shared' => [
             'resourcePageBlocks' => false,
