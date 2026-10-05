@@ -33,11 +33,14 @@ class Uri extends AbstractDataType implements ValueAnnotatingInterface, Conversi
         if (!is_string($uri)) {
             return false;
         }
-        $uri = trim($uri);
+        $uri = str_replace(["\t", "\r", "\n"], '', trim($uri));
         if ('' === $uri) {
             return false;
         }
-        if ('javascript' === parse_url(strtolower(str_replace(["\t", "\r", "\n"], '', $uri)), \PHP_URL_SCHEME)) {
+        if (preg_match('/[\x00-\x1F]/', $uri)) {
+            return false;
+        }
+        if ('javascript' === parse_url(strtolower($uri), \PHP_URL_SCHEME)) {
             return false;
         }
         return true;
