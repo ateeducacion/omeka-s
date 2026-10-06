@@ -98,6 +98,9 @@ class SqliteCompatConnection extends Connection
         // including INSERT/UPDATE which skip the keyword fast path below.
         $sql = $this->translateFunctions($sql);
 
+        // MySQL's INSERT IGNORE is INSERT OR IGNORE in SQLite.
+        $sql = preg_replace('/^(\s*)INSERT\s+IGNORE\b/i', '$1INSERT OR IGNORE', $sql);
+
         $trimmed = trim($sql, " \t\n\r\0\x0B;");
 
         // Fast path: most queries don't need translation.
