@@ -19,7 +19,7 @@ class Url implements LinkInterface
     public function isValid(array $data, ErrorStore $errorStore)
     {
         $label = trim($data['label'] ?? '');
-        $url = trim($data['url'] ?? '');
+        $url = str_replace(["\t", "\r", "\n"], '', trim($data['url'] ?? ''));
         if ('' === $label) {
             $errorStore->addError('o:navigation', 'Invalid navigation: URL link missing label');
             return false;
@@ -28,7 +28,13 @@ class Url implements LinkInterface
             $errorStore->addError('o:navigation', 'Invalid navigation: URL link missing URL');
             return false;
         }
-        if ('javascript' === parse_url(strtolower(str_replace(["\t", "\r", "\n"], '', $url)), \PHP_URL_SCHEME)) {
+        // Reject URLs with any of the C0 control characters after trimming and tab/newline stripping
+        // They're unlikely in real data, browsers trim them and they trip up parse_url, so just reject them
+        if (preg_match('/[\x00-\x1F]/', $url)) {
+            $errorStore->addError('o:navigation', 'Invalid navigation: URL link contains invalid character');
+            return false;
+        }
+        if ('javascript' === parse_url(strtolower($url), \PHP_URL_SCHEME)) {
             $errorStore->addError('o:navigation', 'Invalid navigation: URL link invalid scheme');
             return false;
         }
