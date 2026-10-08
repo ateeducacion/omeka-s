@@ -1,0 +1,58 @@
+AUDITORIA ESTATICA DE MODULOS OMEKA S / SQLITE
+Fecha UTC: 2026-10-08T05:24:31Z
+Commit del nucleo: 87b4ef845b83bb4b889fda7b8ce7e718f2090341
+
+Catalogos: https://omeka.org/s/modules/ y https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html
+Repositorios distintos inventariados: 573
+Repositorios escaneados: 551
+Fuentes PHP/SQL distintas (sin duplicar mirrors identicos): 515
+Catalogo oficial escaneado: 201/201
+No disponibles: 20; archivos sin codigo propio: 2
+Paquetes publicados: 337; fuentes de release/tag: 53; commits sin release coincidente: 161
+
+Repositorios con candidatos SQL no traducidos o rechazados: 175 (159 fuentes distintas)
+Repositorios con aspectos para revisar: 179
+Repositorios escaneados sin indicios segun estas reglas: 314
+Las categorias se solapan. Ninguna cifra representa fallos confirmados en ejecucion ni certifica compatibilidad.
+
+CANDIDATOS POR REGLA (coincidencias / repositorios / fuentes distintas)
+alter_foreign_key: 548 / 123 / 112
+translated_functions: 543 / 92 / 84
+mysql_collation: 420 / 154 / 141
+alter_mysql: 413 / 89 / 79
+mysql_functions: 221 / 42 / 34
+set_statement: 211 / 74 / 64
+translated_syntax: 108 / 55 / 51
+mysql_join_write: 104 / 26 / 22
+group_concat: 86 / 23 / 19
+upsert_mysql: 74 / 26 / 24
+information_schema: 64 / 23 / 20
+show_mysql: 41 / 13 / 11
+fulltext: 34 / 11 / 9
+connection_bypass: 31 / 18 / 16
+mysql_driver: 19 / 5 / 4
+mysql_expression: 8 / 7 / 5
+mysql_enum: 2 / 2 / 2
+
+ALCANCE Y LIMITES
+El escaner no instala ni ejecuta codigo de los modulos; las pruebas de ejecucion requieren un informe separado.
+Se escanea PHP/SQL propio; se excluyen vendor, node_modules, tests/test, comentarios y archivos de mas de 2 MiB.
+Las coincidencias pueden estar protegidas por condiciones o usarse en bases externas; hay que revisar el contexto.
+En PHP se buscan consultas dentro de strings/heredocs; las llamadas PHP a funciones homonimas no se consideran SQL.
+Las consultas construidas concatenando fragmentos pueden escapar a las expresiones regulares.
+covered_if_wrapper depende de que el modulo use la conexion de Omeka y no demuestra igualdad de resultados.
+unreleased_commit es una revision fijada por SHA, no un paquete publicado ni necesariamente la version del catalogo.
+filtered_release_source contiene solo el codigo de un tag publicado; no incluye datos ni dependencias del paquete.
+Las dependencias se leen de config/module.ini; pueden existir otras comprobaciones dinamicas.
+Las discrepancias entre version de catalogo y manifiesto se registran en version_matches_manifest.
+
+PRIORIDADES REVISADAS MANUALMENTE (versiones del informe inicial)
+Collecting 1.13.0: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (lineas 46 y siguientes).
+CSV Import 2.6.2: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (linea 44).
+Advanced Search 3.4.64: data/install/schema.sql, FULLTEXT INDEX y ADD CONSTRAINT FOREIGN KEY.
+Common 3.4.93: Module.php, SHOW INDEX. Atrapa el error y omite indices; puede instalarse con optimizaciones ausentes.
+Easy Admin 3.4.49: Module.php, executeSessionCleanup(), SHOW INDEX; tambien hay SQL de mantenimiento/backup especifico de MySQL.
+
+CONFIRMACION DE LOS CANDIDATOS
+Probar estas versiones por separado en SQLite y MariaDB, con las mismas dependencias y datos, y verificar instalacion y una operacion representativa.
+Las primeras pruebas de instalacion y sus limites estan documentados por separado en runtime/summary.txt.

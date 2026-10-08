@@ -1,0 +1,38 @@
+PRIMERAS PRUEBAS DE INSTALACION SQLITE / MARIADB
+
+Núcleo: 87b4ef845b83bb4b889fda7b8ce7e718f2090341 (develop, 4.3.0-alpha).
+Imagen base: alpine-omeka-s:sqlite-test, identificada en image.txt.
+PHP: 8.4.17. Se superpone el código versionado del núcleo; se conservan las
+dependencias vendor de la imagen (Doctrine DBAL 2.13.9).
+Los paquetes corresponden a los hashes y versiones de inventory.json.
+
+Módulo                 SQLite               MariaDB
+Collecting 1.13.0       falla, no instalado   instalado y activo
+CSV Import 2.6.2       falla, no instalado   instalado y activo
+Code Snippets 1.0.3    instalado y activo    instalado y activo
+
+FALLOS CONFIRMADOS
+Collecting: Module.php:41 crea collecting_form con COLLATE `utf8mb4_unicode_ci`.
+La traducción elimina ENGINE y CHARACTER SET, pero conserva COLLATE cuando su
+nombre está entre comillas. SQLite devuelve "near COLLATE: syntax error".
+Es una carencia del traductor del núcleo. Después de resolverla, las llamadas
+ADD CONSTRAINT FOREIGN KEY de las líneas 46 y siguientes seguirán pendientes.
+
+CSV Import: Module.php:44 usa ALTER TABLE ... ADD CONSTRAINT ... FOREIGN KEY.
+Las tablas se crean, pero el adaptador rechaza expresamente la operación porque
+SQLite requiere definir la clave en CREATE TABLE o reconstruir la tabla.
+No es correcto omitir la consulta: se perdería integridad referencial.
+
+VALIDACION
+Cada combinación usa una instalación nueva, sin datos de la mediateca.
+Además del código de salida del instalador se consulta la fila y el estado
+is_active de la tabla module. Los controles MariaDB y Code Snippets en SQLite
+han pasado. El script comprueba estos controles al terminar.
+Se han eliminado el contenedor MariaDB y la red creados para las pruebas.
+
+LIMITES
+Son pruebas de instalación en develop, no de uso, actualización ni de las ramas
+4.1/4.2. Code Snippets instalado no certifica todas sus funciones. No se han
+ejecutado todavía Common/Easy Admin ni Advanced Search.
+Las cifras de summary.txt en la carpeta superior siguen siendo candidatos
+estáticos; estos resultados de ejecución corresponden solo a estos módulos.

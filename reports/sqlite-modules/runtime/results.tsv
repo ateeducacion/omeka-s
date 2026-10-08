@@ -1,0 +1,7 @@
+driver	module	cli_exit	installed_active
+sqlite	Collecting	255	0
+sqlite	CSVImport	255	0
+sqlite	CodeSnippets	0	1
+mysql	Collecting	0	1
+mysql	CSVImport	0	1
+mysql	CodeSnippets	0	1

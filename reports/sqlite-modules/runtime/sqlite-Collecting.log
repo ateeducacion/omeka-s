@@ -1,0 +1,43 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: Module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+An exception occurred while executing 'CREATE TABLE `collecting_form` (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  item_set_id INTEGER DEFAULT NULL,
+  site_id INTEGER NOT NULL,
+  owner_id INTEGER DEFAULT NULL,
+  `label` VARCHAR(255) NOT NULL,
+  anon_type VARCHAR(255) NOT NULL,
+  success_text TEXT DEFAULT NULL,
+  email_text TEXT DEFAULT NULL,
+  default_site_assign INTEGER DEFAULT NULL
+) COLLATE `utf8mb4_unicode_ci`':
+
+SQLSTATE[HY000]: General error: 1 near "COLLATE": syntax error
+AUDIT_CLI_EXIT=255
++------------+------------+---------------+---------+------------------+---------------+-----------------+------------+
+| Id         | Name       | State         | Version | InstalledVersion | LatestVersion | UpdateAvailable | Author     |
++------------+------------+---------------+---------+------------------+---------------+-----------------+------------+
+| Collecting | Collecting | not_installed | 1.13.0  | unknown          | 1.13.0        | no              | Omeka Team |
++------------+------------+---------------+---------+------------------+---------------+-----------------+------------+
+AUDIT_INSTALLED_ACTIVE=0
+AUDIT_DATABASE_RECORD=false

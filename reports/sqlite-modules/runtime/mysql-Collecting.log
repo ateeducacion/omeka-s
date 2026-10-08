@@ -1,0 +1,31 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: Module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Collecting' v1.13.0 installed.
+AUDIT_CLI_EXIT=0
++------------+------------+--------+---------+------------------+---------------+-----------------+------------+
+| Id         | Name       | State  | Version | InstalledVersion | LatestVersion | UpdateAvailable | Author     |
++------------+------------+--------+---------+------------------+---------------+-----------------+------------+
+| Collecting | Collecting | active | 1.13.0  | 1.13.0           | 1.13.0        | no              | Omeka Team |
++------------+------------+--------+---------+------------------+---------------+-----------------+------------+
+AUDIT_INSTALLED_ACTIVE=1
+AUDIT_DATABASE_RECORD={"id":"Collecting","is_active":1,"version":"1.13.0"}

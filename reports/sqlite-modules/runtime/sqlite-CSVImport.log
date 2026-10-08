@@ -1,0 +1,31 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: Module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+SQLite cannot add a foreign key with ALTER TABLE; define it in CREATE TABLE or rebuild the table in a migration.
+AUDIT_CLI_EXIT=255
++-----------+------------+---------------+---------+------------------+---------------+-----------------+----------------------------------+
+| Id        | Name       | State         | Version | InstalledVersion | LatestVersion | UpdateAvailable | Author                           |
++-----------+------------+---------------+---------+------------------+---------------+-----------------+----------------------------------+
+| CSVImport | CSV Import | not_installed | 2.6.2   | unknown          | 2.6.2         | no              | Omeka Team and Daniel Berthereau |
++-----------+------------+---------------+---------+------------------+---------------+-----------------+----------------------------------+
+AUDIT_INSTALLED_ACTIVE=0
+AUDIT_DATABASE_RECORD=false
