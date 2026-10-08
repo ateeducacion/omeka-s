@@ -740,9 +740,9 @@ class Module extends AbstractModule
         $isSqlite = ConnectionFactory::isSqlite($conn);
 
         if ($isSqlite) {
-            $match = '(omeka_fulltext_search.title LIKE :omeka_fulltext_search OR omeka_fulltext_search.text LIKE :omeka_fulltext_search)';
+            $match = "(omeka_fulltext_search.title LIKE :omeka_fulltext_search ESCAPE '!' OR omeka_fulltext_search.text LIKE :omeka_fulltext_search ESCAPE '!')";
         } else {
-            $match = 'MATCH(omeka_fulltext_search.title, omeka_fulltext_search.text) AGAINST (:omeka_fulltext_search IN BOOLEAN MODE)';
+            $match = 'MATCH(omeka_fulltext_search.title, omeka_fulltext_search.text) AGAINST (:omeka_fulltext_search)';
         }
 
         if ('api.search.query' === $event->getName()) {
@@ -752,7 +752,7 @@ class Module extends AbstractModule
             // happens after we've already gotten the total count.
 
             if ($isSqlite) {
-                $qb->setParameter('omeka_fulltext_search', '%' . $query['fulltext_search'] . '%');
+                $qb->setParameter('omeka_fulltext_search', '%' . str_replace(['!', '%', '_'], ['!!', '!%', '!_'], $query['fulltext_search']) . '%');
             } else {
                 $qb->setParameter('omeka_fulltext_search', $query['fulltext_search']);
             }
@@ -764,7 +764,7 @@ class Module extends AbstractModule
             $qb->innerJoin('Omeka\Entity\FulltextSearch', 'omeka_fulltext_search', 'WITH', $joinConditions);
 
             // Filter out resources with no similarity.
-            $qb->andWhere($match);
+            $qb->andWhere($isSqlite ? $match : sprintf('%s > 0', $match));
 
             // Set visibility constraints.
             $acl = $this->getServiceLocator()->get('Omeka\Acl');
@@ -797,7 +797,8 @@ class Module extends AbstractModule
                     // scores.
                     $sortOrder = 'DESC';
                 }
-                $qb->orderBy($match, $sortOrder);
+                // ponytail: LIKE has no relevance score; use IDs until SQLite FTS is implemented.
+                $qb->orderBy($isSqlite ? 'omeka_root.id' : $match, $sortOrder);
             }
         }
     }

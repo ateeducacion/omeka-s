@@ -29,19 +29,24 @@ class GroupConcat extends MysqlGroupConcat
         foreach ($this->pathExp as $pathExp) {
             $fields[] = $pathExp->dispatch($sqlWalker);
         }
-        $result .= implode(', ', $fields);
+        $result .= count($fields) === 1 ? $fields[0] : 'CONCAT(' . implode(', ', $fields) . ')';
 
-        // SQLite rejects DISTINCT aggregates with more than one argument
-        // ("DISTINCT aggregates must have exactly one argument"), so a custom
-        // separator cannot be honored together with DISTINCT; fall back to the
-        // default ',' separator in that case.
-        if ($this->separator && !$this->isDistinct) {
-            $result .= ', ' . $sqlWalker->walkStringPrimary($this->separator);
+        if ($this->separator) {
+            $separator = $sqlWalker->walkStringPrimary($this->separator);
+            if ($this->isDistinct && $separator !== "','") {
+                throw new \RuntimeException('SQLite GROUP_CONCAT cannot combine DISTINCT with a custom separator.');
+            }
+            if (!$this->isDistinct) {
+                $result .= ', ' . $separator;
+            }
         }
 
         // SQLite supports ORDER BY inside aggregate calls since 3.44, placed
         // after the arguments: GROUP_CONCAT(x, 'sep' ORDER BY y).
         if ($this->orderBy) {
+            if (version_compare($sqlWalker->getConnection()->fetchOne('SELECT sqlite_version()'), '3.44.0', '<')) {
+                throw new \RuntimeException('Ordered GROUP_CONCAT requires SQLite 3.44 or later.');
+            }
             $result .= ' ' . $sqlWalker->walkOrderByClause($this->orderBy);
         }
 

@@ -13,6 +13,10 @@ class SqliteCompatConnection extends Connection
 {
     private const TRANSLATABLE_KEYWORDS = ['SHOW', 'SET', 'TRUNCATE', 'DESCRIBE', 'DESC', 'CREATE', 'ALTER'];
 
+    private const SQL_PROTECTED = <<<'REGEX'
+'(?:[^']|'')*'|"(?:[^"]|"")*"|`(?:[^`]|``)*`|\[[^\]]*\]|--[^\r\n]*|\/\*.*?\*\/
+REGEX;
+
     public function connect()
     {
         $newConnection = parent::connect();
@@ -47,9 +51,18 @@ class SqliteCompatConnection extends Connection
         return parent::query(...$args);
     }
 
+    public function prepare($sql)
+    {
+        $statements = $this->translateSql($sql);
+        if ($statements !== null && count($statements) !== 1) {
+            throw new \RuntimeException('SQLite compatibility cannot prepare multiple statements.');
+        }
+        return parent::prepare($statements[0] ?? 'SELECT 1 WHERE 0');
+    }
+
     public function executeQuery($sql, array $params = [], $types = [], ?QueryCacheProfile $qcp = null)
     {
-        $last = $this->execLeading($sql);
+        $last = $this->execLeading($sql, $params !== []);
         if ($last === null) {
             return parent::executeQuery('SELECT 1 WHERE 0', [], []);
         }
@@ -58,7 +71,7 @@ class SqliteCompatConnection extends Connection
 
     public function executeStatement($sql, array $params = [], array $types = [])
     {
-        $last = $this->execLeading($sql);
+        $last = $this->execLeading($sql, $params !== []);
         if ($last === null) {
             return 0;
         }
@@ -70,11 +83,14 @@ class SqliteCompatConnection extends Connection
      *
      * @return string|null The last translated statement to execute, or null to skip.
      */
-    private function execLeading(string $sql): ?string
+    private function execLeading(string $sql, bool $hasParams = false): ?string
     {
         $statements = $this->translateSql($sql);
         if ($statements === null) {
             return null;
+        }
+        if ($hasParams && count($statements) > 1) {
+            throw new \RuntimeException('SQLite compatibility cannot execute multiple statements with parameters.');
         }
         for ($i = 0, $last = count($statements) - 1; $i < $last; $i++) {
             parent::exec($statements[$i]);
@@ -94,60 +110,15 @@ class SqliteCompatConnection extends Connection
      */
     protected function translateSql(string $sql): ?array
     {
-        // Rewrite MySQL scalar functions (NOW(), etc.) on every statement,
-        // including INSERT/UPDATE which skip the keyword fast path below.
-        $sql = $this->translateFunctions($sql);
-
-        // MySQL's INSERT IGNORE is INSERT OR IGNORE in SQLite.
-        $sql = preg_replace('/^(\s*)INSERT\s+IGNORE\b/i', '$1INSERT OR IGNORE', $sql);
-
+        // Remove comments without touching quoted values or identifiers.
+        $sql = preg_replace_callback('/' . self::SQL_PROTECTED . '/s', function (array $m): string {
+            return str_starts_with($m[0], '--') || str_starts_with($m[0], '/*') ? ' ' : $m[0];
+        }, $sql);
         $trimmed = trim($sql, " \t\n\r\0\x0B;");
 
-        // Fast path: most queries don't need translation.
-        $firstSpace = strpos($trimmed, ' ');
-        $firstWord = $firstSpace !== false ? strtoupper(substr($trimmed, 0, $firstSpace)) : strtoupper($trimmed);
-        if (!in_array($firstWord, self::TRANSLATABLE_KEYWORDS, true)) {
-            return [$sql];
-        }
-
-        if (preg_match('/^SHOW\s+(FULL\s+)?TABLES/i', $trimmed)) {
-            return ["SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"];
-        }
-
-        if (preg_match('/^SET\s+FOREIGN_KEY_CHECKS\s*=\s*0/i', $trimmed)) {
-            return ['PRAGMA foreign_keys = OFF'];
-        }
-        if (preg_match('/^SET\s+FOREIGN_KEY_CHECKS\s*=\s*1/i', $trimmed)) {
-            return ['PRAGMA foreign_keys = ON'];
-        }
-
-        // SET NAMES and other unsupported SET statements are no-ops for SQLite.
-        if (preg_match('/^SET\s+/i', $trimmed)) {
-            return null;
-        }
-
-        if (preg_match('/^(?:SHOW\s+COLUMNS\s+FROM|DESCRIBE|DESC)\s+[`"\']?(\w+)[`"\']?/i', $trimmed, $m)) {
-            return ['PRAGMA table_info(' . $m[1] . ')'];
-        }
-
-        if (preg_match('/^TRUNCATE\s+(?:TABLE\s+)?[`"\']?(\w+)[`"\']?/i', $trimmed, $m)) {
-            return ['DELETE FROM ' . $m[1]];
-        }
-
-        // Translate MySQL CREATE TABLE to SQLite-compatible DDL.
-        if (preg_match('/^CREATE\s+TABLE\s+/i', $trimmed)) {
-            return $this->translateCreateTable($trimmed);
-        }
-
-        // SQLite doesn't support ALTER TABLE ADD CONSTRAINT FOREIGN KEY.
-        // Skip these since FKs are already defined inline in CREATE TABLE.
-        if (preg_match('/^ALTER\s+TABLE\s+.+\s+ADD\s+CONSTRAINT\s+.+\s+FOREIGN\s+KEY/i', $trimmed)) {
-            return null;
-        }
-
-        // Compound statements like "SET FOREIGN_KEY_CHECKS=0; DROP TABLE x".
-        if (str_contains($trimmed, ';')) {
-            $parts = array_filter(array_map('trim', explode(';', $trimmed)));
+        // Trigger bodies contain semicolons that belong to one SQLite statement.
+        if (!preg_match('/^CREATE\s+(?:(?:TEMP|TEMPORARY)\s+)?TRIGGER\b/i', $trimmed)) {
+            $parts = $this->splitSql($sql, ';');
             if (count($parts) > 1) {
                 $result = [];
                 foreach ($parts as $part) {
@@ -158,6 +129,58 @@ class SqliteCompatConnection extends Connection
                 }
                 return $result ?: null;
             }
+        }
+
+        $sql = $this->translateFunctions($sql);
+        $sql = preg_replace('/^(\s*)INSERT\s+IGNORE\b/i', '$1INSERT OR IGNORE', $sql);
+        $trimmed = trim($sql, " \t\n\r\0\x0B;");
+
+        preg_match('/^\w+/', $trimmed, $keyword);
+        if (!in_array(strtoupper($keyword[0] ?? ''), self::TRANSLATABLE_KEYWORDS, true)) {
+            return [$sql];
+        }
+
+        if (preg_match('/^SHOW\s+(FULL\s+)?TABLES(?:\s+LIKE\s+(.+))?$/is', $trimmed, $m)) {
+            $type = empty($m[1]) ? '' : ", 'BASE TABLE' AS Table_type";
+            $filter = isset($m[2]) ? ' AND name LIKE ' . $m[2] : '';
+            return ["SELECT name AS Tables_in_main$type FROM sqlite_master WHERE type='table' AND name NOT GLOB 'sqlite_*'$filter ORDER BY name"];
+        }
+
+        if (preg_match('/^SET\s+FOREIGN_KEY_CHECKS\s*=\s*([01])$/i', $trimmed, $m)) {
+            if ($this->isTransactionActive()) {
+                throw new \RuntimeException('SQLite cannot change foreign key enforcement inside a transaction.');
+            }
+            return ['PRAGMA foreign_keys = ' . ($m[1] === '1' ? 'ON' : 'OFF')];
+        }
+
+        // SQLite has no connection charset setting; do not suppress other SETs.
+        if (preg_match('/^SET\s+NAMES\s+[\w\'"`]+(?:\s+COLLATE\s+[\w\'"`]+)?$/i', $trimmed)) {
+            return null;
+        }
+        if (preg_match('/^SET\b/i', $trimmed)) {
+            throw new \RuntimeException('Unsupported MySQL SET statement on SQLite: ' . $trimmed);
+        }
+
+        if (preg_match('/^(?:SHOW\s+COLUMNS\s+FROM|DESCRIBE|DESC)\s+[`"\']?(\w+)[`"\']?(?:\s+LIKE\s+(.+))?$/is', $trimmed, $m)) {
+            $filter = isset($m[2]) ? ' WHERE name LIKE ' . $m[2] : '';
+            return ["SELECT name AS Field, type AS Type, CASE WHEN \"notnull\" OR pk THEN 'NO' ELSE 'YES' END AS \"Null\", CASE WHEN pk THEN 'PRI' ELSE '' END AS \"Key\", dflt_value AS \"Default\", '' AS Extra FROM pragma_table_info('$m[1]')$filter ORDER BY cid"];
+        }
+
+        if (preg_match('/^TRUNCATE\s+(?:TABLE\s+)?[`"\']?(\w+)[`"\']?$/i', $trimmed, $m)) {
+            $statements = ['DELETE FROM `' . $m[1] . '`'];
+            if ($this->fetchOne("SELECT 1 FROM sqlite_master WHERE name='sqlite_sequence'")) {
+                $statements[] = "DELETE FROM sqlite_sequence WHERE name='$m[1]'";
+            }
+            return $statements;
+        }
+
+        if (preg_match('/^CREATE\s+TABLE\s+/i', $trimmed)) {
+            return $this->translateCreateTable($trimmed);
+        }
+
+        // Rebuilding arbitrary module tables needs an explicit migration.
+        if (preg_match('/^ALTER\s+TABLE\s+.+\s+ADD\s+(?:CONSTRAINT\s+.+\s+)?FOREIGN\s+KEY/is', $trimmed)) {
+            throw new \RuntimeException('SQLite cannot add a foreign key with ALTER TABLE; define it in CREATE TABLE or rebuild the table in a migration.');
         }
 
         return [$sql];
@@ -175,45 +198,13 @@ class SqliteCompatConnection extends Connection
             return $sql;
         }
 
-        $result = '';
-        $buffer = '';
-        $len = strlen($sql);
-        for ($i = 0; $i < $len; $i++) {
-            $char = $sql[$i];
-            if ($char === "'" || $char === '"' || $char === '`') {
-                // Flush the unquoted buffer (translated) before copying the
-                // quoted region verbatim.
-                $result .= $this->replaceFunctions($buffer);
-                $buffer = '';
-                $quote = $char;
-                $result .= $char;
-                for ($i++; $i < $len; $i++) {
-                    $c = $sql[$i];
-                    // Backslash escape inside '...'/"..." (not for `identifiers`).
-                    if ($c === '\\' && $quote !== '`' && $i + 1 < $len) {
-                        $result .= $c . $sql[$i + 1];
-                        $i++;
-                        continue;
-                    }
-                    if ($c === $quote) {
-                        // Doubled quote ('' / "" / ``) is an escaped quote.
-                        if ($i + 1 < $len && $sql[$i + 1] === $quote) {
-                            $result .= $c . $quote;
-                            $i++;
-                            continue;
-                        }
-                        $result .= $c;
-                        break;
-                    }
-                    $result .= $c;
-                }
-                continue;
+        $parts = preg_split('/(' . self::SQL_PROTECTED . ')/s', $sql, -1, PREG_SPLIT_DELIM_CAPTURE);
+        foreach ($parts as $i => &$part) {
+            if ($i % 2 === 0) {
+                $part = $this->replaceFunctions($part);
             }
-            $buffer .= $char;
         }
-        $result .= $this->replaceFunctions($buffer);
-
-        return $result;
+        return implode('', $parts);
     }
 
     /**
@@ -261,17 +252,28 @@ class SqliteCompatConnection extends Connection
 
         // Find the body between the outermost parentheses.
         $openParen = strpos($sql, '(');
-        $closeParen = strrpos($sql, ')');
-        if ($openParen === false || $closeParen === false) {
+        preg_match_all('/' . self::SQL_PROTECTED . '|[()]/s', $sql, $tokens, PREG_OFFSET_CAPTURE);
+        $depth = 0;
+        $closeParen = null;
+        foreach ($tokens[0] as [$token, $offset]) {
+            if ($token === '(') {
+                $depth++;
+            } elseif ($token === ')' && --$depth === 0) {
+                $closeParen = $offset;
+                break;
+            }
+        }
+        if ($openParen === false || $closeParen === null) {
             return [$sql];
         }
         $body = substr($sql, $openParen + 1, $closeParen - $openParen - 1);
 
         // Split body into lines by comma, respecting parenthesized expressions.
-        $lines = $this->splitByComma($body);
+        $lines = $this->splitSql($body, ',');
 
         $columns = [];
         $createIndexes = [];
+        $autoIncrementColumn = null;
 
         foreach ($lines as $line) {
             $line = trim($line);
@@ -279,9 +281,8 @@ class SqliteCompatConnection extends Connection
                 continue;
             }
 
-            // Skip FULLTEXT KEY/INDEX (handled in application code).
             if (preg_match('/^\s*FULLTEXT\s+(KEY|INDEX)\s+/i', $line)) {
-                continue;
+                throw new \RuntimeException('MySQL FULLTEXT indexes require a SQLite-specific search implementation.');
             }
 
             // Extract KEY/INDEX into separate CREATE INDEX statements. The index
@@ -290,24 +291,58 @@ class SqliteCompatConnection extends Connection
             // named and unnamed forms must become standalone CREATE INDEX.
             if (preg_match('/^\s*(?:(UNIQUE)\s+)?(?:KEY|INDEX)\s*(?:[`"\']?(\w+)[`"\']?\s*)?(\(.*\))/i', $line, $km)) {
                 $isUnique = ($km[1] ?? '') !== '' ? 'UNIQUE ' : '';
-                // Strip prefix lengths like col(191) → col (SQLite doesn't support them).
-                $indexCols = preg_replace('/(\w)`?\s*\(\d+\)/', '$1`', $km[3]);
+                // Preserve prefix uniqueness with expression indexes on SQLite.
+                $indexCols = preg_replace_callback('/([`"]?\w+[`"]?)\s*\((\d+)\)/', function (array $m) use ($isUnique): string {
+                    return $isUnique ? 'substr(' . $m[1] . ', 1, ' . $m[2] . ')' : $m[1];
+                }, $km[3]);
                 $indexName = ($km[2] ?? '') !== ''
-                    ? $km[2]
+                    ? $tableName . '_' . $km[2]
                     : $this->generateIndexName($tableName, $indexCols, $isUnique !== '');
-                $createIndexes[] = "CREATE {$isUnique}INDEX `{$indexName}` ON `{$tableName}` {$indexCols}";
+                $ifNotExists = preg_match('/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS/i', $sql) ? 'IF NOT EXISTS ' : '';
+                $createIndexes[] = "CREATE {$isUnique}INDEX {$ifNotExists}`{$indexName}` ON `{$tableName}` {$indexCols}";
                 continue;
             }
 
             // Keep CONSTRAINT, PRIMARY KEY, and column definitions.
             // Apply column-level translations.
+            if (preg_match('/(?:' . self::SQL_PROTECTED . ')(*SKIP)(*F)|\bAUTO_INCREMENT\b/is', $line)) {
+                if ($autoIncrementColumn !== null || !preg_match('/^[`"]?(\w+)[`"]?\s+(?:TINY|SMALL|MEDIUM|BIG)?INT\b/i', $line, $column)) {
+                    throw new \RuntimeException('SQLite AUTO_INCREMENT requires one integer primary key.');
+                }
+                $autoIncrementColumn = $column[1];
+            }
             $line = $this->translateColumnDef($line);
             $columns[] = $line;
         }
 
+        if ($autoIncrementColumn !== null) {
+            $hasPrimaryKey = false;
+            foreach ($columns as $i => $column) {
+                if (preg_match('/^PRIMARY\s+KEY\s*\(\s*[`"]?' . $autoIncrementColumn . '[`"]?\s*\)$/i', $column)) {
+                    unset($columns[$i]);
+                    $hasPrimaryKey = true;
+                } elseif (preg_match('/^[`"]?' . $autoIncrementColumn . '[`"]?\s/i', $column) && preg_match('/\bPRIMARY\s+KEY\b/i', $column)) {
+                    $hasPrimaryKey = true;
+                } elseif (preg_match('/^PRIMARY\s+KEY\b/i', $column)) {
+                    throw new \RuntimeException('SQLite AUTO_INCREMENT cannot use a composite primary key.');
+                }
+            }
+            if (!$hasPrimaryKey) {
+                throw new \RuntimeException('SQLite AUTO_INCREMENT requires an integer primary key.');
+            }
+            foreach ($columns as &$column) {
+                if (preg_match('/^[`"]?' . $autoIncrementColumn . '[`"]?\s/i', $column)) {
+                    $column .= (preg_match('/\bPRIMARY\s+KEY\b/i', $column) ? '' : ' PRIMARY KEY') . ' AUTOINCREMENT';
+                }
+            }
+            unset($column);
+        }
+
         $ifNotExists = preg_match('/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS/i', $sql) ? 'IF NOT EXISTS ' : '';
         $columnsStr = implode(",\n  ", $columns);
-        $result = ["CREATE TABLE {$ifNotExists}`{$tableName}` (\n  {$columnsStr}\n)"];
+        $suffix = substr($sql, $closeParen + 1);
+        $suffix = preg_replace('/(?:' . self::SQL_PROTECTED . ')(*SKIP)(*F)|\s*(?:ENGINE\s*=?\s*\w+|(?:DEFAULT\s+)?(?:CHARSET|CHARACTER\s+SET)\s*=?\s*\w+|COLLATE\s*=?\s*\w+|COMMENT\s*=?\s*\'(?:[^\']|\'\')*\')/is', '', $suffix);
+        $result = ["CREATE TABLE {$ifNotExists}`{$tableName}` (\n  {$columnsStr}\n)$suffix"];
 
         // Append CREATE INDEX statements.
         foreach ($createIndexes as $idx) {
@@ -322,14 +357,15 @@ class SqliteCompatConnection extends Connection
      */
     private function translateColumnDef(string $line): string
     {
-        $line = preg_replace('/\b(?:TINY|SMALL|MEDIUM|BIG)?INT\b(?:\s*\(\d+\))?/i', 'INTEGER', $line);
-        $line = preg_replace('/\b(?:LONG|MEDIUM|TINY)TEXT\b/i', 'TEXT', $line);
-        $line = preg_replace('/\b(?:VAR)?BINARY\b(?:\s*\(\d+\))?/i', 'BLOB', $line);
-        $line = preg_replace('/\b(?:LONG|MEDIUM|TINY)BLOB\b/i', 'BLOB', $line);
-        $line = preg_replace('/\s+AUTO_INCREMENT/i', '', $line);
-        $line = preg_replace('/\s+COLLATE\s+[`"\']?\w+[`"\']?/i', '', $line);
-        $line = preg_replace('/\s+COMMENT\s+(?:\'[^\']*\'|"[^"]*")/i', '', $line);
-        $line = preg_replace('/\s+CHARACTER\s+SET\s+\w+/i', '', $line);
+        $skip = '(?:' . self::SQL_PROTECTED . ')(*SKIP)(*F)|';
+        $line = preg_replace('/' . $skip . '\b(?:TINY|SMALL|MEDIUM|BIG)?INT\b(?:\s*\(\d+\))?/is', 'INTEGER', $line);
+        $line = preg_replace('/' . $skip . '\b(?:LONG|MEDIUM|TINY)TEXT\b/is', 'TEXT', $line);
+        $line = preg_replace('/' . $skip . '\b(?:VAR)?BINARY\b(?:\s*\(\d+\))?/is', 'BLOB', $line);
+        $line = preg_replace('/' . $skip . '\b(?:LONG|MEDIUM|TINY)BLOB\b/is', 'BLOB', $line);
+        $line = preg_replace('/' . $skip . '\s+(?:AUTO_INCREMENT|UNSIGNED)\b/is', '', $line);
+        $line = preg_replace('/' . $skip . '\s+COLLATE\s+[`"\']?\w+[`"\']?/is', '', $line);
+        $line = preg_replace('/' . $skip . '\s+COMMENT\s+(?:\'(?:[^\']|\'\')*\'|"(?:[^"]|"")*")/is', '', $line);
+        $line = preg_replace('/' . $skip . '\s+CHARACTER\s+SET\s+\w+/is', '', $line);
         $line = preg_replace('/^(\s*)UNIQUE\s+KEY\s+[`"\']?\w+[`"\']?\s*/i', '$1UNIQUE ', $line);
 
         return $line;
@@ -350,33 +386,30 @@ class SqliteCompatConnection extends Connection
     }
 
     /**
-     * Split a string by commas, respecting parenthesized expressions.
+     * Split SQL outside quoted regions, comments and parenthesized expressions.
      *
      * @return string[]
      */
-    private function splitByComma(string $body): array
+    private function splitSql(string $sql, string $delimiter): array
     {
+        preg_match_all('/' . self::SQL_PROTECTED . '|[();,]/s', $sql, $tokens, PREG_OFFSET_CAPTURE);
         $parts = [];
-        $current = '';
+        $start = 0;
         $depth = 0;
-
-        for ($i = 0, $len = strlen($body); $i < $len; $i++) {
-            $char = $body[$i];
-            if ($char === '(') {
+        foreach ($tokens[0] as [$token, $offset]) {
+            if ($token === '(') {
                 $depth++;
-            } elseif ($char === ')') {
+            } elseif ($token === ')') {
                 $depth--;
-            } elseif ($char === ',' && $depth === 0) {
-                $parts[] = $current;
-                $current = '';
-                continue;
+            } elseif ($token === $delimiter && $depth === 0) {
+                $parts[] = trim(substr($sql, $start, $offset - $start));
+                $start = $offset + 1;
             }
-            $current .= $char;
         }
-        if (trim($current) !== '') {
-            $parts[] = $current;
-        }
-        return $parts;
+        $parts[] = trim(substr($sql, $start));
+        return array_values(array_filter($parts, function (string $part): bool {
+            return $part !== '';
+        }));
     }
 
     /**
@@ -419,8 +452,11 @@ class SqliteCompatConnection extends Connection
             return $this->formatMysqlDate($timestamp, (string) $format);
         }, -1);
         $create('unix_timestamp', function ($datetime = null) {
-            if ($datetime === null) {
+            if (func_num_args() === 0) {
                 return time();
+            }
+            if ($datetime === null) {
+                return null;
             }
             $timestamp = strtotime((string) $datetime);
             return $timestamp === false ? null : $timestamp;
