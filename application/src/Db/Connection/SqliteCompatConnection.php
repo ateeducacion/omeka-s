@@ -146,6 +146,10 @@ REGEX;
             return ["SELECT name AS Tables_in_main$type FROM sqlite_master WHERE type='table' AND name NOT GLOB 'sqlite_*'$filter ORDER BY name"];
         }
 
+        if (preg_match('/^SHOW\s+(?:INDEX(?:ES)?|KEYS)\s+(?:FROM|IN)\s+[`"\']?(\w+)[`"\']?(?:\s+WHERE\s+(.+))?$/is', $trimmed, $m)) {
+            return [$this->translateShowIndex($m[1], $m[2] ?? null)];
+        }
+
         if (preg_match('/^SET\s+FOREIGN_KEY_CHECKS\s*=\s*([01])$/i', $trimmed, $m)) {
             if ($this->isTransactionActive()) {
                 throw new \RuntimeException('SQLite cannot change foreign key enforcement inside a transaction.');
@@ -184,6 +188,43 @@ REGEX;
         }
 
         return [$sql];
+    }
+
+    private function translateShowIndex(string $table, ?string $where): string
+    {
+        if (!$this->fetchOne("SELECT 1 FROM sqlite_master WHERE type='table' AND name=? COLLATE NOCASE UNION ALL SELECT 1 FROM sqlite_temp_master WHERE type='table' AND name=? COLLATE NOCASE", [$table, $table])) {
+            throw new \RuntimeException('Cannot show indexes: table does not exist: ' . $table);
+        }
+        // Integer rowid primary keys have no entry in pragma_index_list.
+        // shortcut: expose physical SQLite index names, port name-based migrations explicitly.
+        $sql = <<<SQL
+WITH index_columns AS (
+    SELECT CASE WHEN il.origin = 'pk' THEN 'PRIMARY' ELSE il.name END AS index_name,
+        1 - il."unique" AS non_unique, ix.seqno + 1 AS position,
+        ix.name AS column_name, ix."desc" AS descending
+    FROM pragma_index_list('$table') AS il
+    JOIN pragma_index_xinfo(il.name) AS ix
+    WHERE ix."key" = 1
+    UNION ALL
+    SELECT 'PRIMARY', 0, pk, name, 0 FROM pragma_table_info('$table')
+    WHERE pk > 0 AND NOT EXISTS (SELECT 1 FROM pragma_index_list('$table') WHERE origin = 'pk')
+)
+SELECT * FROM (
+    SELECT '$table' AS "Table", ic.non_unique AS Non_unique,
+        ic.index_name AS Key_name, ic.position AS Seq_in_index,
+        ic.column_name AS Column_name,
+        CASE WHEN ic.descending THEN 'D' ELSE 'A' END AS Collation,
+        NULL AS Cardinality, NULL AS Sub_part, NULL AS Packed,
+        CASE WHEN ti."notnull" OR ti.pk THEN '' ELSE 'YES' END AS "Null",
+        'BTREE' AS Index_type, '' AS Comment, '' AS Index_comment
+    FROM index_columns AS ic
+    LEFT JOIN pragma_table_xinfo('$table') AS ti ON ti.name = ic.column_name
+)
+SQL;
+        if ($where !== null) {
+            $sql .= ' WHERE ' . $where;
+        }
+        return $sql . ' ORDER BY Key_name, Seq_in_index';
     }
 
     /**
@@ -341,7 +382,7 @@ REGEX;
         $ifNotExists = preg_match('/^CREATE\s+TABLE\s+IF\s+NOT\s+EXISTS/i', $sql) ? 'IF NOT EXISTS ' : '';
         $columnsStr = implode(",\n  ", $columns);
         $suffix = substr($sql, $closeParen + 1);
-        $suffix = preg_replace('/(?:' . self::SQL_PROTECTED . ')(*SKIP)(*F)|\s*(?:ENGINE\s*=?\s*\w+|(?:DEFAULT\s+)?(?:CHARSET|CHARACTER\s+SET)\s*=?\s*\w+|COLLATE\s*=?\s*\w+|COMMENT\s*=?\s*\'(?:[^\']|\'\')*\')/is', '', $suffix);
+        $suffix = preg_replace('/(?:' . self::SQL_PROTECTED . ')(*SKIP)(*F)|\s*(?:ENGINE\s*=?\s*\w+|(?:DEFAULT\s+)?(?:CHARSET|CHARACTER\s+SET)\s*=?\s*\w+|COLLATE\s*=?\s*(?:\w+|`\w+`|"\w+"|\'\w+\')|COMMENT\s*=?\s*\'(?:[^\']|\'\')*\')/is', '', $suffix);
         $result = ["CREATE TABLE {$ifNotExists}`{$tableName}` (\n  {$columnsStr}\n)$suffix"];
 
         // Append CREATE INDEX statements.

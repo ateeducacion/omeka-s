@@ -44,6 +44,15 @@ This branch supports fresh SQLite installations with `pdo_sqlite`; see
 `config/database.ini.dist` for configuration. The compatibility connection
 translates a subset of MySQL SQL, not the entire dialect.
 
+MySQL table-level `COLLATE` options are removed even when their names are quoted.
+`SHOW INDEX`, `SHOW INDEXES` and `SHOW KEYS` support `FROM`/`IN` and `WHERE`
+filters, including the index checks used by Common and Easy Admin. Metadata
+includes primary keys, uniqueness, column order and sort direction. Index names
+are the physical SQLite names (translated inline indexes are prefixed by their
+table); cardinality and prefix lengths are unavailable and returned as `NULL`.
+This does not emulate MySQL collation rules or port other database maintenance
+commands used by these modules.
+
 Module compatibility still requires testing installation, queries, upgrades and
 uninstallation. Unsupported `SET` statements, adding foreign keys with `ALTER
 TABLE`, and MySQL `FULLTEXT` indexes raise errors rather than being silently
