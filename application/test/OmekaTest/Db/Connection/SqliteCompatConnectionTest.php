@@ -110,6 +110,113 @@ class SqliteCompatConnectionTest extends TestCase
         $this->assertSame(['value'], $this->connection->fetchFirstColumn("SHOW COLUMNS FROM setting LIKE 'val%'"));
     }
 
+    /** @dataProvider tableCollations */
+    public function testCreateTableAcceptsQuotedMysqlTableCollation($collation)
+    {
+        $this->connection->exec("CREATE TABLE example (id INT AUTO_INCREMENT NOT NULL, note TEXT DEFAULT 'COLLATE `utf8mb4_unicode_ci`', PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE $collation ENGINE = InnoDB");
+        $this->connection->exec('INSERT INTO example DEFAULT VALUES');
+        $this->assertSame('COLLATE `utf8mb4_unicode_ci`', $this->connection->fetchOne('SELECT note FROM example'));
+        $this->assertSame(1, (int) $this->connection->fetchOne('SELECT id FROM example'));
+    }
+
+    public function tableCollations()
+    {
+        return [['utf8mb4_unicode_ci'], ['`utf8mb4_unicode_ci`'], ['"utf8mb4_unicode_ci"'], ["'utf8mb4_unicode_ci'"]];
+    }
+
+    /** @dataProvider indexQueries */
+    public function testShowIndexSupportsModuleFilters($sql)
+    {
+        $this->connection->exec('CREATE TABLE session (id INTEGER PRIMARY KEY, modified INT NOT NULL, token TEXT)');
+        $this->connection->exec('CREATE INDEX idx_modified ON session (modified)');
+        $rows = $this->connection->fetchAllAssociative($sql);
+        $this->assertCount(1, $rows);
+        $this->assertSame('session', $rows[0]['Table']);
+        $this->assertSame('idx_modified', $rows[0]['Key_name']);
+        $this->assertSame('modified', $rows[0]['Column_name']);
+        $this->assertSame(1, (int) $rows[0]['Non_unique']);
+        $this->assertSame(1, (int) $rows[0]['Seq_in_index']);
+        $this->assertSame('', $rows[0]['Null']);
+    }
+
+    public function indexQueries()
+    {
+        return [
+            ["SHOW INDEX FROM `session` WHERE `Key_name` = 'idx_modified'"],
+            ["SHOW INDEX FROM `session` WHERE `Column_name` = 'modified'"],
+            ['SHOW INDEX FROM `session` WHERE `column_name` = "modified";'],
+            ["SHOW INDEXES IN session WHERE Column_name LIKE 'mod%' AND Non_unique = 1"],
+            ["SHOW KEYS FROM session WHERE Key_name = 'idx_modified'"],
+        ];
+    }
+
+    public function testShowIndexReportsCompositeUniqueIndexesInColumnOrder()
+    {
+        $this->connection->exec('CREATE UNIQUE INDEX idx_pair ON setting (value DESC, id)');
+        $rows = $this->connection->fetchAllAssociative("SHOW INDEX FROM setting WHERE Key_name = 'idx_pair'");
+        $this->assertSame(['value', 'id'], array_column($rows, 'Column_name'));
+        $this->assertSame([1, 2], array_map('intval', array_column($rows, 'Seq_in_index')));
+        $this->assertSame([0, 0], array_map('intval', array_column($rows, 'Non_unique')));
+        $this->assertSame(['D', 'A'], array_column($rows, 'Collation'));
+        $this->assertSame(['YES', ''], array_column($rows, 'Null'));
+        $this->assertNull($rows[0]['Cardinality']);
+        $this->assertNull($rows[0]['Sub_part']);
+    }
+
+    /** @dataProvider primaryIndexTables */
+    public function testShowIndexIncludesPrimaryKeysWithoutDuplicates($ddl, $columns)
+    {
+        $this->connection->exec($ddl);
+        $rows = $this->connection->fetchAllAssociative("SHOW INDEX FROM example WHERE Key_name = 'PRIMARY'");
+        $this->assertSame($columns, array_column($rows, 'Column_name'));
+        $this->assertSame(array_fill(0, count($columns), 0), array_map('intval', array_column($rows, 'Non_unique')));
+    }
+
+    public function primaryIndexTables()
+    {
+        return [
+            ['CREATE TABLE example (id INTEGER PRIMARY KEY)', ['id']],
+            ['CREATE TABLE example (id TEXT PRIMARY KEY)', ['id']],
+            ['CREATE TABLE example (id INT, other INT, PRIMARY KEY(id, other))', ['id', 'other']],
+            ['CREATE TABLE example (id INT, other INT, PRIMARY KEY(id, other)) WITHOUT ROWID', ['id', 'other']],
+        ];
+    }
+
+    public function testPreparedShowIndexReadsCurrentMetadataAndAcceptsParameters()
+    {
+        $statement = $this->connection->prepare('SHOW INDEX FROM setting WHERE Key_name = ?');
+        $this->connection->exec('CREATE INDEX new_index ON setting (value)');
+        $statement->execute(['new_index']);
+        $this->assertSame('value', $statement->fetchAssociative()['Column_name']);
+        $this->assertFalse($this->connection->fetchOne('SHOW INDEX FROM setting WHERE Column_name = :column', ['column' => 'absent']));
+    }
+
+    public function testShowIndexReportsActualNamesOfTranslatedAndNativeIndexes()
+    {
+        $this->connection->exec('CREATE TABLE example (value TEXT, KEY shared(value))');
+        $rows = $this->connection->fetchAllAssociative("SHOW INDEX FROM example WHERE Key_name = 'example_shared'");
+        $this->assertCount(1, $rows);
+        $this->assertSame('example_shared', $rows[0]['Key_name']);
+    }
+
+    public function testShowIndexDoesNotReportAuxiliaryColumnsAsIndexed()
+    {
+        $this->connection->exec('CREATE INDEX expression_index ON setting (lower(value)) WHERE value IS NOT NULL');
+        $rows = $this->connection->fetchAllAssociative("SHOW INDEX FROM setting WHERE Key_name = 'expression_index'");
+        $this->assertCount(1, $rows);
+        $this->assertNull($rows[0]['Column_name']);
+        $this->assertFalse($this->connection->fetchOne("SHOW INDEX FROM setting WHERE Column_name = 'value'"));
+    }
+
+    public function testShowIndexDistinguishesMissingTablesFromTablesWithoutIndexes()
+    {
+        $this->connection->exec('CREATE TABLE example (value TEXT)');
+        $this->assertSame([], $this->connection->fetchAllAssociative('SHOW INDEX FROM example'));
+        $this->expectException(\Doctrine\DBAL\Exception::class);
+        $this->expectExceptionMessage('missing');
+        $this->connection->fetchAllAssociative('SHOW INDEX FROM missing');
+    }
+
     public function testCreateTablePreservesDefaultsAndQuotedIdentifiers()
     {
         $this->connection->exec("CREATE TABLE example (`int` VARCHAR(190) DEFAULT 'BIGINT, NOW(); AUTO_INCREMENT', number INT UNSIGNED, note TEXT COMMENT 'a,b')");
