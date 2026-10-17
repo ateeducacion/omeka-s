@@ -69,6 +69,7 @@ class AuditTests(unittest.TestCase):
         source = "$settings->set('example', $value); // SELECT FOR UPDATE\n/* ON DUPLICATE KEY UPDATE */"
         self.assertEqual([], scan_text('Module.php', source))
         self.assertEqual(1, len(scan_text('Module.php', '$sql = "SELECT * FROM resource FOR UPDATE";')))
+        self.assertEqual([], scan_text('Module.php', "$js = \"url.searchParams.set('login_as', uid);\";"))
 
     def test_module_asset_is_preferred_to_bundled_library(self):
         project = 'Daniel-KM/Omeka-S-module-Sparql'

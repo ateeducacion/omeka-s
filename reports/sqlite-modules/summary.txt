@@ -1,5 +1,5 @@
 AUDITORIA ESTATICA DE MODULOS OMEKA S / SQLITE
-Fecha UTC: 2026-10-17T17:17:53Z
+Fecha UTC: 2026-10-17T18:33:32Z
 Commit del nucleo: 7d41095a1b1889fe240a63ae57278d425dcf25b1
 
 Catalogos: https://omeka.org/s/modules/ y https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html
@@ -10,7 +10,7 @@ Catalogo oficial escaneado: 201/201
 No disponibles: 24; archivos sin codigo propio: 2
 Paquetes publicados: 333; fuentes de release/tag: 53; commits sin release coincidente: 161
 
-Repositorios con candidatos SQL no traducidos o rechazados: 98 (91 fuentes distintas)
+Repositorios con candidatos SQL no traducidos o rechazados: 97 (90 fuentes distintas)
 Repositorios con aspectos para revisar: 178
 Repositorios escaneados sin indicios segun estas reglas: 312
 Las categorias se solapan. Ninguna cifra representa fallos confirmados en ejecucion ni certifica compatibilidad.
@@ -34,7 +34,7 @@ connection_bypass: 33 / 19 / 18
 show_mysql: 22 / 10 / 10
 mysql_driver: 19 / 5 / 5
 mysql_expression: 8 / 7 / 5
-mysql_enum: 2 / 2 / 2
+mysql_enum: 1 / 1 / 1
 
 ALCANCE Y LIMITES
 El escaner no instala ni ejecuta codigo de los modulos; las pruebas de ejecucion requieren un informe separado.

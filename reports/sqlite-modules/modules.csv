@@ -8,8 +8,8 @@ Admin Login Styles,2.0.0,2.0.0,unreleased_commit,scanned,^4.0.0,,0,0,1,https://g
 Admin Plus,3.0.3,3.0.3,unreleased_commit,scanned,^3,,0,0,4,https://github.com/GhentCDH/Omeka-S-module-AdminPlus,,536778d3acc5b6a3
 Adminer database manager,3.4.18-p6.1.1,3.4.18-p6.1.1,release_asset,scanned,^3.1.0 || ^4.0.0,,0,1,10,https://github.com/Daniel-KM/Omeka-S-module-Adminer,,97175eeb409d8862
 Adminer database manager,3.4.18-p6.1.1,3.4.18-p6.1.1,release_asset,scanned,^3.1.0 || ^4.0.0,,0,1,10,https://gitlab.com/Daniel-KM/Omeka-S-module-Adminer,,c246a43dfdefa5d3
-Advanced Resource Template,3.4.55,3.4.55,release_asset,scanned,^4.0.0,,3,3,41,https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedResourceTemplate,,5de56ebe49db3c5d
 Advanced Resource Template,3.4.56,3.4.56,release_asset,scanned,^4.0.0,,3,3,41,https://github.com/Daniel-KM/Omeka-s-module-AdvancedResourceTemplate,,2d063c0ac5a58b61
+Advanced Resource Template,3.4.55,3.4.55,release_asset,scanned,^4.0.0,,3,3,41,https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedResourceTemplate,,5de56ebe49db3c5d
 Advanced Search,3.4.65,3.4.65,release_asset,scanned,^4.1.0,,13,13,171,https://github.com/Daniel-KM/Omeka-S-module-AdvancedSearch,,de8ce8b3b9599a7e
 Advanced Search,3.4.64,3.4.64,release_asset,scanned,^4.1.0,,12,13,171,https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearch,,2f502bc372055124
 Advanced Search adapter for Solr,3.5.73,3.5.73,release_asset,scanned,^4.1.0,,6,1,71,https://github.com/Daniel-KM/Omeka-S-module-SearchSolr,,31d8cce605af53a6
@@ -52,8 +52,8 @@ Banner,1.0,1.0,release_asset,scanned,^4.1.0,,0,0,5,https://github.com/rochester-
 Banner Image,1.0,1.0,unreleased_commit,scanned,^1.1.0,,0,0,5,https://github.com/scholarslab/BannerImage,,95a07dfd2cea04ac
 Base,0.1.0,0.1.0,tag_source,scanned,,,0,0,4,https://github.com/pols12/omeka-s-module-Base,,32a65c656f90e7e0
 Basket,0.2.0,0.2.0,unreleased_commit,scanned,,,2,2,10,https://github.com/biblibre/omeka-s-module-Basket,,98c840ee5cafbe66
-Basket (archived),3.2.4,3.2.4,release_asset,scanned,^1.2.0 || ^2.0.0,,2,2,17,https://github.com/Daniel-KM/Omeka-S-module-Basket,,f5c623f40795a3a8
 Basket (archived),3.2.4,3.2.4,release_asset,scanned,^1.2.0 || ^2.0.0,,2,2,17,https://gitlab.com/Daniel-KM/Omeka-S-module-Basket,,b371aa19d5780bef
+Basket (archived),3.2.4,3.2.4,release_asset,scanned,^1.2.0 || ^2.0.0,,2,2,17,https://github.com/Daniel-KM/Omeka-S-module-Basket,,f5c623f40795a3a8
 Bibliography,3.4.12,3.4.12,release_asset,scanned,^4.1.0,,0,0,39,https://github.com/Daniel-KM/Omeka-S-module-Bibliography,,b379fa052f30fb27
 Bibliography (Atlas fork),999.3.4.12,999.3.4.12,unreleased_commit,scanned,^4.1.0,,0,0,37,https://github.com/ionm/Omeka-S-module-Bibliography,,a7d92eaed2032fb9
 Biblionumber Support,1.0.0,1.0.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,4,https://github.com/biblibre/omeka-s-module-BiblionumberSupport,,b18f25c45684c928
@@ -92,8 +92,8 @@ Columb'O,0.1.4,0.1.4,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,4,https://githu
 Column Maker,0.0.1,0.0.1,unreleased_commit,scanned,^1.0.0,,0,0,5,https://github.com/Gutalala/OmekaS-Columns-Maker,,efb5187ef6516b0c
 COMEM API Enhancements,1.0.0,1.0.0,unreleased_commit,scanned,^2.0.0,,0,0,3,https://github.com/zerocrates/ComemApi,,fcab1696e6bd5548
 Comment,3.4.19,3.4.19,release_asset,scanned,^4.1.0,,4,5,49,https://github.com/Daniel-KM/Omeka-S-module-Comment,,c3fe09686d16d516
-Common,3.4.94,3.4.94,release_asset,scanned,^3.1 || ^4.0,,9,18,179,https://github.com/Daniel-KM/Omeka-S-module-Common,,8c05ee95f6f659f4
 Common,3.4.93,3.4.93,release_asset,scanned,^3.1 || ^4.0,,9,18,179,https://gitlab.com/Daniel-KM/Omeka-S-module-Common,,58075d07c70b14d6
+Common,3.4.94,3.4.94,release_asset,scanned,^3.1 || ^4.0,,9,18,179,https://github.com/Daniel-KM/Omeka-S-module-Common,,8c05ee95f6f659f4
 Compilatio,3.4.4,3.4.4,release_asset,scanned,^4.0.0,,1,2,13,https://gitlab.com/Daniel-KM/Omeka-S-module-Compilatio,,42fba9b5cd8e7aba
 Connected Sites,1.0,1.0,unreleased_commit,scanned,,,0,0,7,https://github.com/coreytegeler/omeka-s-module-ConnectedSites,,57df5cf9d020953c
 Contact us and report,3.3.8.2,3.3.8.2,tag_source,scanned,^3.0.0,,0,2,19,https://gitlab.com/dlivinglabs/Omeka-S-module-ContactUs,,f405867959800509
@@ -132,8 +132,8 @@ DataScribe,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,1,12,104,https://github.com
 DataScribe Data Types,0.1.0,0.1.0,unreleased_commit,scanned,^3.0.0,,0,0,6,https://github.com/chnm/DatascribeDataTypes-module,,cd0643b3e1886e8c
 DataTypeClass,1.0.0,1.0.0,unreleased_commit,scanned,^3.0.0,,0,0,6,https://github.com/Limonadeandcoscop/omeka-s-module-DataTypeClass,,d7d2d44444e18b38
 DCL Omeka Misc,1.0.3,1.0.3,release_source,scanned,^3.1.0 || ^4.0.0,,0,0,2,https://github.com/dartmouth-dltg/dcl_omeka_misc,,e70767a7e962ae6d
-Deduplicate resources based on properties,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,2,7,https://github.com/Daniel-KM/Omeka-S-module-Deduplicate,,bb209d092712f95a
 Deduplicate resources based on properties,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,2,7,https://gitlab.com/Daniel-KM/Omeka-S-module-Deduplicate,,7befc572ab1740e9
+Deduplicate resources based on properties,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,2,7,https://github.com/Daniel-KM/Omeka-S-module-Deduplicate,,bb209d092712f95a
 Demo Data,1.0.0,1.0.0,filtered_release_source,scanned,^4.0.0,,0,0,11,https://github.com/omeka-s-modules/DemoData,,2e45ec7bef73cf46
 Deploy,0.1.0,0.1.0,unreleased_commit,scanned,^4.0.0,,0,0,13,https://gitlab.com/arklab/omeka-s-module-Deploy,,0837a92a4de780ea
 "Derivative Images (archived, replaced by Easy Admin and Derivative Media)",3.3.8,3.3.8,release_asset,scanned,^3.0.0,,0,0,5,https://github.com/Daniel-KM/Omeka-S-module-DerivativeImages,,10d741d8d6b85f79
@@ -177,8 +177,8 @@ Exports,1.0.0,1.0.0,release_asset,scanned,^4.1.0,,0,5,24,https://github.com/omek
 Extended Site Description,0.2.0,0.2.0,release_asset,scanned,^1.1.0 || ^2.0.0,,0,0,1,https://github.com/Omeka-External/ExtendedSiteDescription,,9f22e25e2706764b
 Extra Blocks,0.1.0,0.1.0,unreleased_commit,scanned,^4.0.0,,0,0,6,https://github.com/Micah-Mast/ExtraBlocks,,5ec780c19bcd02d2
 Extract Metadata,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,0,5,20,https://github.com/omeka-s-modules/ExtractMetadata,,0c6e71e00aafad9f
-Extract Ocr,3.4.8,3.4.8,tag_source,scanned,^3.0.0 || ^4.0.0,,0,0,5,https://gitlab.com/loyolakain/Omeka-S-module-ExtractOcr,,5322063c46050863
 Extract Ocr,3.4.6,3.4.6,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,4,https://github.com/symac/Omeka-S-module-ExtractOcr,,33ad4fa4e803c221
+Extract Ocr,3.4.8,3.4.8,tag_source,scanned,^3.0.0 || ^4.0.0,,0,0,5,https://gitlab.com/loyolakain/Omeka-S-module-ExtractOcr,,5322063c46050863
 "Extract Ocr (archived, merged with Iiif Search)",3.4.12,3.4.12,unreleased_commit,scanned,^3.1 || ^4.0,,0,0,1,https://github.com/smachefert/Omeka-S-module-ExtractOcr,,5b144c7ceec50db6
 Extract Text,2.1.0,2.1.0,release_asset,scanned,^4.0.0,,0,0,21,https://github.com/omeka-s-modules/ExtractText,,f3f0847a39915956
 Faceted Browse,1.10.0,1.10.0,release_asset,scanned,^4.0.0,,1,8,54,https://github.com/omeka-s-modules/FacetedBrowse,,34fab34ce1b676ef
@@ -261,7 +261,7 @@ Image Annotate,1.1.0,1.1.0,release_asset,scanned,^4.1.0,,0,5,12,https://github.c
 Image Map,1.0,1.0,unreleased_commit,scanned,^2.0.0,,0,1,7,https://github.com/vachanda/image-map,,8cd3584237154ff3
 Image Server,3.6.26,3.6.26,release_asset,scanned,^3.1 || ^4.0,,0,2,63,https://github.com/Daniel-KM/Omeka-S-module-ImageServer,,7b1b8bfa04e5eddb
 Image With Text,1.3.0,1.3.0,unreleased_commit,scanned,^3.0.0,,0,0,5,https://github.com/jemurdock/ImageWithText,,c786eda8274269fc
-Impersonate,1.0.5,1.0.5,release_asset,scanned,^3.0.0 || ^4.0.0,,1,0,6,https://github.com/ateeducacion/omeka-s-Impersonate,,cabe529b75dcbfed
+Impersonate,1.0.5,1.0.5,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,6,https://github.com/ateeducacion/omeka-s-Impersonate,,cabe529b75dcbfed
 ImportIt,0.2.0,0.2.0,release_asset,scanned,^4.1.0,,0,3,40,https://github.com/biblibre/omeka-s-module-ImportIt,,d2681225f5e14776
 Input Method Editor,1.0,1.0,tag_source,scanned,^4.0.0,,0,0,3,https://github.com/junaidpv/InputMethodEditor,,afd59cc83d13274d
 Internationalisation,3.4.22,3.4.22,release_asset,scanned,^4.1.0,,0,5,49,https://github.com/Daniel-KM/Omeka-S-module-Internationalisation,,0726ad53460ffe7b
@@ -296,8 +296,8 @@ KintMe,0.1.7,0.1.7,release_asset,scanned,^4.1.0,,0,0,3,https://github.com/borega
 Kobun OCR / Translation,0.10.2,0.12.8,unreleased_commit,scanned,^4.0.0,,0,0,16,https://github.com/wakitosh/KobunOcrTranslation,,b9809f64d5db1d00
 KohaImport,2.0.0,2.0.0,release_asset,scanned,^4.0.0,,0,3,26,https://github.com/biblibre/omeka-s-module-KohaImport,,37e0a38636b367bf
 Landing Block,1.0.0,1.0.0,unreleased_commit,scanned,,,0,0,5,https://gitlab.com/university-of-dayton-libraries/omeka-s-landing-block,,e60557c0eb47f833
-LDAP,0.7.0,0.7.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,6,https://github.com/biblibre/omeka-s-module-Ldap,,74c0eee7b681258c
 Ldap,0.2,0.2,unreleased_commit,scanned,^1.0.0-beta2,,0,0,5,https://github.com/digihum/omeka-s-ldap,,bad18ef0dd274410
+LDAP,0.7.0,0.7.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,6,https://github.com/biblibre/omeka-s-module-Ldap,,74c0eee7b681258c
 Learning Objects Adapter,1.0.1,1.0.1,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,11,https://github.com/ateeducacion/OmekaS-LearningObject,,69441de90182d296
 Lesson Plans,1.1,,unreleased_commit,no_source_files,^3.1.0,,0,0,0,https://github.com/lionick/module-lessonplans-omeka-s,,cd09a13d57ade463
 LHDB shared translations,1.0.0,1.0.0,unreleased_commit,scanned,^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,2,https://github.com/lhdbkul/Omeka-S-module-LHDBlang,,bb9c31a2914cc66d
@@ -330,8 +330,8 @@ Media Order Fixer,0.1.1,0.1.1,release_source,scanned,^4.0.0,,0,0,3,https://githu
 Media Watermark,1.0,,,unavailable,^1.0.0,,0,0,0,https://github.com/3ffusi0on/omeka-s-media-watermark,RuntimeError: gh: Not Found (HTTP 404),12168fe9f19236e6
 MediaArchive,2.1.0,2.1.0,release_asset,scanned,^3.0.0,,0,0,5,https://github.com/utarchives/Omeka-S-module-MediaArchive,,5a78b32a9b9a9c2a
 MeetingMind,1.0.0,,,unavailable,^4.0.0 || ^4.1.0 || ^4.2.0,,0,0,0,https://github.com/IssamIdri/Omeka-S-module-MeetingMind,RuntimeError: gh: Not Found (HTTP 404),beaf1530a84f5b4b
-Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://github.com/Daniel-KM/Omeka-s-module-Menu,,6dc44e8d07a08208
 Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://gitlab.com/Daniel-KM/Omeka-S-module-Menu,,3f26d549e7f9c058
+Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://github.com/Daniel-KM/Omeka-s-module-Menu,,6dc44e8d07a08208
 Merge Items,1.1.7,1.1.7,release_asset,scanned,^4.1.1,,0,0,9,https://github.com/Systemik-Solutions/OmekaS-MergeItems,,e8c4f6c0b06b280e
 Mesostiche,0.0.2,0.0.2,unreleased_commit,scanned,^3.0.0,,0,0,5,https://github.com/samszo/Omeka-S-module-Mesostiche,,b4389ade6776026e
 Meta Tags,3.4.6,3.4.6,tag_source,scanned,^4.0.0,,0,0,4,https://gitlab.com/Daniel-KM/Omeka-S-module-MetaTags,,1c9f0f467056094a
@@ -465,23 +465,23 @@ Services,1.0.0-alpha,,,unavailable,^4.2.0,,0,0,0,https://github.com/omeka-s-modu
 Share Me Baby,1.2.4,1.2.4,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,8,https://github.com/Kaeness/Omeka-S-module-ShareMeBaby,,e418dd198c0c83cf
 ShareButton,1.1.0,1.0.0,release_source,scanned,^4.0.0,,0,0,7,https://github.com/wakitosh/ShareButton,,228028b6ff42e4c9
 Sharing,1.5.0,1.5.0,release_asset,scanned,^4.0.0,,0,0,7,https://github.com/omeka-s-modules/Sharing,,755d41c02c206103
-"Shibboleth (archived, replaced by Single Sign-On)",3.4.13,3.4.13,release_asset,scanned,^4.1.0,,0,0,8,https://github.com/Daniel-KM/Omeka-s-module-Shibboleth,,9af78fdd683a8984
 "Shibboleth (archived, replaced by Single Sign-On)",3.4.13,3.4.13,release_asset,scanned,^4.1.0,,0,0,8,https://gitlab.com/Daniel-KM/Omeka-S-module-Shibboleth,,7e760aa736c5b525
-Shortcode,3.4.17,3.4.17,release_asset,scanned,^4.0.0,,2,0,14,https://github.com/Daniel-KM/Omeka-S-module-Shortcode,,390a30c2afd01f1e
+"Shibboleth (archived, replaced by Single Sign-On)",3.4.13,3.4.13,release_asset,scanned,^4.1.0,,0,0,8,https://github.com/Daniel-KM/Omeka-s-module-Shibboleth,,9af78fdd683a8984
 Shortcode,3.4.17,3.4.17,release_asset,scanned,^4.0.0,,2,0,14,https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode,,b2adb4e01627f5a9
+Shortcode,3.4.17,3.4.17,release_asset,scanned,^4.0.0,,2,0,14,https://github.com/Daniel-KM/Omeka-S-module-Shortcode,,390a30c2afd01f1e
 Show More,1.5,1.5,release_asset,scanned,^4.1.0,,0,0,3,https://github.com/rochester-rcl/show-more,,a3e95faea9353051
 Sigil,0.1.0,0.1.0,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/biblibre/omeka-s-module-Sigil,,35d7cd37719ccb56
 Similar Items,0.6.0,0.6.0,release_source,scanned,^4.0.0,,1,1,18,https://github.com/wakitosh/SimilarItems,,f8ddbc919331f4b3
 Simple Block,0.1.0,0.1.0,unreleased_commit,scanned,^1.1.0,,0,0,3,https://github.com/zerocrates/SimpleBlock,,391403c6bbeb3489
-Simple Carousel,1.2.3,1.2.3,release_asset,scanned,^1.1.0,,0,0,5,https://github.com/Neo-Inspiration/Omeka-S-SimpleCarousel,,dc0715c817e6587d
 Simple Carousel,1.3.0,1.3.0,unreleased_commit,scanned,^4.0.0,,0,0,5,https://github.com/candelariajr/SimpleCarousel,,a2e2f4c1448b1916
+Simple Carousel,1.2.3,1.2.3,release_asset,scanned,^1.1.0,,0,0,5,https://github.com/Neo-Inspiration/Omeka-S-SimpleCarousel,,dc0715c817e6587d
 Simple IIIF,0.1.0-alpha,,,unavailable,^3.99.0,,0,0,0,https://github.com/omeka-s-modules/SimpleIiif,RuntimeError: gh: Not Found (HTTP 404),5b8b5365a3d53ae9
-Simple PDF,1.0.2,1.0.2,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,3,https://github.com/ivyrze/omeka-s-module-simplepdf,,1901d99945a0fa29
 Simple PDF,1.0.2,1.0.2,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,3,https://github.com/arepr/omeka-s-module-simplepdf,,c186efb64ed1f5b4
+Simple PDF,1.0.2,1.0.2,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,3,https://github.com/ivyrze/omeka-s-module-simplepdf,,1901d99945a0fa29
 Simple Reference,1.0.0,1.0.0,unreleased_commit,scanned,^3.0.0,,0,0,5,https://github.com/artefacto/Omeka-S-module-SimpleReference,,120f7c1df7933ffa
 Simpler Carousel,1.2.3,1.2.3,unreleased_commit,scanned,^3.0.0,,0,0,5,https://github.com/marinquantum/Omeka-S-SimpleCarousel,,861fb87feafafe93
-Single Sign-On,3.4.29,3.4.29,release_asset,scanned,^4.1.0,,0,0,22,https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn,,e73e0f5a1c08280b
 Single Sign-On,3.4.29,3.4.29,release_asset,scanned,^4.1.0,,0,0,22,https://gitlab.com/Daniel-KM/Omeka-S-module-SingleSignOn,,c7418226db905ee5
+Single Sign-On,3.4.29,3.4.29,release_asset,scanned,^4.1.0,,0,0,22,https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn,,e73e0f5a1c08280b
 Site Hub,3.4.0,3.4.0,release_asset,scanned,^3.1 || ^4.0,,0,0,8,https://gitlab.com/Daniel-KM/Omeka-S-module-SiteHub,,5716067f30ecfa79
 SiteLog,0.2.0,0.2.0,unreleased_commit,scanned,^3.0.0,,0,1,22,https://github.com/billxu0521/Omeka-S-module-SiteLog,,c2d39049cd57198f
 Sitemaps,1.1,1.1,release_asset,scanned,^4.0.0,,0,0,4,https://github.com/ManOnDaMoon/omeka-s-module-Sitemaps,,841cfe7e21438442
@@ -503,8 +503,8 @@ Statistics,3.4.14,3.4.14,release_asset,scanned,^4.0.0,,5,6,11,https://github.com
 Statistics,3.4.14,3.4.14,release_asset,scanned,^4.0.0,,5,6,11,https://gitlab.com/Daniel-KM/Omeka-S-module-Statistics,,3eeb22923919394f
 STest,1.0.0,1.0.0,unreleased_commit,scanned,,,0,0,2,https://github.com/patrickmj/STest,,b55e9020a345897c
 Storymap,3.4.4,3.4.4,unreleased_commit,scanned,^1.2.0 || ^2.0.0,,0,0,10,https://github.com/agile-humanities/agile-storymap,,5d3507cbadac5693
-Table,3.4.10,3.4.10,release_asset,scanned,^4.0.0,,4,2,22,https://github.com/Daniel-KM/Omeka-S-module-Table,,1c7ed4105f25da4f
 Table,3.4.10,,,unavailable,^4.0.0,,0,0,0,https://gitlab.com/Daniel-KM/Omeka-S-module-Table,HTTPError: HTTP Error 429: Too Many Requests,07d67c4be1b74f19
+Table,3.4.10,3.4.10,release_asset,scanned,^4.0.0,,4,2,22,https://github.com/Daniel-KM/Omeka-S-module-Table,,1c7ed4105f25da4f
 Taxonomy,0.9.5,0.9.5,release_asset,scanned,^4.1.0,,1,2,46,https://github.com/biblibre/omeka-s-module-Taxonomy,,66f3f71199067c54
 Teams,4.2.0,4.2.0,unreleased_commit,scanned, ^3.0.0 || ^4.0.0,,1,8,97,https://github.com/UIUCLibrary/teams,,4ab03c3a8f6dd274
 TEXT Embed,1.2.0,1.2.0,release_asset,scanned,^1.2.0,,0,0,3,https://github.com/novaljn/Omeka-S-module-TextEmbed,,aee1b27ebfd12e30
@@ -515,8 +515,8 @@ ThreeDViewer,1.0.8,1.0.8,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,8,https://g
 Tify,1.0,1.1,unreleased_commit,scanned,^4.0.0,,0,0,10,https://github.com/indic-archive/omeka-s-tify,,fced06d651d3e90c
 Timeline,3.4.31,3.4.31,release_asset,scanned,^4.1.0,,0,0,26,https://github.com/Daniel-KM/Omeka-s-module-Timeline,,868e0e4f51599335
 TimeWhisper,0.1.0,0.1.0,unreleased_commit,scanned,^3.0.0 || ^4.0.0,,2,4,16,https://github.com/Zackbellaj/Omeka-S-module-TimeWhisper,,0b05443c49501511
-Transcript,4.1.1,4.1.1,release_asset,scanned,^4.0.0,,0,0,16,https://github.com/ivyrze/omeka-s-module-transcript,,eca655ec0c54866e
 Transcript,4.1.1,4.1.1,release_asset,scanned,^4.0.0,,0,0,16,https://github.com/arepr/omeka-s-module-transcript,,f0736e024888eff0
+Transcript,4.1.1,4.1.1,release_asset,scanned,^4.0.0,,0,0,16,https://github.com/ivyrze/omeka-s-module-transcript,,eca655ec0c54866e
 Transcription Manager,1.5.0,1.5.0,unreleased_commit,scanned,^4.0.0,,6,4,11,https://github.com/zackrylangford/omeka-s-module-transcription-manager,,a16bda1b7d87bb82
 Translations,3.0.4,3.0.4,release_asset,scanned,^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,2,https://github.com/Daniel-KM/Omeka-S-module-Translations,,b81e41a0359cf752
 Translations,3.1.0,3.1.0,release_source,scanned,^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,2,https://github.com/dartmouth-dltg/Omeka-S-module-Translations,,bdcf415fb67546ff
@@ -549,8 +549,8 @@ Video Thumbnails,3.5.42,3.5.42,unreleased_commit,scanned,^4.1.0,,0,0,49,https://
 View Private Resources,1.0.2,1.0.2,release_asset,scanned,^2.0.0||^3.0.0||^4.0.0,,0,0,1,https://github.com/omeka-s-modules/ViewPrivateResources,,c9e0766be91da18b
 ViewerJS,3.4.6-p0.8.0,3.4.6-p0.8.0,release_asset,scanned,^4.1.0,,0,0,9,https://github.com/Daniel-KM/Omeka-S-module-ViewerJs,,e7b815cf6787e9a2
 Vikus Viewer for maastrichtuniversity.nl,3.4.0,,release_asset,unavailable,^4.1,,0,0,0,https://gitlab.com/Daniel-KM/Omeka-S-module-Vikus,HTTPError: HTTP Error 429: Too Many Requests,073c15686c5f4353
-Vips thumbnailer,3.4.7,3.4.7,release_asset,scanned,^3.1 || ^4.0,,0,0,8,https://github.com/Daniel-KM/Omeka-S-module-Vips,,26fcfe216f999c90
 Vips thumbnailer,3.4.7,,release_asset,unavailable,^3.1 || ^4.0,,0,0,0,https://gitlab.com/Daniel-KM/Omeka-S-module-Vips,HTTPError: HTTP Error 429: Too Many Requests,b0e24766bce208e9
+Vips thumbnailer,3.4.7,3.4.7,release_asset,scanned,^3.1 || ^4.0,,0,0,8,https://github.com/Daniel-KM/Omeka-S-module-Vips,,26fcfe216f999c90
 Vocabulary Addon,1.1.2,1.1.2,unreleased_commit,scanned,^4.0.0,,1,8,15,https://github.com/vovanshu/VocabularyAddon,,dafe15873bcc3a88
 Watermarker,1.1.0,1.1.0,unreleased_commit,scanned,^4.0.0,,0,3,40,https://github.com/neshmi/omeka-s-watermarker,,6d2ee9abe7b889b3
 Web Archive,1.0.0,1.0.0,release_asset,scanned,^4.2.0,,0,0,5,https://github.com/omeka-s-modules/WebArchive,,1fc1d38b25d9cd94

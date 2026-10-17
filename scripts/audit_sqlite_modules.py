@@ -146,7 +146,7 @@ RULES = [
     ('connection_bypass', 'review', r'\bnew\s+\\?PDO\s*\(|->(?:getWrappedConnection|getNativeConnection)\s*\(|\bmysqli_(?:connect|query|prepare)\s*\('),
     ('mysql_driver', 'review', r'\bpdo_mysql\b|\b(?:MySqlPlatform|MySQLPlatform|MariaDb\w*Platform)\b'),
     ('mysql_collation', 'review', r'\bCOLLATE\s+[\'"`]?\w*(?:utf8|latin1|unicode|general)\w*'),
-    ('mysql_enum', 'unsupported', r'(?<!->)(?<!::)\b(?:ENUM|SET)\s*\(\s*[\'\"]'),
+    ('mysql_enum', 'unsupported', r'(?<!->)(?<!::)(?<!\.)\b(?:ENUM|SET)\s*\(\s*[\'\"]'),
     ('set_statement', 'review', r'\bSET\s+(?:SESSION\s+|GLOBAL\s+)?(?:SQL_MODE|GROUP_CONCAT_MAX_LEN|FOREIGN_KEY_CHECKS|NAMES|UNIQUE_CHECKS|TIME_ZONE)\b'),
     # Translated by SqliteCompatConnection; update with the translator.
     ('alter_foreign_key', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,450}?\b(?:ADD\s+(?:CONSTRAINT\s+[^;]{1,100}?\s+)?|DROP\s+)FOREIGN\s+KEY\b'),
