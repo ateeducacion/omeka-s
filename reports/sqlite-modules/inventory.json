@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-17T20:12:57Z",
-  "core_commit": "9dc03e13c6a12a4830bc89154c6a166e2f73311d",
-  "scanner_sha256": "c79518b136400deb63a357f1dcb46b6d9978ae3f24e0dae78f90e25f76b69ec5",
+  "generated_at": "2026-10-17T20:25:39Z",
+  "core_commit": "2731e7400f757df086b090eb2282f2099094a9e4",
+  "scanner_sha256": "6b949e38da8782a1abbde8cd502f08490dcc87058114288ab021d6534522d496",
   "catalog_urls": [
     "https://omeka.org/s/modules/",
     "https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html"
@@ -93,7 +93,7 @@
       },
       "files_scanned": 88,
       "excluded_entries": 29,
-      "finding_count": 117,
+      "finding_count": 121,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -392,7 +392,7 @@
       },
       "files_scanned": 71,
       "excluded_entries": 610,
-      "finding_count": 56,
+      "finding_count": 62,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -876,7 +876,7 @@
       },
       "files_scanned": 44,
       "excluded_entries": 20,
-      "finding_count": 43,
+      "finding_count": 44,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -1170,7 +1170,7 @@
       },
       "files_scanned": 34,
       "excluded_entries": 79,
-      "finding_count": 2,
+      "finding_count": 5,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -1842,7 +1842,7 @@
       },
       "files_scanned": 24,
       "excluded_entries": 1,
-      "finding_count": 5,
+      "finding_count": 8,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -2566,7 +2566,7 @@
       },
       "files_scanned": 179,
       "excluded_entries": 83,
-      "finding_count": 48,
+      "finding_count": 49,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -2592,7 +2592,7 @@
       },
       "files_scanned": 179,
       "excluded_entries": 87,
-      "finding_count": 48,
+      "finding_count": 49,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -2756,7 +2756,7 @@
       },
       "files_scanned": 55,
       "excluded_entries": 26,
-      "finding_count": 26,
+      "finding_count": 27,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -3403,7 +3403,7 @@
       },
       "files_scanned": 40,
       "excluded_entries": 388,
-      "finding_count": 98,
+      "finding_count": 99,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -3707,7 +3707,7 @@
       },
       "files_scanned": 11,
       "excluded_entries": 0,
-      "finding_count": 0,
+      "finding_count": 1,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -4263,32 +4263,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Easy Admin",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin/releases/download/3.4.50/EasyAdmin-3.4.50.zip",
-      "version": "3.4.50",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin",
-      "id": "1b9f94b89544a7e9",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.50",
-      "sha256": "81a46367ded0ffdce7cf547a6e62fbe62d11546c6c6e8ac823664055c415b1e6",
-      "source_sha256": "6ce42fe5bea2b475b4e475f4715bb3e3239c31b5bc28036597918fac5c91dee7",
-      "manifest": {
-        "name": "Easy Admin",
-        "version": "3.4.50",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 90,
-      "excluded_entries": 80,
-      "finding_count": 59,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-EasyAdmin",
@@ -4310,7 +4284,33 @@
       },
       "files_scanned": 90,
       "excluded_entries": 77,
-      "finding_count": 59,
+      "finding_count": 74,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Easy Admin",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin/releases/download/3.4.50/EasyAdmin-3.4.50.zip",
+      "version": "3.4.50",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin",
+      "id": "1b9f94b89544a7e9",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.50",
+      "sha256": "81a46367ded0ffdce7cf547a6e62fbe62d11546c6c6e8ac823664055c415b1e6",
+      "source_sha256": "6ce42fe5bea2b475b4e475f4715bb3e3239c31b5bc28036597918fac5c91dee7",
+      "manifest": {
+        "name": "Easy Admin",
+        "version": "3.4.50",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 90,
+      "excluded_entries": 80,
+      "finding_count": 74,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -5504,7 +5504,7 @@
       },
       "files_scanned": 25,
       "excluded_entries": 0,
-      "finding_count": 13,
+      "finding_count": 14,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -5865,7 +5865,7 @@
       },
       "files_scanned": 14,
       "excluded_entries": 0,
-      "finding_count": 0,
+      "finding_count": 1,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -6914,7 +6914,7 @@
       },
       "files_scanned": 11,
       "excluded_entries": 0,
-      "finding_count": 9,
+      "finding_count": 10,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -7831,7 +7831,7 @@
       },
       "files_scanned": 88,
       "excluded_entries": 679,
-      "finding_count": 6,
+      "finding_count": 7,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -8664,6 +8664,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Mapper",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Mapper/releases/download/3.4.9/Mapper-3.4.9.zip",
+      "version": "3.4.9",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Mapper",
+      "id": "e9ddf93f14870e14",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.9",
+      "sha256": "9b08760d82061857d85672d1732a334ec2e31b5995e2ea5e1090e1892ed9b65e",
+      "source_sha256": "fb1b30fdd3d819f174309c4476fc72efdfc799ee243fd17b208bf375c90cc557",
+      "manifest": {
+        "name": "Mapper",
+        "version": "3.4.9",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 37,
+      "excluded_entries": 885,
+      "finding_count": 5,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Mapper",
@@ -8689,32 +8715,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "e9ddf93f14870e14"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Mapper",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Mapper/releases/download/3.4.9/Mapper-3.4.9.zip",
-      "version": "3.4.9",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Mapper",
-      "id": "e9ddf93f14870e14",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.9",
-      "sha256": "9b08760d82061857d85672d1732a334ec2e31b5995e2ea5e1090e1892ed9b65e",
-      "source_sha256": "fb1b30fdd3d819f174309c4476fc72efdfc799ee243fd17b208bf375c90cc557",
-      "manifest": {
-        "name": "Mapper",
-        "version": "3.4.9",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 37,
-      "excluded_entries": 885,
-      "finding_count": 5,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -9404,7 +9404,7 @@
       },
       "files_scanned": 6,
       "excluded_entries": 0,
-      "finding_count": 49,
+      "finding_count": 56,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -11685,7 +11685,7 @@
       },
       "files_scanned": 5,
       "excluded_entries": 0,
-      "finding_count": 0,
+      "finding_count": 2,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -12253,7 +12253,7 @@
       },
       "files_scanned": 108,
       "excluded_entries": 10,
-      "finding_count": 29,
+      "finding_count": 30,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -12628,6 +12628,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Shibboleth (archived, replaced by Single Sign-On)",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
+      "version": "3.4.13",
+      "archived": true,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
+      "id": "9af78fdd683a8984",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.13",
+      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
+      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
+      "manifest": {
+        "name": "Shibboleth (archived, replaced by Single Sign-On)",
+        "version": "3.4.13",
+        "omeka_version_constraint": "^4.1.0",
+        "dependencies": []
+      },
+      "files_scanned": 8,
+      "excluded_entries": 80,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shibboleth",
@@ -12653,32 +12679,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "9af78fdd683a8984"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Shibboleth (archived, replaced by Single Sign-On)",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
-      "version": "3.4.13",
-      "archived": true,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
-      "id": "9af78fdd683a8984",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.13",
-      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
-      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
-      "manifest": {
-        "name": "Shibboleth (archived, replaced by Single Sign-On)",
-        "version": "3.4.13",
-        "omeka_version_constraint": "^4.1.0",
-        "dependencies": []
-      },
-      "files_scanned": 8,
-      "excluded_entries": 80,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -12812,7 +12812,7 @@
       },
       "files_scanned": 18,
       "excluded_entries": 0,
-      "finding_count": 6,
+      "finding_count": 7,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -12839,34 +12839,6 @@
         "dependencies": []
       },
       "files_scanned": 3,
-      "excluded_entries": 0,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
-        "daniel"
-      ],
-      "repository": "https://github.com/candelariajr/SimpleCarousel",
-      "name": "Simple Carousel",
-      "archived": false,
-      "version": "1.3.0",
-      "catalog_omeka_constraint": "^4.0.0",
-      "id": "a2e2f4c1448b1916",
-      "archive_url": "https://codeload.github.com/candelariajr/SimpleCarousel/tar.gz/42d1b1d1572bda961358cd46d0cc63674dd4741b",
-      "artifact_kind": "unreleased_commit",
-      "resolved_tag": "42d1b1d1572bda961358cd46d0cc63674dd4741b",
-      "sha256": "eb9436992fcffc181840219384c625d5399d77b2822d6bad59882b60bb86e104",
-      "source_commit": "42d1b1d1572bda961358cd46d0cc63674dd4741b",
-      "source_sha256": "c2b68add93ff5e86e2138baabf313787542d47966288dea81722e247618f5944",
-      "manifest": {
-        "name": "Simple Carousel",
-        "version": "1.3.0",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 5,
       "excluded_entries": 0,
       "finding_count": 0,
       "version_matches_manifest": true,
@@ -12904,6 +12876,34 @@
       "sources": [
         "daniel"
       ],
+      "repository": "https://github.com/candelariajr/SimpleCarousel",
+      "name": "Simple Carousel",
+      "archived": false,
+      "version": "1.3.0",
+      "catalog_omeka_constraint": "^4.0.0",
+      "id": "a2e2f4c1448b1916",
+      "archive_url": "https://codeload.github.com/candelariajr/SimpleCarousel/tar.gz/42d1b1d1572bda961358cd46d0cc63674dd4741b",
+      "artifact_kind": "unreleased_commit",
+      "resolved_tag": "42d1b1d1572bda961358cd46d0cc63674dd4741b",
+      "sha256": "eb9436992fcffc181840219384c625d5399d77b2822d6bad59882b60bb86e104",
+      "source_commit": "42d1b1d1572bda961358cd46d0cc63674dd4741b",
+      "source_sha256": "c2b68add93ff5e86e2138baabf313787542d47966288dea81722e247618f5944",
+      "manifest": {
+        "name": "Simple Carousel",
+        "version": "1.3.0",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 5,
+      "excluded_entries": 0,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "daniel"
+      ],
       "repository": "https://github.com/omeka-s-modules/SimpleIiif",
       "name": "Simple IIIF",
       "archived": true,
@@ -12914,32 +12914,6 @@
       "files_scanned": 0,
       "finding_count": 0,
       "error": "RuntimeError: gh: Not Found (HTTP 404)"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Simple PDF",
-      "archive_url": "https://github.com/ivyrze/omeka-s-module-simplepdf/releases/download/1.0.2/SimplePdf.zip",
-      "version": "1.0.2",
-      "archived": false,
-      "repository": "https://github.com/ivyrze/omeka-s-module-simplepdf",
-      "id": "1901d99945a0fa29",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "1.0.2",
-      "sha256": "0324198c130c7a0e9c191348336915e9c9d334f112f6309e808b9e7cf6a8ab33",
-      "source_sha256": "41dde7e4a284da0374f46d17bb4053c0844a9910a591550f7ce69242def96267",
-      "manifest": {
-        "name": "Simple PDF",
-        "version": "1.0.2",
-        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 3,
-      "excluded_entries": 195,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -12968,6 +12942,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "1901d99945a0fa29"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Simple PDF",
+      "archive_url": "https://github.com/ivyrze/omeka-s-module-simplepdf/releases/download/1.0.2/SimplePdf.zip",
+      "version": "1.0.2",
+      "archived": false,
+      "repository": "https://github.com/ivyrze/omeka-s-module-simplepdf",
+      "id": "1901d99945a0fa29",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "1.0.2",
+      "sha256": "0324198c130c7a0e9c191348336915e9c9d334f112f6309e808b9e7cf6a8ab33",
+      "source_sha256": "41dde7e4a284da0374f46d17bb4053c0844a9910a591550f7ce69242def96267",
+      "manifest": {
+        "name": "Simple PDF",
+        "version": "1.0.2",
+        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 3,
+      "excluded_entries": 195,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -13027,6 +13027,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Single Sign-On",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn/releases/download/3.4.29/SingleSignOn-3.4.29.zip",
+      "version": "3.4.29",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn",
+      "id": "e73e0f5a1c08280b",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.29",
+      "sha256": "b1cbc5be55a163e9f36047e7626acb0b748340a98c487f1b35cfb8606c8bb76e",
+      "source_sha256": "4aac60fa494ec0ddca9e3cf0cd99ae45e3eaba2341d16a74c2ec6485c2447a61",
+      "manifest": {
+        "name": "Single Sign-On",
+        "version": "3.4.29",
+        "omeka_version_constraint": "^4.1.0",
+        "dependencies": []
+      },
+      "files_scanned": 22,
+      "excluded_entries": 451,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-SingleSignOn",
@@ -13052,32 +13078,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "e73e0f5a1c08280b"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Single Sign-On",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn/releases/download/3.4.29/SingleSignOn-3.4.29.zip",
-      "version": "3.4.29",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-SingleSignOn",
-      "id": "e73e0f5a1c08280b",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.29",
-      "sha256": "b1cbc5be55a163e9f36047e7626acb0b748340a98c487f1b35cfb8606c8bb76e",
-      "source_sha256": "4aac60fa494ec0ddca9e3cf0cd99ae45e3eaba2341d16a74c2ec6485c2447a61",
-      "manifest": {
-        "name": "Single Sign-On",
-        "version": "3.4.29",
-        "omeka_version_constraint": "^4.1.0",
-        "dependencies": []
-      },
-      "files_scanned": 22,
-      "excluded_entries": 451,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -13404,7 +13404,7 @@
       },
       "files_scanned": 15,
       "excluded_entries": 347,
-      "finding_count": 1,
+      "finding_count": 2,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -13423,7 +13423,7 @@
       "resolved_tag": "3.4.8",
       "status": "scanned",
       "files_scanned": 15,
-      "finding_count": 1,
+      "finding_count": 2,
       "sha256": "21729f28d2ce1c176269426131229bcf3f402629b4c411be8305eb31197bf990",
       "source_sha256": "3301ca5af300a5f9a275d32c4b48ad482aee8941a851a0c4662e47710995216a",
       "manifest": {
@@ -13548,32 +13548,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Statistics",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Statistics/releases/download/3.4.14/Statistics-3.4.14.zip",
-      "version": "3.4.14",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Statistics",
-      "id": "c05aa42cf8aa686c",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.14",
-      "sha256": "f5a3c9f703c6816f934dffa5550bd25f6ad8f0226cc3bce3dcf72d0b0f17671e",
-      "source_sha256": "b26782cf68050c868a2a7b27e9bf994aaf8b771eaa336ac41d186aa805a5e79a",
-      "manifest": {
-        "name": "Statistics",
-        "version": "3.4.14",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 11,
-      "excluded_entries": 163,
-      "finding_count": 24,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Statistics",
@@ -13599,6 +13573,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "c05aa42cf8aa686c"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Statistics",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Statistics/releases/download/3.4.14/Statistics-3.4.14.zip",
+      "version": "3.4.14",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Statistics",
+      "id": "c05aa42cf8aa686c",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.14",
+      "sha256": "f5a3c9f703c6816f934dffa5550bd25f6ad8f0226cc3bce3dcf72d0b0f17671e",
+      "source_sha256": "b26782cf68050c868a2a7b27e9bf994aaf8b771eaa336ac41d186aa805a5e79a",
+      "manifest": {
+        "name": "Statistics",
+        "version": "3.4.14",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 11,
+      "excluded_entries": 163,
+      "finding_count": 24,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -13830,7 +13830,7 @@
       },
       "files_scanned": 40,
       "excluded_entries": 22,
-      "finding_count": 35,
+      "finding_count": 39,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -14053,7 +14053,34 @@
       },
       "files_scanned": 11,
       "excluded_entries": 48,
-      "finding_count": 19,
+      "finding_count": 25,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "daniel"
+      ],
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translations",
+      "name": "Translations",
+      "archived": false,
+      "version": "3.0.4",
+      "catalog_omeka_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
+      "id": "b81e41a0359cf752",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translations/releases/download/3.0.4/Translations-3.0.4.zip",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.0.4",
+      "sha256": "eaa78a0473bbfc0a96e2c119cd8c0b8709f16cc6cc71c41d4c4f3a9fee667c27",
+      "source_sha256": "d75adab67558ef2d5d0f65de39edd46ec06d931156b61ab8cd9d052d25fd6ed4",
+      "manifest": {
+        "name": "Translations",
+        "version": "3.0.4",
+        "omeka_version_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 2,
+      "excluded_entries": 11,
+      "finding_count": 0,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -14088,28 +14115,29 @@
       "sources": [
         "daniel"
       ],
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translations",
-      "name": "Translations",
+      "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator",
+      "name": "Translator",
       "archived": false,
-      "version": "3.0.4",
-      "catalog_omeka_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
-      "id": "b81e41a0359cf752",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translations/releases/download/3.0.4/Translations-3.0.4.zip",
+      "version": "3.4.5",
+      "catalog_omeka_constraint": "^4.0.0",
+      "id": "e38495baace6be2d",
+      "archive_url": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator/-/releases/3.4.5/downloads/Translator-3.4.5.zip",
       "artifact_kind": "release_asset",
-      "resolved_tag": "3.0.4",
-      "sha256": "eaa78a0473bbfc0a96e2c119cd8c0b8709f16cc6cc71c41d4c4f3a9fee667c27",
-      "source_sha256": "d75adab67558ef2d5d0f65de39edd46ec06d931156b61ab8cd9d052d25fd6ed4",
+      "resolved_tag": "3.4.5",
+      "status": "scanned",
+      "files_scanned": 21,
+      "finding_count": 20,
+      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
+      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
       "manifest": {
-        "name": "Translations",
-        "version": "3.0.4",
-        "omeka_version_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
+        "name": "Translator",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
         "dependencies": []
       },
-      "files_scanned": 2,
-      "excluded_entries": 11,
-      "finding_count": 0,
+      "excluded_entries": 310,
       "version_matches_manifest": true,
-      "status": "scanned"
+      "same_source_as": "e9a46cca61cc27e2"
     },
     {
       "sources": [
@@ -14133,37 +14161,9 @@
       },
       "files_scanned": 21,
       "excluded_entries": 310,
-      "finding_count": 17,
+      "finding_count": 20,
       "version_matches_manifest": true,
       "status": "scanned"
-    },
-    {
-      "sources": [
-        "daniel"
-      ],
-      "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator",
-      "name": "Translator",
-      "archived": false,
-      "version": "3.4.5",
-      "catalog_omeka_constraint": "^4.0.0",
-      "id": "e38495baace6be2d",
-      "archive_url": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator/-/releases/3.4.5/downloads/Translator-3.4.5.zip",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "status": "scanned",
-      "files_scanned": 21,
-      "finding_count": 17,
-      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
-      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
-      "manifest": {
-        "name": "Translator",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "excluded_entries": 310,
-      "version_matches_manifest": true,
-      "same_source_as": "e9a46cca61cc27e2"
     },
     {
       "sources": [
@@ -14243,7 +14243,7 @@
       },
       "files_scanned": 52,
       "excluded_entries": 32,
-      "finding_count": 11,
+      "finding_count": 12,
       "version_matches_manifest": true,
       "status": "scanned"
     },

@@ -1,0 +1,51 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: Module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Cron' v3.4.3 installed.
+AUDIT_INSTALL Cron exit=0 status=active
+AUDIT_RESULT install=ok
+AUDIT_RESULT installed_active=1
+AUDIT_OP item create ok [1,2,3]
+AUDIT_OP item fulltext search ok 1
+AUDIT_OP item property search ok 2
+AUDIT_OP item update ok "Cultural heritage"
+AUDIT_OP item delete ok 2
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Cron' uninstalled.
+AUDIT_UNINSTALL Cron exit=0 status=absent
+AUDIT_RESULT uninstall=ok
+AUDIT_RESULT fk_violations=0

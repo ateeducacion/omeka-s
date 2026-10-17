@@ -1,0 +1,33 @@
+driver	chain	install	installed_active	operations_failed	uninstall	fk_violations
+sqlite	Common	ok	1	0	ok	0
+mysql	Common	ok	1	0	ok	
+sqlite	Common,EasyAdmin	ok	1	0	ok	0
+mysql	Common,EasyAdmin	ok	1	0	ok	
+sqlite	Common,AdvancedSearch	ok	1	0	ok	0
+mysql	Common,AdvancedSearch	ok	1	0	ok	
+sqlite	Common,Reference	ok	1	0	ok	0
+mysql	Common,Reference	ok	1	0	ok	
+sqlite	Common,BulkEdit	ok	1	0	ok	0
+mysql	Common,BulkEdit	ok	1	0	ok	
+sqlite	Common,Log	ok	1	0	ok	0
+mysql	Common,Log	ok	1	0	ok	
+sqlite	Common,Log,Mapper,BulkImport	ok	1	0	ok	0
+mysql	Common,Log,Mapper,BulkImport	ok	1	0	ok	
+sqlite	Common,Statistics	ok	1	0	ok	0
+mysql	Common,Statistics	ok	1	0	ok	
+sqlite	Common,Access	ok	1	0	ok	0
+mysql	Common,Access	ok	1	0	ok	
+sqlite	Common,AdvancedResourceTemplate,Contribute	ok	1	0	ok	0
+mysql	Common,AdvancedResourceTemplate,Contribute	ok	1	0	ok	
+sqlite	CustomVocab,Common,Annotate	ok	1	0	ok	0
+mysql	CustomVocab,Common,Annotate	ok	1	0	ok	
+sqlite	Collecting	ok	1	0	ok	0
+mysql	Collecting	ok	1	0	ok	
+sqlite	CSVImport	ok	1	0	ok	0
+mysql	CSVImport	ok	1	0	ok	
+sqlite	CodeSnippets	ok	1	0	ok	0
+mysql	CodeSnippets	ok	1	0	ok	
+sqlite	Mapping	failed:Mapping	0	0	ok	0
+mysql	Mapping	ok	1	0	ok	
+sqlite	Cron	ok	1	0	ok	0
+mysql	Cron	ok	1	0	ok	

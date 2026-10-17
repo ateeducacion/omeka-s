@@ -34,11 +34,13 @@ class AuditTests(unittest.TestCase):
                             ' SELECT SUBSTRING_INDEX(a, ".", 1), YEAR(b), RAND() FROM t;'
                             ' ALTER TABLE t CHANGE a b INT; UPDATE value v JOIN r ON r.id = v.r SET v.a = 1;'
                             ' DELETE FROM t WHERE c < DATE_SUB(NOW(), INTERVAL 1 DAY); SELECT id FROM t FOR UPDATE;'
-                            ' SELECT GROUP_CONCAT(DISTINCT a SEPARATOR " ") FROM t WHERE MATCH(a) AGAINST(?); SHOW VARIABLES LIKE "version";')
+                            ' SELECT GROUP_CONCAT(DISTINCT a SEPARATOR " ") FROM t WHERE MATCH(a) AGAINST(?); SHOW VARIABLES LIKE "version";'
+                            ' SELECT VERSION(), ELT(1, "a"), TABLE_ROWS FROM `information_schema`.`TABLES` WHERE TABLE_SCHEMA = DATABASE();')
         self.assertEqual({'covered_if_wrapper'}, {m['classification'] for m in covered})
         unsupported = scan_text('schema.sql', 'ALTER TABLE t CONVERT TO CHARACTER SET utf8mb4; UPDATE value v RIGHT JOIN r ON r.id = v.r SET v.a = 1;'
-                                ' SELECT NOW() - INTERVAL 1 DAY, ST_AsGeoJSON(g) FROM t; SHOW CREATE TABLE t;')
-        self.assertEqual({'alter_mysql', 'mysql_join_write', 'mysql_functions', 'mysql_expression', 'show_mysql'},
+                                ' SELECT NOW() - INTERVAL 1 DAY, ST_AsGeoJSON(g) FROM t; SHOW CREATE TABLE t;'
+                                ' SELECT constraint_name FROM information_schema.key_column_usage;')
+        self.assertEqual({'alter_mysql', 'mysql_join_write', 'mysql_functions', 'mysql_expression', 'show_mysql', 'information_schema'},
                          {m['rule'] for m in unsupported if m['classification'] == 'unsupported'})
 
     def test_covered_syntax_is_not_reported_as_unsupported(self):

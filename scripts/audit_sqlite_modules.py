@@ -136,7 +136,7 @@ def inventory(catalogs):
 RULES = [
     ('alter_mysql', 'unsupported', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CONVERT\s+TO|(?:DEFAULT\s+)?CHARSET)\b'),
     ('mysql_join_write', 'unsupported', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+RIGHT\s+(?:OUTER\s+)?JOIN\b|\bDELETE\s+[`\w]+\s*,\s*[`\w]+\s+FROM\b'),
-    ('information_schema', 'unsupported', r'\binformation_schema\s*\.'),
+    ('information_schema', 'unsupported', r'\binformation_schema`?\s*\.\s*`?(?!TABLES\b)\w'),
     ('server_variable', 'unsupported', r'@@(?:\w+\.)?\w+'),
     ('show_mysql', 'unsupported', r'\bSHOW\s+(?:CREATE|TABLE\s+STATUS|STATUS|WARNINGS|DATABASES|ENGINES|PROCESSLIST)\b'),
     ('mysql_functions', 'unsupported', r'\b(?:DATEDIFF|TIMESTAMPDIFF|TIMESTAMPADD|CONVERT_TZ|DAYOFWEEK|DAYOFYEAR|WEEKDAY|YEARWEEK|MONTHNAME|DAYNAME|LPAD|RPAD|UUID|UUID_SHORT|INET_ATON|INET_NTOA|INET6_ATON|INET6_NTOA|REGEXP_LIKE|REGEXP_INSTR|JSON_CONTAINS|JSON_CONTAINS_PATH|JSON_SEARCH|JSON_TABLE|JSON_OBJECTAGG|JSON_ARRAYAGG|ST_\w+)\s*\('),
@@ -155,8 +155,8 @@ RULES = [
     ('alter_index', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:ADD|DROP)\s+(?:UNIQUE\s+)?(?:INDEX|KEY)\b'),
     ('upsert', 'covered_if_wrapper', r'\bON\s+DUPLICATE\s+KEY\s+UPDATE\b'),
     ('delete_join', 'covered_if_wrapper', r'\bDELETE\s+[`\w]+\s+FROM\b'),
-    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bSHOW\s+(?:INDEX(?:ES)?|KEYS)\b|\bSHOW\s+(?:(?:GLOBAL|SESSION)\s+)?VARIABLES\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]|\bSELECT\b[^;]{0,800}?\b(?:FOR\s+(?:UPDATE|SHARE)|LOCK\s+IN\s+SHARE\s+MODE)\b'),
-    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP|SUBSTRING_INDEX|STR_TO_DATE|LAST_DAY|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|CRC32|SHA1|SHA2|REGEXP_REPLACE|REGEXP_SUBSTR|JSON_UNQUOTE|DATE_ADD|DATE_SUB|ADDDATE|SUBDATE)\s*\('),
+    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bSHOW\s+(?:INDEX(?:ES)?|KEYS)\b|\bSHOW\s+(?:(?:GLOBAL|SESSION)\s+)?VARIABLES\b|\binformation_schema`?\s*\.\s*`?TABLES\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]|\bSELECT\b[^;]{0,800}?\b(?:FOR\s+(?:UPDATE|SHARE)|LOCK\s+IN\s+SHARE\s+MODE)\b'),
+    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP|SUBSTRING_INDEX|STR_TO_DATE|LAST_DAY|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|CRC32|SHA1|SHA2|REGEXP_REPLACE|REGEXP_SUBSTR|JSON_UNQUOTE|DATE_ADD|DATE_SUB|ADDDATE|SUBDATE|VERSION|ELT|DATABASE)\s*\('),
 ]
 COMPILED_RULES = [(name, status, re.compile(pattern, re.I)) for name, status, pattern in RULES]
 

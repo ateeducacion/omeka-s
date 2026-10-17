@@ -1,0 +1,66 @@
+PRUEBAS DE INSTALACION Y USO EN CONTENEDOR: SQLITE / MARIADB (2026-10-17)
+
+Cada cadena de módulos se instala en una instalación limpia por motor, en el
+orden indicado (el último es el módulo probado). Después se ejecutan
+operaciones reales (scripts/test_sqlite_module_operations.php), se
+desinstalan los módulos en orden inverso y, en SQLite, se ejecuta
+PRAGMA foreign_key_check. MariaDB (mariadb:lts) es el control.
+
+Imágenes publicadas, con el traductor de la rama superpuesto:
+  develop/  erseco/alpine-omeka-s:develop (PHP 8.4.17, SQLite 3.51.2),
+            traductor del commit 2731e7400 (feature/experimental-sqlite-support).
+  4.1/      erseco/alpine-omeka-s:4.1 (PHP 8.3, SQLite 3.45.3),
+            traductor del commit d2837e768 (feature/experimental-sqlite-support-4.1).
+image.txt identifica cada imagen; packages-sha256.txt, los paquetes.
+
+Módulo (dependencias)                         develop                 4.1
+Common 3.4.94                                 igual que MariaDB       igual que MariaDB
+Easy Admin 3.4.50                             igual que MariaDB       igual que MariaDB
+Advanced Search 3.4.65                        igual que MariaDB       igual que MariaDB
+Reference 3.4.64                              igual que MariaDB       igual que MariaDB
+Bulk Edit 3.4.40                              igual que MariaDB       igual que MariaDB
+Log 3.4.41                                    igual que MariaDB       igual que MariaDB
+Bulk Import 3.4.65 (Log, Mapper 3.4.9)        igual que MariaDB       igual que MariaDB
+Statistics 3.4.14                             igual que MariaDB       igual que MariaDB
+Access 3.4.48                                 igual que MariaDB       igual que MariaDB
+Contribute 3.4.40 (Adv. Resource Template)    igual que MariaDB       igual que MariaDB
+Annotate 3.4.13 (CustomVocab 2.1.0)           igual que MariaDB       no instalable en 4.1 (*)
+Collecting 1.13.0                             igual que MariaDB       igual que MariaDB
+CSV Import 2.6.2                              igual que MariaDB       igual que MariaDB
+Code Snippets 1.0.3                           igual que MariaDB       igual que MariaDB
+Cron 3.4.3                                    igual que MariaDB       igual que MariaDB
+Mapping 2.3.0                                 falla solo en SQLite    no probado
+
+"Igual que MariaDB": instalado y activo, mismas salidas en todas las
+operaciones (crear, buscar, actualizar y borrar ítems, más las propias del
+módulo), desinstalado y sin violaciones de claves foráneas.
+(*) CustomVocab 2.1.0 exige Omeka S 4.2: falla igual en los dos motores.
+
+FALLOS ENCONTRADOS Y CORREGIDOS (commit 2731e7400)
+Mapper, Bulk Import, Contribute: opciones de tabla entre comillas
+(ENGINE = `InnoDB`, DEFAULT CHARACTER SET `utf8mb4`) no se eliminaban.
+Access: SELECT VERSION() y ELT() no existían en SQLite.
+Common, Contribute, Easy Admin: information_schema.TABLES, ahora emulada.
+
+FALLO QUE PERSISTE
+Mapping: su columna geography usa doctrine-spatial, que solo admite MySQL y
+PostgreSQL ("Unknown database type geometry"). No se resuelve traduciendo
+SQL; necesitaría un tipo propio para SQLite en el módulo.
+
+OPERACIONES PROBADAS POR MODULO
+Todas: crear tres ítems, búsqueda fulltext, búsqueda por propiedad con orden,
+actualización parcial, borrado. Advanced Search: orden por relevancia y
+filtro avanzado. Reference: lista de dcterms:subject. Bulk Edit: trimValues.
+Easy Admin: trabajos DbSession, DbValueClean y DbResourceTitle. Log: escribir
+y leer un mensaje. Mapping: crear y leer una feature.
+
+REPETIR
+  bash scripts/test_sqlite_module_installation.sh <paquetes> <salida> \
+    Common Common,EasyAdmin Common,AdvancedSearch ...
+OMEKA_AUDIT_IMAGE elige la imagen; OMEKA_AUDIT_CORE, un tar con ficheros del
+núcleo que se superponen (aquí, solo SqliteCompatConnection.php). Los paquetes
+son los de la caché de la auditoría, con los hashes de packages-sha256.txt.
+
+LIMITES
+Las operaciones cubren usos comunes, no todas las funciones de cada módulo.
+No se prueban actualizaciones desde versiones anteriores ni datos reales.

@@ -1,0 +1,186 @@
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+Omeka S v4.1.1 installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: Module audit
+Time zone: UTC
+Locale: en_US
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.3.15
+> PHP is using the following php.ini file:
+  /etc/php83/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Common' v3.4.94 installed.
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_INSTALL Common exit=0 status=active
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.3.15
+> PHP is using the following php.ini file:
+  /etc/php83/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Log' v3.4.41 installed.
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_INSTALL Log exit=0 status=active
+AUDIT_RESULT install=ok
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_RESULT installed_active=1
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_OP item create ok [1,2,3]
+AUDIT_OP item fulltext search ok 1
+AUDIT_OP item property search ok 2
+AUDIT_OP item update ok "Cultural heritage"
+AUDIT_OP log write and read ok 0
+AUDIT_OP item delete ok 2
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.3.15
+> PHP is using the following php.ini file:
+  /etc/php83/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Log' uninstalled.
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_UNINSTALL Log exit=0 status=absent
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.3.15
+> PHP is using the following php.ini file:
+  /etc/php83/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Common' uninstalled.
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_UNINSTALL Common exit=0 status=absent
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_RESULT uninstall=ok
+PHP Warning:  Invalid "upload_max_filesize" setting. Invalid quantity "$upload_max_filesize": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "post_max_size" setting. Invalid quantity "$post_max_size": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "max_input_vars" setting. Invalid quantity "$max_input_vars": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Invalid "memory_limit" setting. Invalid quantity "$memory_limit": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+PHP Warning:  Failed to set memory limit to 0 bytes (Current memory usage is 2097152 bytes) in Unknown on line 0
+PHP Warning:  PHP Startup: Invalid date.timezone value '$date_timezone', using 'UTC' instead in Unknown on line 0
+PHP Warning:  Invalid "zlib.output_compression" setting. Invalid quantity "$zlib_output_compression": no valid leading digits, interpreting as "0" for backwards compatibility in Unknown on line 0
+AUDIT_RESULT fk_violations=0
