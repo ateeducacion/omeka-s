@@ -100,6 +100,13 @@ foreach ($modules as $module) {
                 return $api->search('logs', ['message' => 'SQLite audit'])->getTotalResults();
             });
             break;
+        case 'Table':
+            $run('table create and delete', function () use ($api) {
+                $id = $api->create('tables', ['o:title' => 'Audit table', 'o:codes' => [['o:code' => 'a', 'o:label' => 'Alpha']]])->getContent()->id();
+                $api->delete('tables', $id);
+                return $api->search('tables')->getTotalResults();
+            });
+            break;
         case 'Mapping':
             $run('mapping feature create', function () use ($api, &$ids) {
                 return $api->create('mapping_features', ['o:item' => ['o:id' => $ids[2]], 'o-module-mapping:geography-type' => 'Point', 'o-module-mapping:geography-coordinates' => [-15.4, 28.1]])->getContent()->id();

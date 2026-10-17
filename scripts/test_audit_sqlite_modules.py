@@ -35,7 +35,8 @@ class AuditTests(unittest.TestCase):
                             ' ALTER TABLE t CHANGE a b INT; UPDATE value v JOIN r ON r.id = v.r SET v.a = 1;'
                             ' DELETE FROM t WHERE c < DATE_SUB(NOW(), INTERVAL 1 DAY); SELECT id FROM t FOR UPDATE;'
                             ' SELECT GROUP_CONCAT(DISTINCT a SEPARATOR " ") FROM t WHERE MATCH(a) AGAINST(?); SHOW VARIABLES LIKE "version";'
-                            ' SELECT VERSION(), ELT(1, "a"), TABLE_ROWS FROM `information_schema`.`TABLES` WHERE TABLE_SCHEMA = DATABASE();')
+                            ' SELECT VERSION(), ELT(1, "a"), TABLE_ROWS FROM `information_schema`.`TABLES` WHERE TABLE_SCHEMA = DATABASE();'
+                            ' SELECT JSON_SEARCH(d, "one", ?) FROM JSON_TABLE(?, "$[*]" COLUMNS (s TEXT PATH "$")) j;')
         self.assertEqual({'covered_if_wrapper'}, {m['classification'] for m in covered})
         unsupported = scan_text('schema.sql', 'ALTER TABLE t CONVERT TO CHARACTER SET utf8mb4; UPDATE value v RIGHT JOIN r ON r.id = v.r SET v.a = 1;'
                                 ' SELECT NOW() - INTERVAL 1 DAY, ST_AsGeoJSON(g) FROM t; SHOW CREATE TABLE t;'
