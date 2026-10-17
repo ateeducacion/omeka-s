@@ -27,7 +27,7 @@ sqlite	CSVImport	ok	1	0	ok	0
 mysql	CSVImport	ok	1	0	ok	
 sqlite	CodeSnippets	ok	1	0	ok	0
 mysql	CodeSnippets	ok	1	0	ok	
-sqlite	Mapping	failed:Mapping	0	0	ok	0
-mysql	Mapping	ok	1	0	ok	
 sqlite	Cron	ok	1	0	ok	0
 mysql	Cron	ok	1	0	ok	
+sqlite	Mapping	failed:Mapping	0	0	ok	0
+mysql	Mapping	ok	1	0	ok	

@@ -1,0 +1,5 @@
+driver	chain	install	installed_active	operations_failed	uninstall	fk_violations
+sqlite	Common,Table	ok	1	0	ok	0
+mysql	Common,Table	ok	1	0	ok	
+sqlite	UniqueProperties	ok	1	0	ok	0
+mysql	UniqueProperties	ok	1	0	ok	
