@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-17T18:59:09Z",
-  "core_commit": "e4c3246e6ad273215333ad13eabcb451c7dbf3d8",
-  "scanner_sha256": "d0f70e730e5ea2b291160aa78bdaf7e146859fc3d28142d49a6dfa8a496c8251",
+  "generated_at": "2026-10-17T20:12:57Z",
+  "core_commit": "9dc03e13c6a12a4830bc89154c6a166e2f73311d",
+  "scanner_sha256": "c79518b136400deb63a357f1dcb46b6d9978ae3f24e0dae78f90e25f76b69ec5",
   "catalog_urls": [
     "https://omeka.org/s/modules/",
     "https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html"
@@ -1739,32 +1739,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Bot Challenge",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge/releases/download/3.4.5/BotChallenge-3.4.5.zip",
-      "version": "3.4.5",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge",
-      "id": "b3cafd6f3ebae9af",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "9cbae0b7e8ef1fccaa39b0fc339c129c1b053c827fc4e89bbb49bd5ccc33089e",
-      "source_sha256": "f1b7e57f58ef4814ef5352a1e999fac7a6963b993a9fcf2c77dba51925b84efa",
-      "manifest": {
-        "name": "Bot Challenge",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 11,
-      "excluded_entries": 19,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-BotChallenge",
@@ -1790,6 +1764,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "b3cafd6f3ebae9af"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Bot Challenge",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge/releases/download/3.4.5/BotChallenge-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge",
+      "id": "b3cafd6f3ebae9af",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "9cbae0b7e8ef1fccaa39b0fc339c129c1b053c827fc4e89bbb49bd5ccc33089e",
+      "source_sha256": "f1b7e57f58ef4814ef5352a1e999fac7a6963b993a9fcf2c77dba51925b84efa",
+      "manifest": {
+        "name": "Bot Challenge",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 11,
+      "excluded_entries": 19,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -12628,32 +12628,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Shibboleth (archived, replaced by Single Sign-On)",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
-      "version": "3.4.13",
-      "archived": true,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
-      "id": "9af78fdd683a8984",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.13",
-      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
-      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
-      "manifest": {
-        "name": "Shibboleth (archived, replaced by Single Sign-On)",
-        "version": "3.4.13",
-        "omeka_version_constraint": "^4.1.0",
-        "dependencies": []
-      },
-      "files_scanned": 8,
-      "excluded_entries": 80,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shibboleth",
@@ -12682,31 +12656,29 @@
     },
     {
       "sources": [
-        "daniel"
+        "official"
       ],
-      "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode",
-      "name": "Shortcode",
-      "archived": false,
-      "version": "3.4.17",
-      "catalog_omeka_constraint": "^4.0.0",
-      "id": "b2adb4e01627f5a9",
-      "archive_url": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode/-/releases/3.4.17/downloads/Shortcode-3.4.17.zip",
+      "name": "Shibboleth (archived, replaced by Single Sign-On)",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
+      "version": "3.4.13",
+      "archived": true,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
+      "id": "9af78fdd683a8984",
       "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.17",
-      "sha256": "c16385314658f815b93b2324ccb2ce39ba3d6567865553888a41b088d1d31072",
-      "source_sha256": "0d6e197e721943717bdf48a2aa2265c91344cc8afe2babebc92cd58aaf14f470",
+      "resolved_tag": "3.4.13",
+      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
+      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
       "manifest": {
-        "name": "Shortcode",
-        "version": "3.4.17",
-        "omeka_version_constraint": "^4.0.0",
+        "name": "Shibboleth (archived, replaced by Single Sign-On)",
+        "version": "3.4.13",
+        "omeka_version_constraint": "^4.1.0",
         "dependencies": []
       },
-      "files_scanned": 14,
-      "excluded_entries": 18,
-      "finding_count": 2,
+      "files_scanned": 8,
+      "excluded_entries": 80,
+      "finding_count": 0,
       "version_matches_manifest": true,
-      "status": "scanned",
-      "same_source_as": "390a30c2afd01f1e"
+      "status": "scanned"
     },
     {
       "sources": [
@@ -12733,6 +12705,34 @@
       "finding_count": 2,
       "version_matches_manifest": true,
       "status": "scanned"
+    },
+    {
+      "sources": [
+        "daniel"
+      ],
+      "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode",
+      "name": "Shortcode",
+      "archived": false,
+      "version": "3.4.17",
+      "catalog_omeka_constraint": "^4.0.0",
+      "id": "b2adb4e01627f5a9",
+      "archive_url": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode/-/releases/3.4.17/downloads/Shortcode-3.4.17.zip",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.17",
+      "sha256": "c16385314658f815b93b2324ccb2ce39ba3d6567865553888a41b088d1d31072",
+      "source_sha256": "0d6e197e721943717bdf48a2aa2265c91344cc8afe2babebc92cd58aaf14f470",
+      "manifest": {
+        "name": "Shortcode",
+        "version": "3.4.17",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 14,
+      "excluded_entries": 18,
+      "finding_count": 2,
+      "version_matches_manifest": true,
+      "status": "scanned",
+      "same_source_as": "390a30c2afd01f1e"
     },
     {
       "sources": [
@@ -14113,6 +14113,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Translator",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
+      "id": "e9a46cca61cc27e2",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
+      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
+      "manifest": {
+        "name": "Translator",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 21,
+      "excluded_entries": 310,
+      "finding_count": 17,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator",
@@ -14138,32 +14164,6 @@
       "excluded_entries": 310,
       "version_matches_manifest": true,
       "same_source_as": "e9a46cca61cc27e2"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Translator",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
-      "version": "3.4.5",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
-      "id": "e9a46cca61cc27e2",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
-      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
-      "manifest": {
-        "name": "Translator",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 21,
-      "excluded_entries": 310,
-      "finding_count": 17,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
