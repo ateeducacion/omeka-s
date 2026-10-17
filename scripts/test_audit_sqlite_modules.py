@@ -36,11 +36,12 @@ class AuditTests(unittest.TestCase):
                             ' DELETE FROM t WHERE c < DATE_SUB(NOW(), INTERVAL 1 DAY); SELECT id FROM t FOR UPDATE;'
                             ' SELECT GROUP_CONCAT(DISTINCT a SEPARATOR " ") FROM t WHERE MATCH(a) AGAINST(?); SHOW VARIABLES LIKE "version";'
                             ' SELECT VERSION(), ELT(1, "a"), TABLE_ROWS FROM `information_schema`.`TABLES` WHERE TABLE_SCHEMA = DATABASE();'
-                            ' SELECT JSON_SEARCH(d, "one", ?) FROM JSON_TABLE(?, "$[*]" COLUMNS (s TEXT PATH "$")) j;')
+                            ' SELECT JSON_SEARCH(d, "one", ?) FROM JSON_TABLE(?, "$[*]" COLUMNS (s TEXT PATH "$")) j;'
+                            ' SELECT constraint_name FROM information_schema.key_column_usage; SHOW TABLE STATUS LIKE "t";')
         self.assertEqual({'covered_if_wrapper'}, {m['classification'] for m in covered})
         unsupported = scan_text('schema.sql', 'ALTER TABLE t CONVERT TO CHARACTER SET utf8mb4; UPDATE value v RIGHT JOIN r ON r.id = v.r SET v.a = 1;'
                                 ' SELECT NOW() - INTERVAL 1 DAY, ST_AsGeoJSON(g) FROM t; SHOW CREATE TABLE t;'
-                                ' SELECT constraint_name FROM information_schema.key_column_usage;')
+                                ' SELECT PARTITION_NAME FROM information_schema.PARTITIONS;')
         self.assertEqual({'alter_mysql', 'mysql_join_write', 'mysql_functions', 'mysql_expression', 'show_mysql', 'information_schema'},
                          {m['rule'] for m in unsupported if m['classification'] == 'unsupported'})
 

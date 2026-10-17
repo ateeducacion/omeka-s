@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-17T21:23:44Z",
-  "core_commit": "7e5431bbf0aa39c71634a0a29eed4988497a4e0a",
-  "scanner_sha256": "19304ceb853aaa3f308224b3f2eeef58be84db94dd02042d010f9ee540d6881d",
+  "generated_at": "2026-10-17T21:41:46Z",
+  "core_commit": "e83f0135a052df1d2ae154afbcf3f540a3365671",
+  "scanner_sha256": "251a34e145ae42489de772d4ea3d584fe331d3d9f3da50bebfe89c1a91d96ba1",
   "catalog_urls": [
     "https://omeka.org/s/modules/",
     "https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html"
@@ -1739,32 +1739,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Bot Challenge",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge/releases/download/3.4.5/BotChallenge-3.4.5.zip",
-      "version": "3.4.5",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge",
-      "id": "b3cafd6f3ebae9af",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "9cbae0b7e8ef1fccaa39b0fc339c129c1b053c827fc4e89bbb49bd5ccc33089e",
-      "source_sha256": "f1b7e57f58ef4814ef5352a1e999fac7a6963b993a9fcf2c77dba51925b84efa",
-      "manifest": {
-        "name": "Bot Challenge",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 11,
-      "excluded_entries": 19,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-BotChallenge",
@@ -1790,6 +1764,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "b3cafd6f3ebae9af"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Bot Challenge",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge/releases/download/3.4.5/BotChallenge-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge",
+      "id": "b3cafd6f3ebae9af",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "9cbae0b7e8ef1fccaa39b0fc339c129c1b053c827fc4e89bbb49bd5ccc33089e",
+      "source_sha256": "f1b7e57f58ef4814ef5352a1e999fac7a6963b993a9fcf2c77dba51925b84efa",
+      "manifest": {
+        "name": "Bot Challenge",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 11,
+      "excluded_entries": 19,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -3492,32 +3492,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "DataScribe",
-      "archive_url": "https://github.com/omeka-s-modules/Datascribe/releases/download/v1.2.0/Datascribe-1.2.0.zip",
-      "version": "1.2.0",
-      "archived": false,
-      "repository": "https://github.com/omeka-s-modules/Datascribe",
-      "id": "8ba724dae29e06bd",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "1.2.0",
-      "sha256": "bb45e20b4c6d1e7eb05c4f6ecb5827df0480946f4de91fa4a4a36eb97b5e1d0b",
-      "source_sha256": "39d2c216494a315790284da88fff3859d7fc2f0886141e41077f07f5862d5262",
-      "manifest": {
-        "name": "DataScribe",
-        "version": "1.2.0",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 104,
-      "excluded_entries": 38,
-      "finding_count": 42,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://github.com/chnm/Datascribe-module",
@@ -3543,6 +3517,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "8ba724dae29e06bd"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "DataScribe",
+      "archive_url": "https://github.com/omeka-s-modules/Datascribe/releases/download/v1.2.0/Datascribe-1.2.0.zip",
+      "version": "1.2.0",
+      "archived": false,
+      "repository": "https://github.com/omeka-s-modules/Datascribe",
+      "id": "8ba724dae29e06bd",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "1.2.0",
+      "sha256": "bb45e20b4c6d1e7eb05c4f6ecb5827df0480946f4de91fa4a4a36eb97b5e1d0b",
+      "source_sha256": "39d2c216494a315790284da88fff3859d7fc2f0886141e41077f07f5862d5262",
+      "manifest": {
+        "name": "DataScribe",
+        "version": "1.2.0",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 104,
+      "excluded_entries": 38,
+      "finding_count": 42,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -4263,32 +4263,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Easy Admin",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin/releases/download/3.4.50/EasyAdmin-3.4.50.zip",
-      "version": "3.4.50",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin",
-      "id": "1b9f94b89544a7e9",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.50",
-      "sha256": "81a46367ded0ffdce7cf547a6e62fbe62d11546c6c6e8ac823664055c415b1e6",
-      "source_sha256": "6ce42fe5bea2b475b4e475f4715bb3e3239c31b5bc28036597918fac5c91dee7",
-      "manifest": {
-        "name": "Easy Admin",
-        "version": "3.4.50",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 90,
-      "excluded_entries": 80,
-      "finding_count": 74,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-EasyAdmin",
@@ -4310,6 +4284,32 @@
       },
       "files_scanned": 90,
       "excluded_entries": 77,
+      "finding_count": 74,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Easy Admin",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin/releases/download/3.4.50/EasyAdmin-3.4.50.zip",
+      "version": "3.4.50",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin",
+      "id": "1b9f94b89544a7e9",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.50",
+      "sha256": "81a46367ded0ffdce7cf547a6e62fbe62d11546c6c6e8ac823664055c415b1e6",
+      "source_sha256": "6ce42fe5bea2b475b4e475f4715bb3e3239c31b5bc28036597918fac5c91dee7",
+      "manifest": {
+        "name": "Easy Admin",
+        "version": "3.4.50",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 90,
+      "excluded_entries": 80,
       "finding_count": 74,
       "version_matches_manifest": true,
       "status": "scanned"
@@ -9025,32 +9025,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Menu",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Menu/releases/download/3.4.16/Menu-3.4.16.zip",
-      "version": "3.4.16",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Menu",
-      "id": "6dc44e8d07a08208",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.16",
-      "sha256": "34a51fe7b41fcd954d4ecaffb321e479e8ef548efe69d4b6bd0c74e5f558151b",
-      "source_sha256": "0aa22c2d2f1a64533ef88919d16ab33c12adde31a2faa01a2ddf9696298d81a0",
-      "manifest": {
-        "name": "Menu",
-        "version": "3.4.16",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 28,
-      "excluded_entries": 52,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Menu",
@@ -9076,6 +9050,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "6dc44e8d07a08208"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Menu",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Menu/releases/download/3.4.16/Menu-3.4.16.zip",
+      "version": "3.4.16",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Menu",
+      "id": "6dc44e8d07a08208",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.16",
+      "sha256": "34a51fe7b41fcd954d4ecaffb321e479e8ef548efe69d4b6bd0c74e5f558151b",
+      "source_sha256": "0aa22c2d2f1a64533ef88919d16ab33c12adde31a2faa01a2ddf9696298d81a0",
+      "manifest": {
+        "name": "Menu",
+        "version": "3.4.16",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 28,
+      "excluded_entries": 52,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -11428,32 +11428,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Redirector",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Redirector/releases/download/3.4.5/Redirector-3.4.5.zip",
-      "version": "3.4.5",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Redirector",
-      "id": "a7cf05dd1ea6f266",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "01da00f584f30596c5d695e63b2c4b50c4e98cacb7e645644de67dd32901dc57",
-      "source_sha256": "b9282e51e8ff245fe7dbda8133ee48c897f4b17080b8448b1054c1899a9e69a6",
-      "manifest": {
-        "name": "Redirector",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 5,
-      "excluded_entries": 18,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Redirector",
@@ -11479,6 +11453,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "a7cf05dd1ea6f266"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Redirector",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Redirector/releases/download/3.4.5/Redirector-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Redirector",
+      "id": "a7cf05dd1ea6f266",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "01da00f584f30596c5d695e63b2c4b50c4e98cacb7e645644de67dd32901dc57",
+      "source_sha256": "b9282e51e8ff245fe7dbda8133ee48c897f4b17080b8448b1054c1899a9e69a6",
+      "manifest": {
+        "name": "Redirector",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 5,
+      "excluded_entries": 18,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -14113,6 +14113,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Translator",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
+      "id": "e9a46cca61cc27e2",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
+      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
+      "manifest": {
+        "name": "Translator",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 21,
+      "excluded_entries": 310,
+      "finding_count": 20,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Translator",
@@ -14138,32 +14164,6 @@
       "excluded_entries": 310,
       "version_matches_manifest": true,
       "same_source_as": "e9a46cca61cc27e2"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Translator",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
-      "version": "3.4.5",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
-      "id": "e9a46cca61cc27e2",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
-      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
-      "manifest": {
-        "name": "Translator",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 21,
-      "excluded_entries": 310,
-      "finding_count": 20,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -14523,6 +14523,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Urify",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Urify/releases/download/3.4.3/Urify-3.4.3.zip",
+      "version": "3.4.3",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Urify",
+      "id": "f288d78f8de5735d",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.3",
+      "sha256": "6728411c98a3a7e390fce6b99f5aedda94f833a10aa5d99c0f2674b3f6737e37",
+      "source_sha256": "37c74b68b5fb3ad1a58819fbef229d3370bf241fe8b65b3f7973f256c2962a1e",
+      "manifest": {
+        "name": "Urify",
+        "version": "3.4.3",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 11,
+      "excluded_entries": 172,
+      "finding_count": 1,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Urify",
@@ -14548,32 +14574,6 @@
       "excluded_entries": 172,
       "version_matches_manifest": true,
       "same_source_as": "f288d78f8de5735d"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Urify",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Urify/releases/download/3.4.3/Urify-3.4.3.zip",
-      "version": "3.4.3",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Urify",
-      "id": "f288d78f8de5735d",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.3",
-      "sha256": "6728411c98a3a7e390fce6b99f5aedda94f833a10aa5d99c0f2674b3f6737e37",
-      "source_sha256": "37c74b68b5fb3ad1a58819fbef229d3370bf241fe8b65b3f7973f256c2962a1e",
-      "manifest": {
-        "name": "Urify",
-        "version": "3.4.3",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 11,
-      "excluded_entries": 172,
-      "finding_count": 1,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [

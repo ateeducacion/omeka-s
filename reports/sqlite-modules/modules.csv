@@ -12,13 +12,13 @@ Advanced Resource Template,3.4.56,3.4.56,release_asset,scanned,^4.0.0,,0,3,41,ht
 Advanced Resource Template,3.4.55,3.4.55,release_asset,scanned,^4.0.0,,0,3,41,https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedResourceTemplate,,5de56ebe49db3c5d
 Advanced Search,3.4.64,3.4.64,release_asset,scanned,^4.1.0,,0,13,171,https://gitlab.com/Daniel-KM/Omeka-S-module-AdvancedSearch,,2f502bc372055124
 Advanced Search,3.4.65,3.4.65,release_asset,scanned,^4.1.0,,0,13,171,https://github.com/Daniel-KM/Omeka-S-module-AdvancedSearch,,de8ce8b3b9599a7e
-Advanced Search adapter for Solr,3.5.73,3.5.73,release_asset,scanned,^4.1.0,,3,1,71,https://github.com/Daniel-KM/Omeka-S-module-SearchSolr,,31d8cce605af53a6
+Advanced Search adapter for Solr,3.5.73,3.5.73,release_asset,scanned,^4.1.0,,0,1,71,https://github.com/Daniel-KM/Omeka-S-module-SearchSolr,,31d8cce605af53a6
 "Advanced Search Plus (archived, replaced by Advanced Search)",3.3.5.7,3.3.5.7,release_asset,scanned,^3.0.0,,0,0,11,https://github.com/Daniel-KM/Omeka-S-module-AdvancedSearchPlus,,cf47712ad8806cbd
 Agile Tools,1.0.1,1.0.1,unreleased_commit,scanned,^2.0.0,,0,0,36,https://github.com/agile-humanities/agile-theme-tools-omeka,,eb482466f67d746f
 Agile Tools,1.3.1,1.30,tag_source,scanned,^4.1.0,,0,0,61,https://github.com/agile-humanities/AgileThemeTools,,4bef5478be324fd8
 AI Record Generator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,3,29,https://github.com/Daniel-KM/Omeka-S-module-AiGenerator,,97e50b6459bcbf1b
 AI Record Generator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,3,29,https://gitlab.com/Daniel-KM/Omeka-S-module-AiGenerator,,32ec169aa90108ab
-AlineImporter,1.1,1.1,unreleased_commit,scanned,,,1,2,44,https://github.com/pols12/aline-importer,,d162fc86975f49cf
+AlineImporter,1.1,1.1,unreleased_commit,scanned,,,0,2,44,https://github.com/pols12/aline-importer,,d162fc86975f49cf
 All in One Accessibility,1.0.0,1.0,release_asset,scanned,^4.0.0,,0,0,8,https://github.com/skynettechnologies/omeka-s-all-in-one-accessibility,,399597509d8edac1
 Allineamento/Omeka-S-module-Find-IdRef,1.0.1,1.0.1,unreleased_commit,scanned,^4.0.0,,0,0,39,https://gitlab.com/6piTech/allineamento/omeka-s-module-find-idref,,f7a624611d35c09a
 Alt Text,1.3.0,1.3.0,release_asset,scanned,^3.1.0,,0,1,5,https://github.com/zerocrates/AltText,,ba970cb9ac27ae96
@@ -63,13 +63,13 @@ Block Plus,3.4.45,3.4.45,release_asset,scanned,^4.1.0,,0,0,103,https://github.co
 Blocks Addititon,0.1.5,0.1.5,unreleased_commit,scanned,^4.0.0,,1,8,25,https://github.com/vovanshu/BlocksAddon,,699bee142bd79d87
 Blocks Disposition,3.4.6,3.4.6,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/Daniel-KM/Omeka-S-module-BlocksDisposition,,80d7c6dd11e058aa
 BokehBall,0.0.2,0.0.2,tag_source,scanned,^4.0.0,,0,0,8,https://github.com/biblibre/omeka-s-module-BokehBall,,5a2450b2fd7c3e43
-Bot Challenge,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,11,https://github.com/Daniel-KM/Omeka-S-module-BotChallenge,,b3cafd6f3ebae9af
 Bot Challenge,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,11,https://gitlab.com/Daniel-KM/Omeka-S-module-BotChallenge,,7945483664cfc058
+Bot Challenge,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,11,https://github.com/Daniel-KM/Omeka-S-module-BotChallenge,,b3cafd6f3ebae9af
 BU Maps,0.0.1,0.0.1,unreleased_commit,scanned,^4.0.0,,0,2,10,https://github.com/bibnumbcu/BuMaps,,ff7a3fdcc6659710
 "Bulk Check (archived, replaced by Easy Admin)",3.3.11,3.3.11,release_asset,scanned,^3.1.0,,0,0,24,https://github.com/Daniel-KM/Omeka-S-module-BulkCheck,,3456fc069b9b5c93
 Bulk Edit,3.4.40,3.4.40,release_asset,scanned,^4.0.0,,0,0,21,https://github.com/Daniel-KM/Omeka-S-module-BulkEdit,,fd2e46adf5012404
 Bulk Export,3.4.41,3.4.41,release_asset,scanned,^4.0.0,,0,5,93,https://github.com/Daniel-KM/Omeka-s-module-BulkExport,,5cc21cc6c9176486
-Bulk Import,3.4.65,3.4.65,release_asset,scanned,^4.0.0,,2,14,188,https://github.com/Daniel-KM/Omeka-S-module-Bulkimport,,2c46324e63724dcf
+Bulk Import,3.4.65,3.4.65,release_asset,scanned,^4.0.0,,1,14,188,https://github.com/Daniel-KM/Omeka-S-module-Bulkimport,,2c46324e63724dcf
 Bulk Import Files,3.4.9,3.4.9,release_asset,scanned,^4.0.0,,0,0,15,https://github.com/Daniel-KM/Omeka-S-module-BulkImportFiles,,3438cc4624c3aa88
 Bulk Page Ingest,1.0.0,1.0.0,unreleased_commit,scanned,^4.0.0,,0,0,10,https://github.com/zackrylangford/omeka-s-module-bulk-page-ingest,,f0ce1b2bc01e592d
 Bulk Site Item Sets,1.0.0,1.0.0,unreleased_commit,scanned,^4.0.0,,0,0,7,https://github.com/mina37010/Omeka-S-module-BulkSiteItemSets,,81877cfc67c7f6fe
@@ -127,8 +127,8 @@ Data Type Geometry,3.4.8,3.4.8,release_asset,scanned,^4.0.0,,23,6,40,https://git
 Data Type Place,3.4.3,3.4.3,release_asset,scanned,^3.1.0 || ^4.0.0,,0,0,14,https://gitlab.com/Daniel-KM/Omeka-S-module-DataTypePlace,,cc0cc6111eb9577b
 Data Type RDF,3.4.18,3.4.18,release_asset,scanned,^4.0.0,,0,0,12,https://github.com/Daniel-KM/Omeka-s-module-DataTypeRdf,,4ccd1327f2a6566f
 Data Visualization,1.5.0,1.5.0,release_asset,scanned,^4.0.0,,0,5,47,https://github.com/omeka-s-modules/Datavis,,4acaff179e7730e4
-DataScribe,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,0,11,104,https://github.com/omeka-s-modules/Datascribe,,8ba724dae29e06bd
 DataScribe,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,0,11,104,https://github.com/chnm/Datascribe-module,,49f23b90336e5c45
+DataScribe,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,0,11,104,https://github.com/omeka-s-modules/Datascribe,,8ba724dae29e06bd
 DataScribe Data Types,0.1.0,0.1.0,unreleased_commit,scanned,^3.0.0,,0,0,6,https://github.com/chnm/DatascribeDataTypes-module,,cd0643b3e1886e8c
 DataTypeClass,1.0.0,1.0.0,unreleased_commit,scanned,^3.0.0,,0,0,6,https://github.com/Limonadeandcoscop/omeka-s-module-DataTypeClass,,d7d2d44444e18b38
 DCL Omeka Misc,1.0.3,1.0.3,release_source,scanned,^3.1.0 || ^4.0.0,,0,0,2,https://github.com/dartmouth-dltg/dcl_omeka_misc,,e70767a7e962ae6d
@@ -155,8 +155,8 @@ Dynamic Item Sets,3.4.7,3.4.7,release_asset,scanned,^4.0.0,,0,0,7,https://gitlab
 EAD,3.0.4,3.0.4,release_asset,scanned,^1.2.0 || ^2.0.0,,0,0,18,https://github.com/Daniel-KM/Omeka-S-module-Ead,,998ae7f6a485fa2b
 EAD Import,2.1.0,2.1.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,3,31,https://github.com/biblibre/omeka-s-module-EADImport,,6d7e89072ac8cfcf
 EAD XML Data Type,1.0.0,1.0.0,release_source,scanned,^4.0.0,,0,0,7,https://github.com/UIUCLibrary/EadXmlDataType,,95fc59037dcfd74c
-Easy Admin,3.4.50,3.4.50,release_asset,scanned,^4.0.0,,4,15,90,https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin,,1b9f94b89544a7e9
-Easy Admin,3.4.49,3.4.49,release_asset,scanned,^4.0.0,,4,15,90,https://gitlab.com/Daniel-KM/Omeka-S-module-EasyAdmin,,4fbf9c8e677c8c39
+Easy Admin,3.4.49,3.4.49,release_asset,scanned,^4.0.0,,3,15,90,https://gitlab.com/Daniel-KM/Omeka-S-module-EasyAdmin,,4fbf9c8e677c8c39
+Easy Admin,3.4.50,3.4.50,release_asset,scanned,^4.0.0,,3,15,90,https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin,,1b9f94b89544a7e9
 Easy Install,3.2.5,3.2.5,tag_source,scanned,^1.2.0 || ^2.0.0,,0,0,7,https://gitlab.com/dlivinglabs/Omeka-S-module-EasyInstall,,b4a62c30fbb5bd8a
 "Easy Install (archived, replaced by Easy Admin)",3.3.7,3.3.7,release_asset,scanned,^3.1.0,,0,0,7,https://github.com/Daniel-KM/Omeka-S-module-EasyInstall,,426513fe8f1537e0
 eBook Creator,3.4.10,3.4.10,release_asset,scanned,^4.0.0,,0,2,14,https://github.com/Daniel-KM/Omeka-S-module-Ebook,,b9557f575d3fddc4
@@ -200,7 +200,7 @@ Footnotes,3.3.0.2-3.4.1,3.3.0.2-3.4.1,tag_source,scanned,^3.1.0,,0,0,4,https://g
 Formularium,0.5.3,0.5.3,release_asset,scanned,^4.1.0,,0,5,77,https://github.com/biblibre/omeka-s-module-Formularium,,215858f222512002
 FreeSpace,1.0.1,1.0.1,release_asset,scanned,,,0,0,2,https://github.com/symac/Omeka-S-module-FreeSpace,,947629289bb9bd69
 FreeSpace,1.0.1,1.0.1,release_asset,scanned,,,0,0,2,https://github.com/smachefert/Omeka-S-module-FreeSpace,,fca45c3ba8795fe5
-FromClassicWithLove,0.3.2,0.3.2,tag_source,scanned,^4.0.0,,1,2,25,https://github.com/biblibre/omeka-s-module-FromClassicWithLove,,d7afa553ff19ef51
+FromClassicWithLove,0.3.2,0.3.2,tag_source,scanned,^4.0.0,,0,2,25,https://github.com/biblibre/omeka-s-module-FromClassicWithLove,,d7afa553ff19ef51
 Fulltext Diet,1.0.0,1.0.0,tag_source,scanned,^4.0.0,,0,0,2,https://github.com/biblibre/omeka-s-module-FulltextDiet,,2cf10332533a2c5d
 Generic,3.4.43,3.4.43,tag_source,scanned,^3.2.0 || ^4.0.0,,0,0,3,https://gitlab.com/paul4400509/Omeka-S-module-Generic,,d18f6748e36b36b4
 "Generic (archived, replaced by Common)",3.4.47,3.4.47,release_asset,scanned,^3.2.0 || ^4.0.0,,0,1,4,https://github.com/Daniel-KM/Omeka-S-module-Generic,,e29335feef0b3a9d
@@ -251,7 +251,7 @@ IIIF Preview,3.0.3,3.0.3,release_asset,scanned,^3.0.0|^4.0.0,,0,0,7,https://gith
 IIIF Remote Images,1.2.0,1.2.0,release_asset,scanned,^4.0.0,,0,0,8,https://gitlab.com/omeka-projects/omeka-s-module-iiifremoteimages,,326c2e9f776e2757
 IIIF Search,3.4.15,3.4.15,unreleased_commit,scanned,^3.1 || ^4.0,,0,0,37,https://github.com/smachefert/Omeka-S-module-IiifSearch,,dfdcaa55d9230d7b
 IIIF Search (External),1.0.0,1.0.0,unreleased_commit,scanned,^3.0.0,,0,0,3,https://github.com/omeka-j/Omeka-S-module-IiifSearch,,acc21a6a32f87961
-IIIF Search Carousel,0.2.40,0.2.40,release_source,scanned,^4.0.0,,2,0,11,https://github.com/wakitosh/IiifSearchCarousel,,1bb3127e29997512
+IIIF Search Carousel,0.2.40,0.2.40,release_source,scanned,^4.0.0,,0,0,11,https://github.com/wakitosh/IiifSearchCarousel,,1bb3127e29997512
 IIIF Server,3.6.34,3.6.34,release_asset,scanned,^3.1 || ^4.0,,0,0,109,https://github.com/Daniel-KM/Omeka-S-module-IiifServer,,be15d18022a67f3d
 IIIF to File,3.4.0,3.4.0,tag_source,scanned,^4.1.0,,0,0,4,https://gitlab.com/Daniel-KM/Omeka-S-module-IiifToFile,,f29803b59f9bc445
 IIIF Viewers,1.2.5,1.2.5,release_asset,scanned,^3.0.0 || ^4.0.0,,0,3,17,https://github.com/nakamura196/Omeka-S-module-IiifViewers,,ddaf6bebd68efa26
@@ -330,8 +330,8 @@ Media Order Fixer,0.1.1,0.1.1,release_source,scanned,^4.0.0,,0,0,3,https://githu
 Media Watermark,1.0,,,unavailable,^1.0.0,,0,0,0,https://github.com/3ffusi0on/omeka-s-media-watermark,RuntimeError: gh: Not Found (HTTP 404),12168fe9f19236e6
 MediaArchive,2.1.0,2.1.0,release_asset,scanned,^3.0.0,,0,0,5,https://github.com/utarchives/Omeka-S-module-MediaArchive,,5a78b32a9b9a9c2a
 MeetingMind,1.0.0,,,unavailable,^4.0.0 || ^4.1.0 || ^4.2.0,,0,0,0,https://github.com/IssamIdri/Omeka-S-module-MeetingMind,RuntimeError: gh: Not Found (HTTP 404),beaf1530a84f5b4b
-Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://github.com/Daniel-KM/Omeka-s-module-Menu,,6dc44e8d07a08208
 Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://gitlab.com/Daniel-KM/Omeka-S-module-Menu,,3f26d549e7f9c058
+Menu,3.4.16,3.4.16,release_asset,scanned,^4.0.0,,0,0,28,https://github.com/Daniel-KM/Omeka-s-module-Menu,,6dc44e8d07a08208
 Merge Items,1.1.7,1.1.7,release_asset,scanned,^4.1.1,,0,0,9,https://github.com/Systemik-Solutions/OmekaS-MergeItems,,e8c4f6c0b06b280e
 Mesostiche,0.0.2,0.0.2,unreleased_commit,scanned,^3.0.0,,0,0,5,https://github.com/samszo/Omeka-S-module-Mesostiche,,b4389ade6776026e
 Meta Tags,3.4.6,3.4.6,tag_source,scanned,^4.0.0,,0,0,4,https://gitlab.com/Daniel-KM/Omeka-S-module-MetaTags,,1c9f0f467056094a
@@ -342,9 +342,9 @@ Mirador Viewer,3.4.17,3.4.17,release_asset,scanned,^3.1 || ^4.0,,0,0,18,https://
 Model viewer,3.4.5-p185,3.4.5-p185,release_asset,scanned,^4.0.0,,0,0,8,https://github.com/Daniel-KM/Omeka-S-module-ModelViewer,,417a4cdd15654ac7
 ModuleTemplate,0.0.0,0.0.0,unreleased_commit,scanned,^4.0.0,,0,0,3,https://github.com/ateeducacion/omeka-s-ModuleTemplate,,14b963426f12269c
 MP Custom Input,0.1.0,0.1.0,unreleased_commit,scanned,^3.0.0,,0,0,3,https://github.com/KompetenzwerkD/omeka-s-module-MPCustomInput,,c79ea053da7a9361
-Mroonga search,0.9.0,0.9.0,release_asset,scanned,3.x,,1,0,2,https://github.com/fukuchi/Omeka-S-module-mroonga-search,,6d1c7d1ce2194a0d
-Mroonga Search (Enhanced),4.4.0,4.4.0,release_source,scanned,4.x,,15,12,6,https://github.com/wakitosh/MroongaSearch,,75da7ba330ab0f1c
-Mroonga search (Modified),1.0.0,1.0.0,unreleased_commit,scanned,4.x,,1,0,8,https://github.com/fukudakz/Omeka-S-module-mroonga-search,,2bb17cf94c677cf1
+Mroonga search,0.9.0,0.9.0,release_asset,scanned,3.x,,0,0,2,https://github.com/fukuchi/Omeka-S-module-mroonga-search,,6d1c7d1ce2194a0d
+Mroonga Search (Enhanced),4.4.0,4.4.0,release_source,scanned,4.x,,0,12,6,https://github.com/wakitosh/MroongaSearch,,75da7ba330ab0f1c
+Mroonga search (Modified),1.0.0,1.0.0,unreleased_commit,scanned,4.x,,0,0,8,https://github.com/fukudakz/Omeka-S-module-mroonga-search,,2bb17cf94c677cf1
 Multilingual,0.1.0,0.1.0,unreleased_commit,scanned,^4.0.0,,0,0,29,https://gitlab.com/arklab/omeka-s-module-Multilingual,,bbace71c087ff30c
 Multiple Resource Classes,0.1.0,0.1.0,unreleased_commit,scanned,~4.2.0,,0,2,24,https://gitlab.com/xentropics-open-source/xentropics-omeka-multiple-resource-classes,,9914dd4c16df09e9
 My,1.0,,,unavailable,^1.0.0,,0,0,0,https://github.com/AlyxTaj/dictionnaire-module-omeka,RuntimeError: gh: Not Found (HTTP 404),48c39b607d725912
@@ -420,8 +420,8 @@ Random Items Block,0.3.0,0.3.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,5,htt
 Reciprocal,3.4.4,3.4.4,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/Daniel-KM/Omeka-S-module-Reciprocal,,50f384aa24733f6a
 Redact Values,1.1.0,1.1.0,release_asset,scanned,^4.0.0,,0,6,14,https://github.com/omeka-s-modules/RedactValues,,5aa283fb9cb10df2
 Redirect After Login,0.4.0,0.4.0,release_asset,scanned,^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,3,https://github.com/biblibre/omeka-s-module-RedirectAfterLogin,,895d9847233c79ef
-Redirector,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,5,https://github.com/Daniel-KM/Omeka-S-module-Redirector,,a7cf05dd1ea6f266
 Redirector,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,5,https://gitlab.com/Daniel-KM/Omeka-S-module-Redirector,,de2e0045f8d52c24
+Redirector,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,0,5,https://github.com/Daniel-KM/Omeka-S-module-Redirector,,a7cf05dd1ea6f266
 Reference,3.4.64,3.4.64,release_asset,scanned,^4.1.0,,0,2,27,https://github.com/Daniel-KM/Omeka-S-module-Reference,,d2824a20ff7a797e
 ReferentialIntegrity,0.0.1,0.0.1,release_asset,scanned,^4.0.0,,0,0,6,https://github.com/ftheeten/OMEKA_S_ReferentialIntegrity_module,,f538110f14fbeeaf
 RefFormation,0.1.0,,,unavailable,^3.2.0 || ^4.0.0,,0,0,0,https://github.com/biblibre/omeka-s-module-RefFormation,RuntimeError: gh: Not Found (HTTP 404),d3f1e53a0fe94537
@@ -450,14 +450,14 @@ Scripto,1.5.2,1.5.2,release_asset,scanned,^4.0.0,,0,8,72,https://github.com/omek
 Scripto IIIF,0.2.0,0.2.0,release_asset,scanned,^3.2.0 || ^4.0.0,,0,0,3,https://github.com/biblibre/omeka-s-module-ScriptoIiif,,5d3ef317c03edaea
 Scripto Import Contributors,0.2.1,0.2.1,release_asset,scanned,^3.2.0 || ^4.0.0,,0,0,3,https://github.com/biblibre/omeka-s-module-ScriptoImportContributors,,c16c382b8f1a1658
 Scripto Page Blocks,0.1,,,unavailable,^2.0.0,,0,0,0,https://github.com/Limonadeandcoscop/ScriptoPageBlocks,RuntimeError: gh: Not Found (HTTP 404),4522f1bab4a3616d
-Search,0.23.2,0.23.2,release_asset,scanned,^3.1.0 || ^4.0.0,,1,4,108,https://github.com/biblibre/omeka-s-module-Search,,4ca72422822af64b
+Search,0.23.2,0.23.2,release_asset,scanned,^3.1.0 || ^4.0.0,,0,4,108,https://github.com/biblibre/omeka-s-module-Search,,4ca72422822af64b
 "Search (archived, replaced by Advanced Search)",3.5.25.3,3.5.25.3,release_asset,scanned,^3.0.0,,0,2,112,https://gitlab.com/Daniel-KM/Omeka-S-module-Search,,83e5c6fe9a6d076b
 Search adapter for Solr,3.5.22.3,3.5.22.3,tag_source,scanned,^3.0.0,,0,2,58,https://gitlab.com/mantianfyxxl/Omeka-S-module-SearchSolr,,7ae30217c7ab3979
 Search adapter for Solr,3.5.24.3,3.5.24.3,tag_source,scanned,^3.0.0,,0,2,58,https://gitlab.com/symac1/Omeka-S-module-SearchSolr,,eb75a214ea546025
 Search by Visibility,1.0.0,1.0.0,unreleased_commit,scanned,^1.4.0,,0,0,2,https://github.com/bfavaretto/SearchByVisibility,,f642f2cefa4841d0
 Search Filter Plus,1.0.0,1.0.0,release_asset,scanned,^3.0.0 || ^4.0.0,,0,0,7,https://github.com/Fisk-University/SearchFilterPlus,,ea4dcc494ecbef45
 Search History,3.4.8,3.4.8,release_asset,scanned,^4.1.0,,0,1,16,https://github.com/Daniel-KM/Omeka-S-module-SearchHistory,,8e51a901834c9f4e
-"Search Solr (archived, replaced by Search Adapter for Solr)",3.5.13.3,3.5.13.3,release_asset,scanned,^3.0.0,,1,2,47,https://gitlab.com/Daniel-KM/Omeka-S-module-Solr,,b24f3337fa292266
+"Search Solr (archived, replaced by Search Adapter for Solr)",3.5.13.3,3.5.13.3,release_asset,scanned,^3.0.0,,0,2,47,https://gitlab.com/Daniel-KM/Omeka-S-module-Solr,,b24f3337fa292266
 Selection,3.4.19,3.4.19,release_asset,scanned,^4.1.0,,0,3,70,https://github.com/Daniel-KM/Omeka-S-module-Selection,,d8b6c3606c25d426
 Semantic Model Builder,0.1,0.1,unreleased_commit,scanned,,,0,0,12,https://github.com/bsait/SemanticModelBuilder,,b6089a9a8a62edbf
 Server URL Override,1.0.1,1.0.1,release_asset,scanned,^3.1.0 || ^4.0.0,,0,0,1,https://github.com/zerocrates/ServerUrlOverride,,e269b193e20568dc
@@ -471,7 +471,7 @@ Shortcode,3.4.17,3.4.17,release_asset,scanned,^4.0.0,,0,0,14,https://github.com/
 Shortcode,3.4.17,3.4.17,release_asset,scanned,^4.0.0,,0,0,14,https://gitlab.com/Daniel-KM/Omeka-S-module-Shortcode,,b2adb4e01627f5a9
 Show More,1.5,1.5,release_asset,scanned,^4.1.0,,0,0,3,https://github.com/rochester-rcl/show-more,,a3e95faea9353051
 Sigil,0.1.0,0.1.0,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/biblibre/omeka-s-module-Sigil,,35d7cd37719ccb56
-Similar Items,0.6.0,0.6.0,release_source,scanned,^4.0.0,,1,0,18,https://github.com/wakitosh/SimilarItems,,f8ddbc919331f4b3
+Similar Items,0.6.0,0.6.0,release_source,scanned,^4.0.0,,0,0,18,https://github.com/wakitosh/SimilarItems,,f8ddbc919331f4b3
 Simple Block,0.1.0,0.1.0,unreleased_commit,scanned,^1.1.0,,0,0,3,https://github.com/zerocrates/SimpleBlock,,391403c6bbeb3489
 Simple Carousel,1.2.3,1.2.3,release_asset,scanned,^1.1.0,,0,0,5,https://github.com/Neo-Inspiration/Omeka-S-SimpleCarousel,,dc0715c817e6587d
 Simple Carousel,1.3.0,1.3.0,unreleased_commit,scanned,^4.0.0,,0,0,5,https://github.com/candelariajr/SimpleCarousel,,a2e2f4c1448b1916
@@ -488,7 +488,7 @@ Sitemaps,1.1,1.1,release_asset,scanned,^4.0.0,,0,0,4,https://github.com/ManOnDaM
 SiteSearch,0.0.0,0.0.0,unreleased_commit,scanned,^4.0.0,,0,0,4,https://github.com/fmateos/omeka-s-SiteSearch,,60e4e912c5250edf
 SiteSlugAsSubdomain,1.0.0,1.0.0,release_asset,scanned,>=1.2.0,,0,0,2,https://github.com/kyfr59/omeka-s-module-SiteSlugAsSubdomain,,f08afe7b6c47022e
 SiteSwitcher,1.0,1.0,unreleased_commit,scanned,^4.0.0,,0,0,3,https://github.com/ManOnDaMoon/omeka-s-module-SiteSwitcher,,594b78dd35108e05
-Solr,0.26.1,0.26.1,release_asset,scanned,^3.1.0 || ^4.0.0,,1,4,84,https://github.com/biblibre/omeka-s-module-Solr,,a709738d4a6361b3
+Solr,0.26.1,0.26.1,release_asset,scanned,^3.1.0 || ^4.0.0,,0,4,84,https://github.com/biblibre/omeka-s-module-Solr,,a709738d4a6361b3
 Solr Search Override,0.1.0,0.1.0,unreleased_commit,scanned,^4.0.0,,0,0,2,https://github.com/sephirothkod/SolrSearchOverride,,6d8ffda2a61e3883
 SolrDragon,0.0.1,0.0.1,unreleased_commit,scanned,,,0,0,27,https://github.com/jonfackrell/solr-dragon,,7824b056d7e5ac92
 SolrImprovements,1.0.1-bib0.4.2,1.0.1-bib0.4.2,tag_source,scanned,,,0,0,9,https://github.com/pols12/omeka-s-module-SolrImprovements,,614e14e692c1e4c5
@@ -517,14 +517,14 @@ Timeline,3.4.31,3.4.31,release_asset,scanned,^4.1.0,,0,0,26,https://github.com/D
 TimeWhisper,0.1.0,0.1.0,unreleased_commit,scanned,^3.0.0 || ^4.0.0,,0,4,16,https://github.com/Zackbellaj/Omeka-S-module-TimeWhisper,,0b05443c49501511
 Transcript,4.1.1,4.1.1,release_asset,scanned,^4.0.0,,0,0,16,https://github.com/arepr/omeka-s-module-transcript,,f0736e024888eff0
 Transcript,4.1.1,4.1.1,release_asset,scanned,^4.0.0,,0,0,16,https://github.com/ivyrze/omeka-s-module-transcript,,eca655ec0c54866e
-Transcription Manager,1.5.0,1.5.0,unreleased_commit,scanned,^4.0.0,,4,4,11,https://github.com/zackrylangford/omeka-s-module-transcription-manager,,a16bda1b7d87bb82
+Transcription Manager,1.5.0,1.5.0,unreleased_commit,scanned,^4.0.0,,0,4,11,https://github.com/zackrylangford/omeka-s-module-transcription-manager,,a16bda1b7d87bb82
 Translations,3.1.0,3.1.0,release_source,scanned,^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,2,https://github.com/dartmouth-dltg/Omeka-S-module-Translations,,bdcf415fb67546ff
 Translations,3.0.4,3.0.4,release_asset,scanned,^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0,,0,0,2,https://github.com/Daniel-KM/Omeka-S-module-Translations,,b81e41a0359cf752
-Translator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,2,6,21,https://gitlab.com/Daniel-KM/Omeka-S-module-Translator,,e38495baace6be2d
-Translator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,2,6,21,https://github.com/Daniel-KM/Omeka-S-module-Translator,,e9a46cca61cc27e2
+Translator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,6,21,https://github.com/Daniel-KM/Omeka-S-module-Translator,,e9a46cca61cc27e2
+Translator,3.4.5,3.4.5,release_asset,scanned,^4.0.0,,0,6,21,https://gitlab.com/Daniel-KM/Omeka-S-module-Translator,,e38495baace6be2d
 Two-Factor Authentification,3.4.4,3.4.4,release_asset,scanned,^4.0.0,,0,1,16,https://github.com/Daniel-KM/Omeka-S-module-TwoFactorAuth,,88dbc8c53432b782
 Two-Factor Authentification,3.4.4,3.4.4,release_asset,scanned,^4.0.0,,0,1,16,https://gitlab.com/Daniel-KM/Omeka-S-module-TwoFactorAuth,,f07cac71e9083c3f
-TwoFactorTotp,1.0.0,1.0.0,release_asset,scanned,^4.0.0,,1,4,52,https://github.com/coret/Omeka-S-module-TwoFactorTotp,,d7d622bdba6e98a6
+TwoFactorTotp,1.0.0,1.0.0,release_asset,scanned,^4.0.0,,0,4,52,https://github.com/coret/Omeka-S-module-TwoFactorTotp,,d7d622bdba6e98a6
 Typesense Sync,1.0.0,1.0.0,unreleased_commit,scanned,^4.0.0,,0,0,3,https://github.com/zackrylangford/omeka-s-module-typesense-sync,,f9530e8c0e03979a
 TypesenseSearch,0.4.1,0.4.1,release_asset,scanned,^3.1.0|^4.0.0,,0,0,9,https://github.com/indic-archive/omeka-typesense-search,,1467efa4c6163312
 unAPI,1.3.0,1.3.0,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/omeka-s-modules/UnApi,,5c591c8b974e9c72
@@ -535,8 +535,8 @@ Unity,,,unreleased_commit,no_source_files,,,0,0,0,https://github.com/RenderHeads
 Universal Viewer,3.6.16-p4.4.4,3.6.16-p4.4.4,release_asset,scanned,^3.1 || ^4.0,,0,0,12,https://github.com/Daniel-KM/Omeka-S-module-UniversalViewer,,40cd273cd055bc31
 Upgrade from Omeka Classic,3.1.3,3.1.3,tag_source,scanned,^1.3.0,,0,0,9,https://github.com/Daniel-KM/Omeka-S-module-UpgradeFromOmekaClassic,,87a9c7465973a5e9
 URI Dereferencer,1.4.3,1.4.3,release_asset,scanned,^4.0.0,,0,0,3,https://github.com/omeka-s-modules/UriDereferencer,,5a9c96d7ca36b8fe
-Urify,3.4.3,3.4.3,release_asset,scanned,^4.0.0,,0,0,11,https://gitlab.com/Daniel-KM/Omeka-S-module-Urify,,c15f99be18677409
 Urify,3.4.3,3.4.3,release_asset,scanned,^4.0.0,,0,0,11,https://github.com/Daniel-KM/Omeka-S-module-Urify,,f288d78f8de5735d
+Urify,3.4.3,3.4.3,release_asset,scanned,^4.0.0,,0,0,11,https://gitlab.com/Daniel-KM/Omeka-S-module-Urify,,c15f99be18677409
 User Profile,3.4.12,3.4.12,release_asset,scanned,^4.0.0,,0,0,5,https://github.com/Daniel-KM/Omeka-s-module-UserProfile,,487dfa3ce865b901
 UserNames,1.2,1.2,release_asset,scanned,^4.0.0,,0,1,14,https://github.com/ManOnDaMoon/omeka-s-module-UserNames,,1f4b643dd9c4c01f
 Value Suggest,1.21.0,1.21.0,release_asset,scanned,^4.2.0,,0,0,117,https://github.com/omeka-s-modules/ValueSuggest,,21015b20887c2d4f

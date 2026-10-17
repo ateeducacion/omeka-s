@@ -1,6 +1,6 @@
 AUDITORIA ESTATICA DE MODULOS OMEKA S / SQLITE
-Fecha UTC: 2026-10-17T21:23:44Z
-Commit del nucleo: 7e5431bbf0aa39c71634a0a29eed4988497a4e0a
+Fecha UTC: 2026-10-17T21:41:46Z
+Commit del nucleo: e83f0135a052df1d2ae154afbcf3f540a3365671
 
 Catalogos: https://omeka.org/s/modules/ y https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html
 Repositorios distintos inventariados: 573
@@ -10,7 +10,7 @@ Catalogo oficial escaneado: 201/201
 No disponibles: 24; archivos sin codigo propio: 2
 Paquetes publicados: 333; fuentes de release/tag: 53; commits sin release coincidente: 161
 
-Repositorios con candidatos SQL no traducidos o rechazados: 28 (27 fuentes distintas)
+Repositorios con candidatos SQL no traducidos o rechazados: 13 (13 fuentes distintas)
 Repositorios con aspectos para revisar: 172
 Repositorios escaneados sin indicios segun estas reglas: 309
 Las categorias se solapan. Ninguna cifra representa fallos confirmados en ejecucion ni certifica compatibilidad.
@@ -20,19 +20,18 @@ translated_functions: 777 / 113 / 107
 alter_foreign_key: 674 / 122 / 115
 mysql_collation: 417 / 152 / 144
 set_statement: 209 / 73 / 67
+translated_syntax: 204 / 70 / 67
 alter_column: 170 / 54 / 51
-translated_syntax: 164 / 59 / 57
 alter_index: 106 / 31 / 30
 group_concat: 86 / 23 / 19
 upsert: 74 / 26 / 25
 update_join: 62 / 19 / 17
 mysql_functions: 61 / 5 / 5
 delete_join: 41 / 14 / 14
-information_schema: 35 / 17 / 16
 fulltext: 35 / 11 / 10
 connection_bypass: 33 / 19 / 18
 mysql_driver: 19 / 5 / 5
-show_mysql: 16 / 9 / 9
+show_mysql: 11 / 7 / 7
 mysql_enum: 1 / 1 / 1
 
 ALCANCE Y LIMITES
