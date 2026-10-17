@@ -1,36 +1,38 @@
 AUDITORIA ESTATICA DE MODULOS OMEKA S / SQLITE
-Fecha UTC: 2026-10-08T05:24:31Z
-Commit del nucleo: 87b4ef845b83bb4b889fda7b8ce7e718f2090341
+Fecha UTC: 2026-10-17T17:17:53Z
+Commit del nucleo: 7d41095a1b1889fe240a63ae57278d425dcf25b1
 
 Catalogos: https://omeka.org/s/modules/ y https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html
 Repositorios distintos inventariados: 573
-Repositorios escaneados: 551
-Fuentes PHP/SQL distintas (sin duplicar mirrors identicos): 515
+Repositorios escaneados: 547
+Fuentes PHP/SQL distintas (sin duplicar mirrors identicos): 517
 Catalogo oficial escaneado: 201/201
-No disponibles: 20; archivos sin codigo propio: 2
-Paquetes publicados: 337; fuentes de release/tag: 53; commits sin release coincidente: 161
+No disponibles: 24; archivos sin codigo propio: 2
+Paquetes publicados: 333; fuentes de release/tag: 53; commits sin release coincidente: 161
 
-Repositorios con candidatos SQL no traducidos o rechazados: 175 (159 fuentes distintas)
-Repositorios con aspectos para revisar: 179
-Repositorios escaneados sin indicios segun estas reglas: 314
+Repositorios con candidatos SQL no traducidos o rechazados: 98 (91 fuentes distintas)
+Repositorios con aspectos para revisar: 178
+Repositorios escaneados sin indicios segun estas reglas: 312
 Las categorias se solapan. Ninguna cifra representa fallos confirmados en ejecucion ni certifica compatibilidad.
 
 CANDIDATOS POR REGLA (coincidencias / repositorios / fuentes distintas)
-alter_foreign_key: 548 / 123 / 112
-translated_functions: 543 / 92 / 84
-mysql_collation: 420 / 154 / 141
-alter_mysql: 413 / 89 / 79
-mysql_functions: 221 / 42 / 34
-set_statement: 211 / 74 / 64
-translated_syntax: 108 / 55 / 51
-mysql_join_write: 104 / 26 / 22
+translated_functions: 683 / 100 / 96
+alter_foreign_key: 674 / 122 / 115
+mysql_collation: 417 / 152 / 144
+set_statement: 209 / 73 / 67
+alter_mysql: 170 / 54 / 51
+translated_syntax: 129 / 57 / 55
+alter_index: 106 / 31 / 30
 group_concat: 86 / 23 / 19
-upsert_mysql: 74 / 26 / 24
-information_schema: 64 / 23 / 20
-show_mysql: 41 / 13 / 11
-fulltext: 34 / 11 / 9
-connection_bypass: 31 / 18 / 16
-mysql_driver: 19 / 5 / 4
+upsert: 74 / 26 / 25
+mysql_functions: 72 / 15 / 12
+mysql_join_write: 62 / 19 / 17
+information_schema: 59 / 22 / 21
+delete_join: 41 / 14 / 14
+fulltext: 35 / 11 / 10
+connection_bypass: 33 / 19 / 18
+show_mysql: 22 / 10 / 10
+mysql_driver: 19 / 5 / 5
 mysql_expression: 8 / 7 / 5
 mysql_enum: 2 / 2 / 2
 
@@ -45,13 +47,6 @@ unreleased_commit es una revision fijada por SHA, no un paquete publicado ni nec
 filtered_release_source contiene solo el codigo de un tag publicado; no incluye datos ni dependencias del paquete.
 Las dependencias se leen de config/module.ini; pueden existir otras comprobaciones dinamicas.
 Las discrepancias entre version de catalogo y manifiesto se registran en version_matches_manifest.
-
-PRIORIDADES REVISADAS MANUALMENTE (versiones del informe inicial)
-Collecting 1.13.0: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (lineas 46 y siguientes).
-CSV Import 2.6.2: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (linea 44).
-Advanced Search 3.4.64: data/install/schema.sql, FULLTEXT INDEX y ADD CONSTRAINT FOREIGN KEY.
-Common 3.4.93: Module.php, SHOW INDEX. Atrapa el error y omite indices; puede instalarse con optimizaciones ausentes.
-Easy Admin 3.4.49: Module.php, executeSessionCleanup(), SHOW INDEX; tambien hay SQL de mantenimiento/backup especifico de MySQL.
 
 CONFIRMACION DE LOS CANDIDATOS
 Probar estas versiones por separado en SQLite y MariaDB, con las mismas dependencias y datos, y verificar instalacion y una operacion representativa.

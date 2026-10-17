@@ -26,7 +26,17 @@ class AuditTests(unittest.TestCase):
         matches = scan_text('schema.sql', '\nALTER TABLE child\nADD CONSTRAINT fk FOREIGN KEY (parent_id) REFERENCES parent(id);')
         foreign_key = next(m for m in matches if m['rule'] == 'alter_foreign_key')
         self.assertEqual(2, foreign_key['line'])
-        self.assertEqual('rejected', foreign_key['classification'])
+        self.assertEqual('covered_if_wrapper', foreign_key['classification'])
+
+    def test_translated_writes_are_covered_and_the_rest_unsupported(self):
+        covered = scan_text('schema.sql', 'ALTER TABLE t DROP FOREIGN KEY fk; ALTER TABLE t ADD UNIQUE INDEX i (a); SHOW INDEX FROM t;'
+                            ' INSERT INTO t VALUES (1) ON DUPLICATE KEY UPDATE a = VALUES(a); DELETE v FROM value v JOIN r ON r.id = v.r;'
+                            ' SELECT SUBSTRING_INDEX(a, ".", 1), YEAR(b), RAND() FROM t;')
+        self.assertEqual({'covered_if_wrapper'}, {m['classification'] for m in covered})
+        unsupported = scan_text('schema.sql', 'ALTER TABLE t CHANGE a b INT; UPDATE value v JOIN r ON r.id = v.r SET v.a = 1;'
+                                ' SELECT DATE_SUB(NOW(), INTERVAL 1 DAY), ST_AsGeoJSON(g) FROM t;')
+        self.assertEqual({'alter_mysql', 'mysql_join_write', 'mysql_functions', 'mysql_expression'},
+                         {m['rule'] for m in unsupported if m['classification'] == 'unsupported'})
 
     def test_covered_syntax_is_not_reported_as_unsupported(self):
         matches = scan_text('schema.sql', 'INSERT IGNORE INTO example VALUES (CONCAT(?, ?));')
@@ -35,7 +45,7 @@ class AuditTests(unittest.TestCase):
 
     def test_missing_upsert_and_connection_bypass_are_distinct(self):
         matches = scan_text('Module.php', "new \\PDO('mysql:dbname=external'); $sql = 'ON DUPLICATE KEY UPDATE value=VALUES(value)';")
-        self.assertEqual({'upsert_mysql', 'connection_bypass'}, {m['rule'] for m in matches})
+        self.assertEqual({'upsert', 'connection_bypass'}, {m['rule'] for m in matches})
 
     def test_php_if_is_not_a_mysql_function(self):
         self.assertEqual([], scan_text('Module.php', 'if ($enabled) { return; }'))

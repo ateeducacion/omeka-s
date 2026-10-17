@@ -134,15 +134,13 @@ def inventory(catalogs):
 
 # These are candidates, not SQL parsing or a declaration of module compatibility.
 RULES = [
-    ('alter_foreign_key', 'rejected', r'\bALTER\s+TABLE\b[^;]{0,450}?\bADD\s+(?:CONSTRAINT\s+[^;]{1,100}?\s+)?FOREIGN\s+KEY\b'),
     ('fulltext', 'rejected', r'\bFULLTEXT\s+(?:KEY|INDEX)\b|\bMATCH\s*\([^;]{1,250}?\)\s*AGAINST\b'),
-    ('upsert_mysql', 'unsupported', r'\bON\s+DUPLICATE\s+KEY\s+UPDATE\b'),
-    ('alter_mysql', 'unsupported', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CHANGE|MODIFY|DROP\s+FOREIGN\s+KEY|(?:ADD|DROP)\s+(?:UNIQUE\s+)?(?:INDEX|KEY)|(?:DEFAULT\s+)?CHARSET)\b'),
-    ('mysql_join_write', 'unsupported', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+(?:(?:INNER|LEFT|RIGHT)\s+)?JOIN\b|\bDELETE\s+[`\w]+\s+FROM\b|\bDELETE\s+FROM\b[^;]{0,150}?\bJOIN\b'),
+    ('alter_mysql', 'unsupported', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CHANGE|MODIFY|(?:DEFAULT\s+)?CHARSET)\b'),
+    ('mysql_join_write', 'unsupported', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+(?:(?:INNER|LEFT|RIGHT)\s+)?JOIN\b|\bDELETE\s+[`\w]+\s*,\s*[`\w]+\s+FROM\b'),
     ('information_schema', 'unsupported', r'\binformation_schema\s*\.'),
     ('server_variable', 'unsupported', r'@@(?:\w+\.)?\w+'),
-    ('show_mysql', 'unsupported', r'\bSHOW\s+(?:CREATE|INDEX(?:ES)?|KEYS|TABLE\s+STATUS|VARIABLES|STATUS|WARNINGS|DATABASES|ENGINES|PROCESSLIST)\b'),
-    ('mysql_functions', 'unsupported', r'\b(?:SUBSTRING_INDEX|STR_TO_DATE|DATE_ADD|DATE_SUB|ADDDATE|SUBDATE|DATEDIFF|TIMESTAMPDIFF|TIMESTAMPADD|CONVERT_TZ|LAST_DAY|DAYOFWEEK|DAYOFYEAR|WEEKDAY|YEARWEEK|MONTHNAME|DAYNAME|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|LPAD|RPAD|CRC32|SHA1|SHA2|UUID|UUID_SHORT|INET_ATON|INET_NTOA|INET6_ATON|INET6_NTOA|REGEXP_REPLACE|REGEXP_SUBSTR|REGEXP_LIKE|REGEXP_INSTR|JSON_CONTAINS|JSON_CONTAINS_PATH|JSON_UNQUOTE|JSON_SEARCH|JSON_TABLE|JSON_OBJECTAGG|JSON_ARRAYAGG|ST_\w+)\s*\('),
+    ('show_mysql', 'unsupported', r'\bSHOW\s+(?:CREATE|TABLE\s+STATUS|VARIABLES|STATUS|WARNINGS|DATABASES|ENGINES|PROCESSLIST)\b'),
+    ('mysql_functions', 'unsupported', r'\b(?:DATE_ADD|DATE_SUB|ADDDATE|SUBDATE|DATEDIFF|TIMESTAMPDIFF|TIMESTAMPADD|CONVERT_TZ|DAYOFWEEK|DAYOFYEAR|WEEKDAY|YEARWEEK|MONTHNAME|DAYNAME|LPAD|RPAD|UUID|UUID_SHORT|INET_ATON|INET_NTOA|INET6_ATON|INET6_NTOA|REGEXP_LIKE|REGEXP_INSTR|JSON_CONTAINS|JSON_CONTAINS_PATH|JSON_SEARCH|JSON_TABLE|JSON_OBJECTAGG|JSON_ARRAYAGG|ST_\w+)\s*\('),
     ('mysql_expression', 'unsupported', r'\bSQL_CALC_FOUND_ROWS\b|\bSELECT\b[^;]{0,800}?\bFOR\s+UPDATE\b|\bLOCK\s+TABLES\b|\bUNLOCK\s+TABLES\b|\bCONVERT\s*\([^;]{0,150}?\bUSING\b|\bINTERVAL\s+(?:\d+|\?|:\w+)\s+\w+'),
     ('group_concat', 'review', r'\bGROUP_CONCAT\s*\('),
     ('connection_bypass', 'review', r'\bnew\s+\\?PDO\s*\(|->(?:getWrappedConnection|getNativeConnection)\s*\(|\bmysqli_(?:connect|query|prepare)\s*\('),
@@ -150,8 +148,13 @@ RULES = [
     ('mysql_collation', 'review', r'\bCOLLATE\s+[\'"`]?\w*(?:utf8|latin1|unicode|general)\w*'),
     ('mysql_enum', 'unsupported', r'(?<!->)(?<!::)\b(?:ENUM|SET)\s*\(\s*[\'\"]'),
     ('set_statement', 'review', r'\bSET\s+(?:SESSION\s+|GLOBAL\s+)?(?:SQL_MODE|GROUP_CONCAT_MAX_LEN|FOREIGN_KEY_CHECKS|NAMES|UNIQUE_CHECKS|TIME_ZONE)\b'),
-    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]'),
-    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP)\s*\('),
+    # Translated by SqliteCompatConnection; update with the translator.
+    ('alter_foreign_key', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,450}?\b(?:ADD\s+(?:CONSTRAINT\s+[^;]{1,100}?\s+)?|DROP\s+)FOREIGN\s+KEY\b'),
+    ('alter_index', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:ADD|DROP)\s+(?:UNIQUE\s+)?(?:INDEX|KEY)\b'),
+    ('upsert', 'covered_if_wrapper', r'\bON\s+DUPLICATE\s+KEY\s+UPDATE\b'),
+    ('delete_join', 'covered_if_wrapper', r'\bDELETE\s+[`\w]+\s+FROM\b'),
+    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bSHOW\s+(?:INDEX(?:ES)?|KEYS)\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]'),
+    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP|SUBSTRING_INDEX|STR_TO_DATE|LAST_DAY|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|CRC32|SHA1|SHA2|REGEXP_REPLACE|REGEXP_SUBSTR|JSON_UNQUOTE)\s*\('),
 ]
 COMPILED_RULES = [(name, status, re.compile(pattern, re.I)) for name, status, pattern in RULES]
 
@@ -421,12 +424,6 @@ def write_summary(output, records, findings, stamp, support):
               'filtered_release_source contiene solo el codigo de un tag publicado; no incluye datos ni dependencias del paquete.',
               'Las dependencias se leen de config/module.ini; pueden existir otras comprobaciones dinamicas.',
               'Las discrepancias entre version de catalogo y manifiesto se registran en version_matches_manifest.',
-              '', 'PRIORIDADES REVISADAS MANUALMENTE (versiones del informe inicial)',
-              'Collecting 1.13.0: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (lineas 46 y siguientes).',
-              'CSV Import 2.6.2: Module.php, install(), ADD CONSTRAINT FOREIGN KEY (linea 44).',
-              'Advanced Search 3.4.64: data/install/schema.sql, FULLTEXT INDEX y ADD CONSTRAINT FOREIGN KEY.',
-              'Common 3.4.93: Module.php, SHOW INDEX. Atrapa el error y omite indices; puede instalarse con optimizaciones ausentes.',
-              'Easy Admin 3.4.49: Module.php, executeSessionCleanup(), SHOW INDEX; tambien hay SQL de mantenimiento/backup especifico de MySQL.',
               '', 'CONFIRMACION DE LOS CANDIDATOS',
               'Probar estas versiones por separado en SQLite y MariaDB, con las mismas dependencias y datos, y verificar instalacion y una operacion representativa.']
     if (output / 'runtime/summary.txt').exists():
@@ -448,6 +445,7 @@ def main():
     parser.add_argument('--daniel', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--cache', type=Path, required=True)
+    parser.add_argument('--core', type=Path, default=Path('.'), help='Checkout of the Omeka S core whose SQLite translator the rules describe')
     parser.add_argument('--inventory-only', action='store_true')
     parser.add_argument('--retry-unavailable', action='store_true', help='Retry missing archives, using pinned unreleased commits when no published version exists')
     parser.add_argument('--rescan', action='store_true', help='Rescan cached archives from the completed inventory without network requests')
@@ -469,7 +467,7 @@ def main():
                     print(f'Scanned/resolved {len(records)}/{len(pending)}; unavailable: {sum(r["status"] == "unavailable" for r in records)}', flush=True)
         records.sort(key=lambda r: r['name'].lower())
     stamp = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-    support = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
+    support = subprocess.run(['git', '-C', str(args.core), 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
     report = {'generated_at': stamp, 'core_commit': support,
               'scanner_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               'catalog_urls': ['https://omeka.org/s/modules/', 'https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html'],
