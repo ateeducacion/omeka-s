@@ -135,13 +135,13 @@ def inventory(catalogs):
 # These are candidates, not SQL parsing or a declaration of module compatibility.
 RULES = [
     ('fulltext', 'rejected', r'\bFULLTEXT\s+(?:KEY|INDEX)\b|\bMATCH\s*\([^;]{1,250}?\)\s*AGAINST\b'),
-    ('alter_mysql', 'unsupported', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CHANGE|MODIFY|(?:DEFAULT\s+)?CHARSET)\b'),
-    ('mysql_join_write', 'unsupported', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+(?:(?:INNER|LEFT|RIGHT)\s+)?JOIN\b|\bDELETE\s+[`\w]+\s*,\s*[`\w]+\s+FROM\b'),
+    ('alter_mysql', 'unsupported', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CONVERT\s+TO|(?:DEFAULT\s+)?CHARSET)\b'),
+    ('mysql_join_write', 'unsupported', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+RIGHT\s+(?:OUTER\s+)?JOIN\b|\bDELETE\s+[`\w]+\s*,\s*[`\w]+\s+FROM\b'),
     ('information_schema', 'unsupported', r'\binformation_schema\s*\.'),
     ('server_variable', 'unsupported', r'@@(?:\w+\.)?\w+'),
     ('show_mysql', 'unsupported', r'\bSHOW\s+(?:CREATE|TABLE\s+STATUS|VARIABLES|STATUS|WARNINGS|DATABASES|ENGINES|PROCESSLIST)\b'),
-    ('mysql_functions', 'unsupported', r'\b(?:DATE_ADD|DATE_SUB|ADDDATE|SUBDATE|DATEDIFF|TIMESTAMPDIFF|TIMESTAMPADD|CONVERT_TZ|DAYOFWEEK|DAYOFYEAR|WEEKDAY|YEARWEEK|MONTHNAME|DAYNAME|LPAD|RPAD|UUID|UUID_SHORT|INET_ATON|INET_NTOA|INET6_ATON|INET6_NTOA|REGEXP_LIKE|REGEXP_INSTR|JSON_CONTAINS|JSON_CONTAINS_PATH|JSON_SEARCH|JSON_TABLE|JSON_OBJECTAGG|JSON_ARRAYAGG|ST_\w+)\s*\('),
-    ('mysql_expression', 'unsupported', r'\bSQL_CALC_FOUND_ROWS\b|\bSELECT\b[^;]{0,800}?\bFOR\s+UPDATE\b|\bLOCK\s+TABLES\b|\bUNLOCK\s+TABLES\b|\bCONVERT\s*\([^;]{0,150}?\bUSING\b|\bINTERVAL\s+(?:\d+|\?|:\w+)\s+\w+'),
+    ('mysql_functions', 'unsupported', r'\b(?:DATEDIFF|TIMESTAMPDIFF|TIMESTAMPADD|CONVERT_TZ|DAYOFWEEK|DAYOFYEAR|WEEKDAY|YEARWEEK|MONTHNAME|DAYNAME|LPAD|RPAD|UUID|UUID_SHORT|INET_ATON|INET_NTOA|INET6_ATON|INET6_NTOA|REGEXP_LIKE|REGEXP_INSTR|JSON_CONTAINS|JSON_CONTAINS_PATH|JSON_SEARCH|JSON_TABLE|JSON_OBJECTAGG|JSON_ARRAYAGG|ST_\w+)\s*\('),
+    ('mysql_expression', 'unsupported', r'\bSQL_CALC_FOUND_ROWS\b|\bLOCK\s+TABLES\b|\bUNLOCK\s+TABLES\b|\bCONVERT\s*\([^;]{0,150}?\bUSING\b|(?<!,)(?<!,\s)\bINTERVAL\s+(?:\d+|\?|:\w+)\s+\w+'),
     ('group_concat', 'review', r'\bGROUP_CONCAT\s*\('),
     ('connection_bypass', 'review', r'\bnew\s+\\?PDO\s*\(|->(?:getWrappedConnection|getNativeConnection)\s*\(|\bmysqli_(?:connect|query|prepare)\s*\('),
     ('mysql_driver', 'review', r'\bpdo_mysql\b|\b(?:MySqlPlatform|MySQLPlatform|MariaDb\w*Platform)\b'),
@@ -150,11 +150,13 @@ RULES = [
     ('set_statement', 'review', r'\bSET\s+(?:SESSION\s+|GLOBAL\s+)?(?:SQL_MODE|GROUP_CONCAT_MAX_LEN|FOREIGN_KEY_CHECKS|NAMES|UNIQUE_CHECKS|TIME_ZONE)\b'),
     # Translated by SqliteCompatConnection; update with the translator.
     ('alter_foreign_key', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,450}?\b(?:ADD\s+(?:CONSTRAINT\s+[^;]{1,100}?\s+)?|DROP\s+)FOREIGN\s+KEY\b'),
+    ('alter_column', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:CHANGE|MODIFY)\b'),
+    ('update_join', 'covered_if_wrapper', r'\bUPDATE\s+[`\w.]+(?:\s+\w+)?\s+(?:(?:INNER|CROSS|LEFT(?:\s+OUTER)?)\s+)?JOIN\b'),
     ('alter_index', 'covered_if_wrapper', r'\bALTER\s+TABLE\b[^;]{0,180}?\b(?:ADD|DROP)\s+(?:UNIQUE\s+)?(?:INDEX|KEY)\b'),
     ('upsert', 'covered_if_wrapper', r'\bON\s+DUPLICATE\s+KEY\s+UPDATE\b'),
     ('delete_join', 'covered_if_wrapper', r'\bDELETE\s+[`\w]+\s+FROM\b'),
-    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bSHOW\s+(?:INDEX(?:ES)?|KEYS)\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]'),
-    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP|SUBSTRING_INDEX|STR_TO_DATE|LAST_DAY|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|CRC32|SHA1|SHA2|REGEXP_REPLACE|REGEXP_SUBSTR|JSON_UNQUOTE)\s*\('),
+    ('translated_syntax', 'covered_if_wrapper', r'\bINSERT\s+IGNORE\b|\bSHOW\s+(?:FULL\s+)?TABLES\b|\bSHOW\s+COLUMNS\b|\bSHOW\s+(?:INDEX(?:ES)?|KEYS)\b|\bTRUNCATE\s+(?:TABLE\s+)?[`\w]|\bSELECT\b[^;]{0,800}?\b(?:FOR\s+(?:UPDATE|SHARE)|LOCK\s+IN\s+SHARE\s+MODE)\b'),
+    ('translated_functions', 'covered_if_wrapper', r'\b(?:NOW|CURDATE|CURTIME|UTC_TIMESTAMP|UTC_DATE|UTC_TIME|FROM_UNIXTIME|UNIX_TIMESTAMP|DATE_FORMAT|IF|MD5|CONCAT|CONCAT_WS|FIELD|FIND_IN_SET|GREATEST|LEAST|REGEXP|SUBSTRING_INDEX|STR_TO_DATE|LAST_DAY|YEAR|MONTH|DAY|HOUR|MINUTE|SECOND|RAND|CRC32|SHA1|SHA2|REGEXP_REPLACE|REGEXP_SUBSTR|JSON_UNQUOTE|DATE_ADD|DATE_SUB|ADDDATE|SUBDATE)\s*\('),
 ]
 COMPILED_RULES = [(name, status, re.compile(pattern, re.I)) for name, status, pattern in RULES]
 

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-17T18:33:32Z",
-  "core_commit": "7d41095a1b1889fe240a63ae57278d425dcf25b1",
-  "scanner_sha256": "fe9fc043ff57db3332524bf5110458f3408bdb7be5327ca8676b33eef11a93e0",
+  "generated_at": "2026-10-17T18:59:09Z",
+  "core_commit": "e4c3246e6ad273215333ad13eabcb451c7dbf3d8",
+  "scanner_sha256": "d0f70e730e5ea2b291160aa78bdaf7e146859fc3d28142d49a6dfa8a496c8251",
   "catalog_urls": [
     "https://omeka.org/s/modules/",
     "https://daniel-km.github.io/UpgradeToOmekaS/en/omeka_s_modules.html"
@@ -7831,7 +7831,7 @@
       },
       "files_scanned": 88,
       "excluded_entries": 679,
-      "finding_count": 7,
+      "finding_count": 6,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -8464,7 +8464,7 @@
       },
       "files_scanned": 9,
       "excluded_entries": 16,
-      "finding_count": 7,
+      "finding_count": 6,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -8491,7 +8491,7 @@
       },
       "files_scanned": 9,
       "excluded_entries": 16,
-      "finding_count": 7,
+      "finding_count": 6,
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "32ded524168d1f05"
@@ -8664,32 +8664,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Mapper",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Mapper/releases/download/3.4.9/Mapper-3.4.9.zip",
-      "version": "3.4.9",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Mapper",
-      "id": "e9ddf93f14870e14",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.9",
-      "sha256": "9b08760d82061857d85672d1732a334ec2e31b5995e2ea5e1090e1892ed9b65e",
-      "source_sha256": "fb1b30fdd3d819f174309c4476fc72efdfc799ee243fd17b208bf375c90cc557",
-      "manifest": {
-        "name": "Mapper",
-        "version": "3.4.9",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 37,
-      "excluded_entries": 885,
-      "finding_count": 5,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Mapper",
@@ -8715,6 +8689,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "e9ddf93f14870e14"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Mapper",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Mapper/releases/download/3.4.9/Mapper-3.4.9.zip",
+      "version": "3.4.9",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Mapper",
+      "id": "e9ddf93f14870e14",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.9",
+      "sha256": "9b08760d82061857d85672d1732a334ec2e31b5995e2ea5e1090e1892ed9b65e",
+      "source_sha256": "fb1b30fdd3d819f174309c4476fc72efdfc799ee243fd17b208bf375c90cc557",
+      "manifest": {
+        "name": "Mapper",
+        "version": "3.4.9",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 37,
+      "excluded_entries": 885,
+      "finding_count": 5,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -9025,6 +9025,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Menu",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Menu/releases/download/3.4.16/Menu-3.4.16.zip",
+      "version": "3.4.16",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Menu",
+      "id": "6dc44e8d07a08208",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.16",
+      "sha256": "34a51fe7b41fcd954d4ecaffb321e479e8ef548efe69d4b6bd0c74e5f558151b",
+      "source_sha256": "0aa22c2d2f1a64533ef88919d16ab33c12adde31a2faa01a2ddf9696298d81a0",
+      "manifest": {
+        "name": "Menu",
+        "version": "3.4.16",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 28,
+      "excluded_entries": 52,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Menu",
@@ -9050,32 +9076,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "6dc44e8d07a08208"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Menu",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Menu/releases/download/3.4.16/Menu-3.4.16.zip",
-      "version": "3.4.16",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Menu",
-      "id": "6dc44e8d07a08208",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.16",
-      "sha256": "34a51fe7b41fcd954d4ecaffb321e479e8ef548efe69d4b6bd0c74e5f558151b",
-      "source_sha256": "0aa22c2d2f1a64533ef88919d16ab33c12adde31a2faa01a2ddf9696298d81a0",
-      "manifest": {
-        "name": "Menu",
-        "version": "3.4.16",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 28,
-      "excluded_entries": 52,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -10033,32 +10033,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "OctopusViewer",
-      "archive_url": "https://github.com/biblibre/omeka-s-module-OctopusViewer/releases/download/v0.10.4/OctopusViewer-0.10.4.zip",
-      "version": "0.10.4",
-      "archived": false,
-      "repository": "https://github.com/biblibre/omeka-s-module-OctopusViewer",
-      "id": "2a821f9d0c6c95aa",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "0.10.4",
-      "sha256": "faecc5b37c36f1867c3ab29de3a875c6e2692841a6c32eee6d0e818e8776fb14",
-      "source_sha256": "fba1bcd5d99433a9919b1cf50402daf5c83829e8f293cd5900ed80f353ff5c84",
-      "manifest": {
-        "name": "OctopusViewer",
-        "version": "0.10.4",
-        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 31,
-      "excluded_entries": 369,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://github.com/biblibre/omeka-s-module-MediaViewer",
@@ -10084,6 +10058,32 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "2a821f9d0c6c95aa"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "OctopusViewer",
+      "archive_url": "https://github.com/biblibre/omeka-s-module-OctopusViewer/releases/download/v0.10.4/OctopusViewer-0.10.4.zip",
+      "version": "0.10.4",
+      "archived": false,
+      "repository": "https://github.com/biblibre/omeka-s-module-OctopusViewer",
+      "id": "2a821f9d0c6c95aa",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "0.10.4",
+      "sha256": "faecc5b37c36f1867c3ab29de3a875c6e2692841a6c32eee6d0e818e8776fb14",
+      "source_sha256": "fba1bcd5d99433a9919b1cf50402daf5c83829e8f293cd5900ed80f353ff5c84",
+      "manifest": {
+        "name": "OctopusViewer",
+        "version": "0.10.4",
+        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 31,
+      "excluded_entries": 369,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [
@@ -11206,34 +11206,6 @@
     },
     {
       "sources": [
-        "official",
-        "daniel"
-      ],
-      "name": "Quark",
-      "archive_url": "https://github.com/biblibre/omeka-s-module-Quark/releases/download/v0.4.0/Quark-0.4.0.zip",
-      "version": "0.4.0",
-      "archived": false,
-      "repository": "https://github.com/biblibre/omeka-s-module-Quark",
-      "id": "51d0f460e8dbd6e0",
-      "catalog_omeka_constraint": "^3.0.0 || ^4.0.0",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "0.4.0",
-      "sha256": "26b447399a4eed19f0d1416b92a9f4daec088036dc43dacd3b3fcdaa488b369f",
-      "source_sha256": "4803c5b67318ca72d39d8360606dc519a9ebcfd1016e8e7a78777ba65556f08a",
-      "manifest": {
-        "name": "Quark",
-        "version": "0.4.0",
-        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 7,
-      "excluded_entries": 3,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://github.com/jajm/omeka-s-module-Quark",
@@ -11257,6 +11229,34 @@
       "files_scanned": 12,
       "excluded_entries": 0,
       "finding_count": 2,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "official",
+        "daniel"
+      ],
+      "name": "Quark",
+      "archive_url": "https://github.com/biblibre/omeka-s-module-Quark/releases/download/v0.4.0/Quark-0.4.0.zip",
+      "version": "0.4.0",
+      "archived": false,
+      "repository": "https://github.com/biblibre/omeka-s-module-Quark",
+      "id": "51d0f460e8dbd6e0",
+      "catalog_omeka_constraint": "^3.0.0 || ^4.0.0",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "0.4.0",
+      "sha256": "26b447399a4eed19f0d1416b92a9f4daec088036dc43dacd3b3fcdaa488b369f",
+      "source_sha256": "4803c5b67318ca72d39d8360606dc519a9ebcfd1016e8e7a78777ba65556f08a",
+      "manifest": {
+        "name": "Quark",
+        "version": "0.4.0",
+        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 7,
+      "excluded_entries": 3,
+      "finding_count": 0,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -12628,6 +12628,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Shibboleth (archived, replaced by Single Sign-On)",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
+      "version": "3.4.13",
+      "archived": true,
+      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
+      "id": "9af78fdd683a8984",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.13",
+      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
+      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
+      "manifest": {
+        "name": "Shibboleth (archived, replaced by Single Sign-On)",
+        "version": "3.4.13",
+        "omeka_version_constraint": "^4.1.0",
+        "dependencies": []
+      },
+      "files_scanned": 8,
+      "excluded_entries": 80,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Shibboleth",
@@ -12653,32 +12679,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "9af78fdd683a8984"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Shibboleth (archived, replaced by Single Sign-On)",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth/releases/download/3.4.13/Shibboleth-3.4.13.zip",
-      "version": "3.4.13",
-      "archived": true,
-      "repository": "https://github.com/Daniel-KM/Omeka-s-module-Shibboleth",
-      "id": "9af78fdd683a8984",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.13",
-      "sha256": "ae016874a4d03b7bfa2ce8d893f1333572a620cae1b019db849485e2abbcf4bf",
-      "source_sha256": "d9883d2da5a92f10f19d88310e966cfd35ac96cbef58164576251211ba525242",
-      "manifest": {
-        "name": "Shibboleth (archived, replaced by Single Sign-On)",
-        "version": "3.4.13",
-        "omeka_version_constraint": "^4.1.0",
-        "dependencies": []
-      },
-      "files_scanned": 8,
-      "excluded_entries": 80,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -12917,6 +12917,32 @@
     },
     {
       "sources": [
+        "official"
+      ],
+      "name": "Simple PDF",
+      "archive_url": "https://github.com/ivyrze/omeka-s-module-simplepdf/releases/download/1.0.2/SimplePdf.zip",
+      "version": "1.0.2",
+      "archived": false,
+      "repository": "https://github.com/ivyrze/omeka-s-module-simplepdf",
+      "id": "1901d99945a0fa29",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "1.0.2",
+      "sha256": "0324198c130c7a0e9c191348336915e9c9d334f112f6309e808b9e7cf6a8ab33",
+      "source_sha256": "41dde7e4a284da0374f46d17bb4053c0844a9910a591550f7ce69242def96267",
+      "manifest": {
+        "name": "Simple PDF",
+        "version": "1.0.2",
+        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 3,
+      "excluded_entries": 195,
+      "finding_count": 0,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
         "daniel"
       ],
       "repository": "https://github.com/arepr/omeka-s-module-simplepdf",
@@ -12942,32 +12968,6 @@
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "1901d99945a0fa29"
-    },
-    {
-      "sources": [
-        "official"
-      ],
-      "name": "Simple PDF",
-      "archive_url": "https://github.com/ivyrze/omeka-s-module-simplepdf/releases/download/1.0.2/SimplePdf.zip",
-      "version": "1.0.2",
-      "archived": false,
-      "repository": "https://github.com/ivyrze/omeka-s-module-simplepdf",
-      "id": "1901d99945a0fa29",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "1.0.2",
-      "sha256": "0324198c130c7a0e9c191348336915e9c9d334f112f6309e808b9e7cf6a8ab33",
-      "source_sha256": "41dde7e4a284da0374f46d17bb4053c0844a9910a591550f7ce69242def96267",
-      "manifest": {
-        "name": "Simple PDF",
-        "version": "1.0.2",
-        "omeka_version_constraint": "^3.0.0 || ^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 3,
-      "excluded_entries": 195,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
     },
     {
       "sources": [
@@ -13971,7 +13971,7 @@
       },
       "files_scanned": 16,
       "excluded_entries": 0,
-      "finding_count": 10,
+      "finding_count": 9,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -14061,33 +14061,6 @@
       "sources": [
         "daniel"
       ],
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translations",
-      "name": "Translations",
-      "archived": false,
-      "version": "3.0.4",
-      "catalog_omeka_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
-      "id": "b81e41a0359cf752",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translations/releases/download/3.0.4/Translations-3.0.4.zip",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.0.4",
-      "sha256": "eaa78a0473bbfc0a96e2c119cd8c0b8709f16cc6cc71c41d4c4f3a9fee667c27",
-      "source_sha256": "d75adab67558ef2d5d0f65de39edd46ec06d931156b61ab8cd9d052d25fd6ed4",
-      "manifest": {
-        "name": "Translations",
-        "version": "3.0.4",
-        "omeka_version_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 2,
-      "excluded_entries": 11,
-      "finding_count": 0,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
-        "daniel"
-      ],
       "repository": "https://github.com/dartmouth-dltg/Omeka-S-module-Translations",
       "name": "Translations",
       "archived": false,
@@ -14113,27 +14086,28 @@
     },
     {
       "sources": [
-        "official"
+        "daniel"
       ],
-      "name": "Translator",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
-      "version": "3.4.5",
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translations",
+      "name": "Translations",
       "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
-      "id": "e9a46cca61cc27e2",
+      "version": "3.0.4",
+      "catalog_omeka_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
+      "id": "b81e41a0359cf752",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translations/releases/download/3.0.4/Translations-3.0.4.zip",
       "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.5",
-      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
-      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
+      "resolved_tag": "3.0.4",
+      "sha256": "eaa78a0473bbfc0a96e2c119cd8c0b8709f16cc6cc71c41d4c4f3a9fee667c27",
+      "source_sha256": "d75adab67558ef2d5d0f65de39edd46ec06d931156b61ab8cd9d052d25fd6ed4",
       "manifest": {
-        "name": "Translator",
-        "version": "3.4.5",
-        "omeka_version_constraint": "^4.0.0",
+        "name": "Translations",
+        "version": "3.0.4",
+        "omeka_version_constraint": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0",
         "dependencies": []
       },
-      "files_scanned": 21,
-      "excluded_entries": 310,
-      "finding_count": 17,
+      "files_scanned": 2,
+      "excluded_entries": 11,
+      "finding_count": 0,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -14169,6 +14143,32 @@
       "sources": [
         "official"
       ],
+      "name": "Translator",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Translator/releases/download/3.4.5/Translator-3.4.5.zip",
+      "version": "3.4.5",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Translator",
+      "id": "e9a46cca61cc27e2",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.5",
+      "sha256": "e30aec4b0f7ffdb7082bc0a5f58f6ff587817317f9eb4609605a387fdbd34419",
+      "source_sha256": "84cd3ea81d966b5794e101fdb9e1c7da8f766d8b3c49cd6e818ae66566ee36c7",
+      "manifest": {
+        "name": "Translator",
+        "version": "3.4.5",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 21,
+      "excluded_entries": 310,
+      "finding_count": 17,
+      "version_matches_manifest": true,
+      "status": "scanned"
+    },
+    {
+      "sources": [
+        "official"
+      ],
       "name": "Two-Factor Authentification",
       "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-TwoFactorAuth/releases/download/3.4.4/TwoFactorAuth-3.4.4.zip",
       "version": "3.4.4",
@@ -14187,7 +14187,7 @@
       },
       "files_scanned": 16,
       "excluded_entries": 15,
-      "finding_count": 5,
+      "finding_count": 4,
       "version_matches_manifest": true,
       "status": "scanned"
     },
@@ -14214,7 +14214,7 @@
       },
       "files_scanned": 16,
       "excluded_entries": 15,
-      "finding_count": 5,
+      "finding_count": 4,
       "version_matches_manifest": true,
       "status": "scanned",
       "same_source_as": "88dbc8c53432b782"
@@ -14523,32 +14523,6 @@
     },
     {
       "sources": [
-        "official"
-      ],
-      "name": "Urify",
-      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Urify/releases/download/3.4.3/Urify-3.4.3.zip",
-      "version": "3.4.3",
-      "archived": false,
-      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Urify",
-      "id": "f288d78f8de5735d",
-      "artifact_kind": "release_asset",
-      "resolved_tag": "3.4.3",
-      "sha256": "6728411c98a3a7e390fce6b99f5aedda94f833a10aa5d99c0f2674b3f6737e37",
-      "source_sha256": "37c74b68b5fb3ad1a58819fbef229d3370bf241fe8b65b3f7973f256c2962a1e",
-      "manifest": {
-        "name": "Urify",
-        "version": "3.4.3",
-        "omeka_version_constraint": "^4.0.0",
-        "dependencies": []
-      },
-      "files_scanned": 11,
-      "excluded_entries": 172,
-      "finding_count": 1,
-      "version_matches_manifest": true,
-      "status": "scanned"
-    },
-    {
-      "sources": [
         "daniel"
       ],
       "repository": "https://gitlab.com/Daniel-KM/Omeka-S-module-Urify",
@@ -14574,6 +14548,32 @@
       "excluded_entries": 172,
       "version_matches_manifest": true,
       "same_source_as": "f288d78f8de5735d"
+    },
+    {
+      "sources": [
+        "official"
+      ],
+      "name": "Urify",
+      "archive_url": "https://github.com/Daniel-KM/Omeka-S-module-Urify/releases/download/3.4.3/Urify-3.4.3.zip",
+      "version": "3.4.3",
+      "archived": false,
+      "repository": "https://github.com/Daniel-KM/Omeka-S-module-Urify",
+      "id": "f288d78f8de5735d",
+      "artifact_kind": "release_asset",
+      "resolved_tag": "3.4.3",
+      "sha256": "6728411c98a3a7e390fce6b99f5aedda94f833a10aa5d99c0f2674b3f6737e37",
+      "source_sha256": "37c74b68b5fb3ad1a58819fbef229d3370bf241fe8b65b3f7973f256c2962a1e",
+      "manifest": {
+        "name": "Urify",
+        "version": "3.4.3",
+        "omeka_version_constraint": "^4.0.0",
+        "dependencies": []
+      },
+      "files_scanned": 11,
+      "excluded_entries": 172,
+      "finding_count": 1,
+      "version_matches_manifest": true,
+      "status": "scanned"
     },
     {
       "sources": [

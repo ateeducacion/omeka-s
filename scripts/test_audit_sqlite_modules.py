@@ -31,10 +31,12 @@ class AuditTests(unittest.TestCase):
     def test_translated_writes_are_covered_and_the_rest_unsupported(self):
         covered = scan_text('schema.sql', 'ALTER TABLE t DROP FOREIGN KEY fk; ALTER TABLE t ADD UNIQUE INDEX i (a); SHOW INDEX FROM t;'
                             ' INSERT INTO t VALUES (1) ON DUPLICATE KEY UPDATE a = VALUES(a); DELETE v FROM value v JOIN r ON r.id = v.r;'
-                            ' SELECT SUBSTRING_INDEX(a, ".", 1), YEAR(b), RAND() FROM t;')
+                            ' SELECT SUBSTRING_INDEX(a, ".", 1), YEAR(b), RAND() FROM t;'
+                            ' ALTER TABLE t CHANGE a b INT; UPDATE value v JOIN r ON r.id = v.r SET v.a = 1;'
+                            ' DELETE FROM t WHERE c < DATE_SUB(NOW(), INTERVAL 1 DAY); SELECT id FROM t FOR UPDATE;')
         self.assertEqual({'covered_if_wrapper'}, {m['classification'] for m in covered})
-        unsupported = scan_text('schema.sql', 'ALTER TABLE t CHANGE a b INT; UPDATE value v JOIN r ON r.id = v.r SET v.a = 1;'
-                                ' SELECT DATE_SUB(NOW(), INTERVAL 1 DAY), ST_AsGeoJSON(g) FROM t;')
+        unsupported = scan_text('schema.sql', 'ALTER TABLE t CONVERT TO CHARACTER SET utf8mb4; UPDATE value v RIGHT JOIN r ON r.id = v.r SET v.a = 1;'
+                                ' SELECT NOW() - INTERVAL 1 DAY, ST_AsGeoJSON(g) FROM t;')
         self.assertEqual({'alter_mysql', 'mysql_join_write', 'mysql_functions', 'mysql_expression'},
                          {m['rule'] for m in unsupported if m['classification'] == 'unsupported'})
 
