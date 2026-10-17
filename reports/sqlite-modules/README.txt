@@ -58,7 +58,8 @@ Pruebas de ejecución propuestas
      el entrypoint de alpine-omeka-s puede continuar tras una instalación fallida.
   5. Un fallo solo en SQLite identifica una posible carencia del soporte o del
      módulo. Guardar consulta y error, añadir una prueba pequeña y corregir el
-     lugar adecuado. Un fallo también en MariaDB requiere revisar la preparación.
+     lugar adecuado. Un fallo también en MariaDB puede deberse a la preparación
+     o a un defecto del módulo independiente del motor; hay que distinguirlos.
 
 Primeras pruebas realizadas
   Se han comprobado instalaciones limpias de Collecting 1.13.0, CSV Import
@@ -69,20 +70,48 @@ Primeras pruebas realizadas
   Se usa el núcleo fijado en core_commit del inventario, superpuesto sobre una
   imagen Alpine de prueba. No se modifica el repositorio alpine-omeka-s.
 
-Repetir estas seis instalaciones:
-  git archive --format=tar 87b4ef845b83bb4b889fda7b8ce7e718f2090341 -o /tmp/omeka-sqlite-audit-core.tar
-  mkdir -p /tmp/omeka-sqlite-audit-packages
-  cp /tmp/omeka-module-audit-cache/cd4b0e5de4ebba26.archive /tmp/omeka-sqlite-audit-packages/Collecting.zip
-  cp /tmp/omeka-module-audit-cache/aeab175fe456fc76.archive /tmp/omeka-sqlite-audit-packages/CSVImport.zip
-  cp /tmp/omeka-module-audit-cache/ecdc3b4a7ef67855.archive /tmp/omeka-sqlite-audit-packages/CodeSnippets.zip
-  bash scripts/test_sqlite_module_installation.sh \
-    /tmp/omeka-sqlite-audit-core.tar /tmp/omeka-sqlite-audit-packages \
-    reports/sqlite-modules/runtime
+Estas primeras pruebas se hicieron con una versión anterior del script; su
+interfaz ha cambiado y runtime/ se conserva solo como registro histórico.
 
-El script necesita Docker y la imagen local alpine-omeka-s:sqlite-test.
-OMEKA_AUDIT_IMAGE permite usar la misma imagen identificada en runtime/image.txt.
-MariaDB usa mariadb:lts; runtime/database-image.txt identifica la revisión usada.
-Se crean bases, contenedores y una red desechables, sin puertos publicados.
-No usar el estado del contenedor como sustituto de installed_active.
+Pruebas de instalación y uso (2026-10-17)
+  runtime-modules/summary.txt resume las pruebas de 19 módulos en las imágenes
+  publicadas de alpine-omeka-s (develop y 4.1), con MariaDB como control.
+  Cada cadena de módulos se instala en limpio, ejecuta operaciones reales
+  (scripts/test_sqlite_module_operations.php), se desinstala y, en SQLite,
+  pasa PRAGMA foreign_key_check. Todos dan los mismos resultados que en
+  MariaDB salvo Mapping (doctrine-spatial no admite SQLite).
 
-Pendiente: Common, Easy Admin, Advanced Search, operaciones reales y migraciones.
+Repetir:
+  bash scripts/test_sqlite_module_installation.sh <paquetes> <salida> \
+    Common Common,EasyAdmin Common,AdvancedSearch Common,Log,Mapper,BulkImport ...
+
+  Cada argumento es una cadena de módulos en orden de instalación; el último
+  es el que se prueba. <paquetes> contiene un <Módulo>.zip por módulo, por
+  ejemplo copiado de la caché de la auditoría (los hashes usados están en
+  runtime-modules/*/packages-sha256.txt).
+  OMEKA_AUDIT_IMAGE elige la imagen (por defecto erseco/alpine-omeka-s:develop).
+  OMEKA_AUDIT_CORE acepta un tar con ficheros del núcleo que se superponen a
+  la imagen, para probar cambios aún no publicados.
+
+El script necesita Docker. MariaDB usa mariadb:lts; database-image.txt
+identifica la revisión usada. Se crean bases, contenedores y una red
+desechables, sin puertos publicados. El resultado de instalación se toma de
+la tabla module, no del estado del contenedor.
+
+Pendiente: actualizaciones desde versiones anteriores y datos reales.
+
+Pruebas funcionales de módulos ATE (2026-10-09)
+  ate-runtime/summary.md y sus logs contienen pruebas de DiskQuota 1.0.4,
+  IsolatedSites 1.0.8 y ExeLearning 4.0.5 en SQLite y MariaDB, con el núcleo
+  74a5e131f1881e9d565cf346ff090155b7ee833b. Incluyen subidas multipart reales,
+  cuotas, filtros de recursos y permisos, extracción/renderizado/guardado de ELPX
+  y persistencia JSON. El informe distingue fallos comunes a ambos motores del
+  bloqueo SQLite de la dependencia Log. No modifica los resultados históricos
+  de runtime/ ni certifica compatibilidad completa.
+  scripts/test_ate_sqlite_modules.sh y scripts/test_ate_sqlite_modules.php permiten
+  repetir estos casos; véanse los requisitos y límites en ese informe.
+
+Revisión posterior del PR #31 de DiskQuota (2026-10-09)
+  diskquota-pr-review/summary.md documenta la reproducción y corrección de la
+  resolución de o:item contradictorio en medios anidados. Incluye pruebas reales
+  en SQLite/MariaDB y conserva los resultados anteriores, sin sobrescribirlos.

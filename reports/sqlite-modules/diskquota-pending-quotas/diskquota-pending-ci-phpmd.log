@@ -1,0 +1,248 @@
+Run PHPMD scanning	Set up job	﻿2026-10-12T11:28:20.6629975Z Current runner version: '2.337.0'
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6667308Z ##[group]Runner Image Provisioner
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6668943Z Hosted Compute Agent
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6669992Z Version: 20261002.596
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6671263Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6672971Z Build Date: 2026-10-02T22:28:27Z
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6674207Z Worker ID: {dda126b5-5d61-4481-8297-1e2a6f12875c}
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6675606Z Region: eastus2
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6676654Z Cloud: Azure
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6677753Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6680141Z ##[group]Operating System
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6681210Z Ubuntu
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6682545Z 24.04.5
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6683478Z LTS
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6684507Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6685592Z ##[group]Runner Image
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6686634Z Image: ubuntu-24.04
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6687797Z Version: 20261004.327.1
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6689849Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6693318Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6695099Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6697520Z ##[group]GITHUB_TOKEN Permissions
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6700474Z Actions: read
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6701804Z Contents: read
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6702825Z Metadata: read
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6703896Z SecurityEvents: write
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6704911Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6708282Z Secret source: Actions
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6710036Z Cache mode: write
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.6711939Z Prepare workflow directory
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.7188524Z Prepare all required actions
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.7258952Z Getting action download info
+Run PHPMD scanning	Set up job	2026-10-12T11:28:20.9642105Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Run PHPMD scanning	Set up job	2026-10-12T11:28:21.0680288Z Download action repository 'shivammathur/setup-php@v2' (SHA:eb7c497e18156a6bbabfef1d3a82760b9eda3962)
+Run PHPMD scanning	Set up job	2026-10-12T11:28:21.2383878Z Download action repository 'github/codeql-action@v4' (SHA:24c54180a607b1449ed407dd24f251e4e9147c8d)
+Run PHPMD scanning	Set up job	2026-10-12T11:28:21.6536871Z Complete job name: Run PHPMD scanning
+Run PHPMD scanning	Checkout code	﻿2026-10-12T11:28:21.7487481Z ##[group]Run actions/checkout@v7
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7488963Z with:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7489953Z   repository: ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7500619Z   token: ***
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7502459Z   ssh-strict: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7503985Z   ssh-user: git
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7505534Z   persist-credentials: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7507143Z   clean: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7508684Z   sparse-checkout-cone-mode: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7509838Z   fetch-depth: 1
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7510751Z   fetch-tags: false
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7511990Z   show-progress: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7512983Z   lfs: false
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7513865Z   submodules: false
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7514827Z   set-safe-directory: true
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7515901Z   allow-unsafe-pr-checkout: false
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.7517416Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8564645Z Syncing repository: ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8567711Z ##[group]Getting Git version info
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8569384Z Working directory is '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota'
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8572659Z [command]/usr/bin/git version
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8720988Z git version 2.55.0
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8746565Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8757009Z Temporarily overriding HOME='/home/runner/work/_temp/30bedbdf-97e8-4b2c-8758-42d51ac36695' before making global git config changes
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8760958Z Adding repository directory to the temporary git global config as a safe directory
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8765654Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8819841Z Deleting the contents of '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota'
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8826357Z ##[group]Determining repository object format
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8829098Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8830777Z ##[group]Initializing the repository
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8833448Z [command]/usr/bin/git init /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8991250Z hint: Using 'master' as the name for the initial branch. This default branch name
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8995511Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.8998816Z hint: to use in all of your new repositories, which will suppress this warning,
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9001152Z hint: call:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9002817Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9004466Z hint: 	git config --global init.defaultBranch <name>
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9006908Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9008703Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9011273Z hint: 'development'. The just-created branch can be renamed via this command:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9013603Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9014898Z hint: 	git branch -m <name>
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9016390Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9019247Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9022777Z Initialized empty Git repository in /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9029240Z [command]/usr/bin/git remote add origin https://github.com/ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9073987Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9077005Z ##[group]Disabling automatic garbage collection
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9079156Z [command]/usr/bin/git config --local gc.auto 0
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9118270Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9120782Z ##[group]Setting up auth
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9124639Z Removing SSH command configuration
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9136519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9167358Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9616392Z Removing HTTP extra header
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9623769Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9662778Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9882723Z Removing includeIf entries pointing to credentials config files
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9887094Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:21.9932608Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0167582Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0211417Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path /home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0248885Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0288662Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0324742Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0356620Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0363591Z ##[group]Fetching the repository
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.0368766Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e74d08c9f42ab5a81be32508e9baab45d6015807:refs/remotes/pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3166482Z From https://github.com/ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3167659Z  * [new ref]         e74d08c9f42ab5a81be32508e9baab45d6015807 -> pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3171383Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3172516Z ##[group]Determining the checkout info
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3173394Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3177645Z [command]/usr/bin/git sparse-checkout disable
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3234247Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3267339Z ##[group]Checking out the ref
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3271308Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3392597Z Note: switching to 'refs/remotes/pull/32/merge'.
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3393175Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3393591Z You are in 'detached HEAD' state. You can look around, make experimental
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3394278Z changes and commit them, and you can discard any commits you make in this
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3394855Z state without impacting any branches by switching back to a branch.
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3395195Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3395466Z If you want to create a new branch to retain commits you create, you may
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3395991Z do so (now or later) by using -c with the switch command. Example:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3396286Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3396433Z   git switch -c <new-branch-name>
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3396648Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3396781Z Or undo this operation with:
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3396981Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3397095Z   git switch -
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3397295Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3397549Z Turn off this advice by setting config variable advice.detachedHead to false
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3397909Z 
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3398304Z HEAD is now at e74d08c Merge bf8990f109824896502c529eb37fda82a788214a into ebce0f0913ba66f9effdf035b482263040e9c804
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3422379Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3469460Z [command]/usr/bin/git log -1 --format=%H
+Run PHPMD scanning	Checkout code	2026-10-12T11:28:22.3498538Z e74d08c9f42ab5a81be32508e9baab45d6015807
+Run PHPMD scanning	Setup PHP	﻿2026-10-12T11:28:22.3816315Z ##[group]Run shivammathur/setup-php@v2
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3816762Z with:
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3817010Z   coverage: none
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3817268Z   tools: phpmd
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3817527Z   ini-file: production
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3820223Z   github-token: ***
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.3820499Z ##[endgroup]
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.4240873Z [command]/usr/bin/bash /home/runner/work/_actions/shivammathur/setup-php/v2/src/scripts/run.sh
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.4650305Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:22.4651202Z ^[[90;1m==> ^[[0m^[[37;1mSetup PHP^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:27.9378934Z ^[[32;1m✓ ^[[0m^[[34;1mPHP ^[[0m^[[90;1mInstalled PHP 8.1.34^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:27.9379956Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:27.9380514Z ^[[90;1m==> ^[[0m^[[37;1mSetup Tools^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.2370889Z ^[[32;1m✓ ^[[0m^[[34;1mcomposer ^[[0m^[[90;1mAdded composer 2.10.3^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.6314864Z ^[[32;1m✓ ^[[0m^[[34;1mphpmd ^[[0m^[[90;1mAdded phpmd 3.0.0^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.6315749Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.6316103Z ^[[90;1m==> ^[[0m^[[37;1mSetup Coverage^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.8787900Z ^[[32;1m✓ ^[[0m^[[34;1mnone ^[[0m^[[90;1mDisabled Xdebug and PCOV^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.8789186Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.8790106Z ^[[90;1m==> ^[[0m^[[37;1mSponsor setup-php^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T11:28:28.8791474Z ^[[32;1m✓ ^[[0m^[[34;1msetup-php ^[[0m^[[90;1mhttps://setup-php.com/sponsor^[[0m
+Run PHPMD scanning	Run PHPMD	﻿2026-10-12T11:28:28.9006171Z ##[group]Run phpmd analyze --format sarif --ruleset codesize --reportfile-sarif phpmd-results.sarif .
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9006956Z ^[[36;1mphpmd analyze --format sarif --ruleset codesize --reportfile-sarif phpmd-results.sarif .^[[0m
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9292698Z shell: /usr/bin/bash -e {0}
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9293040Z env:
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9293327Z   COMPOSER_PROCESS_TIMEOUT: 0
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9293620Z   COMPOSER_NO_INTERACTION: 1
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9293886Z   COMPOSER_NO_AUDIT: 1
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:28.9294400Z ##[endgroup]
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.2409213Z   0/41 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.3166681Z   5/41 [▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]  12%
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.3562902Z  17/41 [▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░]  41%
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.3773922Z  41/41 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4475466Z {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4476658Z     "version": "2.1.0",
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4477940Z     "$schema": "https:\/\/raw.githubusercontent.com\/oasis-tcs\/sarif-spec\/master\/Schemata\/sarif-schema-2.1.0.json",
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4479006Z     "runs": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4479353Z         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4479836Z             "tool": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4480256Z                 "driver": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4480635Z                     "name": "PHPMD",
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4481075Z                     "informationUri": "https:\/\/phpmd.org",
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4481754Z                     "version": "3.0.0",
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4482225Z                     "rules": []
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4482568Z                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4482853Z             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4483177Z             "originalUriBaseIds": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4483587Z                 "WORKINGDIR": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4484144Z                     "uri": "file:\/\/\/home\/runner\/work\/omeka-s-DiskQuota\/omeka-s-DiskQuota\/"
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4484830Z                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4485159Z             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4485525Z             "results": []
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4485942Z         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4486305Z     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T11:28:29.4486643Z }
+Run PHPMD scanning	Upload analysis results to GitHub	﻿2026-10-12T11:28:29.4686004Z ##[group]Run github/codeql-action/upload-sarif@v4
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4686348Z with:
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4686562Z   sarif_file: phpmd-results.sarif
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4686832Z   wait-for-processing: true
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4687176Z   checkout_path: /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4689826Z   token: ***
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4690051Z   matrix: null
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4690241Z env:
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4690432Z   COMPOSER_PROCESS_TIMEOUT: 0
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4690686Z   COMPOSER_NO_INTERACTION: 1
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4690920Z   COMPOSER_NO_AUDIT: 1
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.4691126Z ##[endgroup]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:29.7640934Z Job run UUID is 7d4ba769-1fe4-4dde-9636-afa0d4033c23.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:30.4959573Z Post-processing sarif files: ["phpmd-results.sarif"]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:30.4964946Z Validating phpmd-results.sarif
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:30.5090204Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:30.5094926Z ##[group]Uploading code scanning results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:30.5474092Z Uploading results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:31.5062680Z Successfully uploaded results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:31.5063540Z ##[endgroup]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:31.5067962Z ##[group]Waiting for processing to finish
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:36.7195807Z Analysis upload status is complete.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T11:28:36.7203187Z ##[endgroup]
+Run PHPMD scanning	Post Upload analysis results to GitHub	﻿2026-10-12T11:28:37.2033228Z Post job cleanup.
+Run PHPMD scanning	Post Upload analysis results to GitHub	2026-10-12T11:28:37.5048668Z ##[group]Uploading combined SARIF debug artifact
+Run PHPMD scanning	Post Upload analysis results to GitHub	2026-10-12T11:28:37.5051389Z ##[endgroup]
+Run PHPMD scanning	Post Checkout code	﻿2026-10-12T11:28:37.5267677Z Post job cleanup.
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6153657Z [command]/usr/bin/git version
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6197265Z git version 2.55.0
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6242745Z Temporarily overriding HOME='/home/runner/work/_temp/3f7e610b-2096-4366-aae4-b286fa07641b' before making global git config changes
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6252357Z Adding repository directory to the temporary git global config as a safe directory
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6253624Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6272626Z Removing SSH command configuration
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6279110Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6318084Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6562587Z Removing HTTP extra header
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6570988Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6604185Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6863424Z Removing includeIf entries pointing to credentials config files
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6871262Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6912566Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6913636Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6914620Z includeif.gitdir:/github/workspace/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6915406Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6922093Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6948701Z /home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.6960362Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-4ad51523\-9b45\-4e4c\-80f0\-8774aa2d9834\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7033382Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7047046Z /home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7057447Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-4ad51523\-9b45\-4e4c\-80f0\-8774aa2d9834\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7097716Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7126559Z /github/runner_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7134579Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-4ad51523\-9b45\-4e4c\-80f0\-8774aa2d9834\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7174014Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7199904Z /github/runner_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7208292Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-4ad51523\-9b45\-4e4c\-80f0\-8774aa2d9834\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7245526Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Run PHPMD scanning	Post Checkout code	2026-10-12T11:28:37.7466913Z Removing credentials config '/home/runner/work/_temp/git-credentials-4ad51523-9b45-4e4c-80f0-8774aa2d9834.config'
+Run PHPMD scanning	Complete job	﻿2026-10-12T11:28:37.7607231Z Cleaning up orphan processes

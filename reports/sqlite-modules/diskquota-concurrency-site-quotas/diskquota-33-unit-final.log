@@ -1,0 +1,104 @@
+php -d pcov.directory=. -d pcov.exclude='~/(vendor|test)/~' vendor/bin/phpunit -c test/phpunit.xml --coverage-clover coverage.xml --coverage-text
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+......................DiskQuota: Upload rejected. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+..DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.....DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.........DiskQuota: Adding site quota fieldset for site ID: 10
+DiskQuota: Retrieved site quota for site ID 10: 1000
+DiskQuota: Set form field value to 1000
+.DiskQuota: Adding site quota fieldset for site ID: 10
+DiskQuota: Retrieved site quota for site ID 10: 1000
+.DiskQuota: Retrieved site quota for site ID 10: 1000
+.DiskQuota: Adding site quota fieldset for site ID: 40
+DiskQuota: Retrieved site quota for site ID 40: 1000
+DiskQuota: Set form field value to 1000
+.DiskQuota: Retrieved site quota for site ID 40: 1000
+..............DiskQuota: Saved site quota: 123 for site ID: 7
+.DiskQuota: Saved site quota: 0 for site ID: 7
+..  63 / 148 ( 42%)
+..DiskQuota: No quota value found in form data for site ID: 7
+..DiskQuota: Saved site quota: 123 for site ID: 7
+.DiskQuota: Saved site quota: 0 for site ID: 7
+....DiskQuota: No quota value found in form data for site ID: 7
+........DiskQuota: site 30 quota 600 MB (default 1000 MB)
+DiskQuota: site 30 quota 700 MB (default 1000 MB)
+.DiskQuota: site 40 quota 600 MB (default 1000 MB)
+DiskQuota: site 30 quota 600 MB (default 1000 MB)
+..DiskQuota: site 30 quota 600 MB (default 1000 MB)
+.DiskQuota: site 40 quota 600 MB (default 1000 MB)
+DiskQuota: site 40 quota 600 MB (default 1000 MB)
+DiskQuota: site 40 quota 600 MB (default 1000 MB)
+.DiskQuota: site 40 quota 600 MB (default 1000 MB)
+DiskQuota: site 40 quota 600 MB (default 1000 MB)
+....DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+...DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+...DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+....DiskQuota: site 10 quota 501 MB (default 1000 MB)
+.DiskQuota: site 10 quota 501 MB (default 1000 MB)
+.DiskQuota: site 10 quota 501 MB (default 1000 MB)
+DiskQuota: site 10 quota 501 MB (default 1000 MB)
+DiskQuota: Upload rejected for site 10. File size: 1 MB, Used: 500 MB, Limit: 501 MB
+.DiskQuota: site 10 quota 0 MB (default 1000 MB)
+......DiskQuota: site 77 quota 200 MB (default 1000 MB)
+.DiskQuota: site 1 quota 0 MB (default 0 MB)
+..DiskQuota: Error calculating user disk usage: Usage query unavailable
+.DiskQuota: site 1 quota 1 MB (default 1000 MB)
+DiskQuota: Error calculating site disk usage: Usage query unavailable
+....... 126 / 148 ( 85%)
+......................                                          148 / 148 (100%)
+
+Time: 00:00.363, Memory: 20.00 MB
+
+OK (148 tests, 338 assertions)
+
+Generating code coverage report in Clover XML format ... done [00:00.003]
+
+
+[1;37;40mCode Coverage Report:      [0m
+[1;37;40m  2026-10-12 12:10:16      [0m
+[1;37;40m                           [0m
+[1;37;40m Summary:                  [0m
+[30;43m  Classes: 53.85% (7/13)   [0m
+[30;43m  Methods: 87.67% (64/73)  [0m
+[30;42m  Lines:   97.91% (750/766)[0m
+
+DiskQuota\Form\ConfigForm
+  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 94/ 94)[0m
+DiskQuota\Form\QuotaFieldset
+  [30;42mMethods: 100.00% ( 1/ 1)[0m   [30;42mLines: 100.00% (  8/  8)[0m
+DiskQuota\Listener\QuotaWriteListener
+  [30;42mMethods: 100.00% ( 6/ 6)[0m   [30;42mLines: 100.00% ( 37/ 37)[0m
+DiskQuota\Listener\SiteAssignmentListener
+  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 43/ 43)[0m
+DiskQuota\Listener\SiteQuotaListener
+  [30;43mMethods:  75.00% ( 6/ 8)[0m   [30;42mLines:  97.14% (102/105)[0m
+DiskQuota\Listener\UploadQuotaListener
+  [30;43mMethods:  87.50% ( 7/ 8)[0m   [30;42mLines:  98.86% ( 87/ 88)[0m
+DiskQuota\Listener\UserQuotaListener
+  [30;42mMethods: 100.00% ( 7/ 7)[0m   [30;42mLines: 100.00% ( 84/ 84)[0m
+DiskQuota\Module
+  [30;43mMethods:  71.43% ( 5/ 7)[0m   [30;42mLines:  98.17% (107/109)[0m
+DiskQuota\Service\DiskQuotaManager
+  [30;42mMethods: 100.00% ( 7/ 7)[0m   [30;42mLines: 100.00% ( 42/ 42)[0m
+DiskQuota\Service\PendingUploads
+  [30;43mMethods:  81.82% ( 9/11)[0m   [30;42mLines:  96.61% ( 57/ 59)[0m
+DiskQuota\Service\QuotaLock
+  [30;43mMethods:  75.00% ( 3/ 4)[0m   [30;43mLines:  86.49% ( 32/ 37)[0m
+DiskQuota\Service\SiteMembership
+  [30;43mMethods:  75.00% ( 3/ 4)[0m   [30;42mLines:  90.00% ( 27/ 30)[0m
+DiskQuota\Service\UploadSizeResolver
+  [30;42mMethods: 100.00% ( 4/ 4)[0m   [30;42mLines: 100.00% ( 30/ 30)[0m
+php test/check-coverage.php coverage.xml 90
+Line coverage: 97.91% (750/766); required: 90%

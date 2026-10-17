@@ -1,0 +1,195 @@
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)
+
+Time: 00:00.015, Memory: 8.00 MB
+
+There was 1 failure:
+
+1) DiskQuotaTest\Module\FileIngestQuotaTest::testThumbnailOnlyFilesAreAlsoCleanedOnFailure
+Failed asserting that two arrays are identical.
+--- Expected
++++ Actual
+@@ @@
+-Array &0 (
+-    0 => Mock_stdClass_6cd1498a Object &00000000000002ac0000000000000000 (
+-        '__phpunit_originalObject' => null
+-        '__phpunit_returnValueGeneration' => true
+-        '__phpunit_invocationMocker' => PHPUnit\Framework\MockObject\InvocationHandler Object &00000000000002b40000000000000000 (
+-            'matchers' => Array &1 (
+-                0 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002b20000000000000000 (
+-                    'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002bb0000000000000000 (
+-                        'invocations' => Array &2 ()
+-                    )
+-                    'afterMatchBuilderId' => null
+-                    'afterMatchBuilderIsInvoked' => false
+-                    'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &00000000000002b00000000000000000 (
+-                        'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &00000000000002b10000000000000000 (
+-                            'exporter' => null
+-                            'methodName' => 'getId'
+-                        )
+-                    )
+-                    'parametersRule' => null
+-                    'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &00000000000002a60000000000000000 (
+-                        'value' => null
+-                    )
+-                )
+-                1 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002a50000000000000000 (
+-                    'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002ae0000000000000000 (
+-                        'invocations' => Array &3 ()
+-                    )
+-                    'afterMatchBuilderId' => null
+-                    'afterMatchBuilderIsInvoked' => false
+-                    'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &00000000000002a30000000000000000 (
+-                        'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &00000000000002a20000000000000000 (
+-                            'exporter' => null
+-                            'methodName' => 'getOwner'
+-                        )
+-                    )
+-                    'parametersRule' => null
+-                    'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &00000000000002a10000000000000000 (
+-                        'value' => Mock_stdClass_c0cae62d Object &00000000000002cb0000000000000000 (
+-                            '__phpunit_originalObject' => null
+-                            '__phpunit_returnValueGeneration' => true
+-                            '__phpunit_invocationMocker' => PHPUnit\Framework\MockObject\InvocationHandler Object &00000000000002cf0000000000000000 (
+-                                'matchers' => Array &4 (
+-                                    0 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002cd0000000000000000 (
+-                                        'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002d20000000000000000 (
+-                                            'invocations' => Array &5 ()
+-                                        )
+-                                        'afterMatchBuilderId' => null
+-                                        'afterMatchBuilderIsInvoked' => false
+-                                        'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &00000000000002c70000000000000000 (
+-                                            'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &00000000000002c60000000000000000 (
+-                                                'exporter' => null
+-                                                'methodName' => 'getId'
+-                                            )
+-                                        )
+-                                        'parametersRule' => null
+-                                        'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &00000000000002c40000000000000000 (
+-                                            'value' => 1
+-                                        )
+-                                    )
+-                                )
+-                                'matcherMap' => Array &6 ()
+-                                'configurableMethods' => Array &7 (
+-                                    0 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002c90000000000000000 (
+-                                        'name' => 'getId'
+-                                        'returnType' => SebastianBergmann\Type\UnknownType Object &00000000000002ca0000000000000000 ()
+-                                    )
+-                                )
+-                                'returnValueGeneration' => true
+-                                'deferredError' => null
+-                            )
+-                        )
+-                    )
+-                )
+-                2 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002a00000000000000000 (
+-                    'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002a40000000000000000 (
+-                        'invocations' => Array &8 ()
+-                    )
+-                    'afterMatchBuilderId' => null
+-                    'afterMatchBuilderIsInvoked' => false
+-                    'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &000000000000029e0000000000000000 (
+-                        'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &000000000000029d0000000000000000 (
+-                            'exporter' => null
+-                            'methodName' => 'getItem'
+-                        )
+-                    )
+-                    'parametersRule' => null
+-                    'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &000000000000029c0000000000000000 (
+-                        'value' => Mock_stdClass_60bc53b2 Object &00000000000002ba0000000000000000 (
+-                            '__phpunit_originalObject' => null
+-                            '__phpunit_returnValueGeneration' => true
+-                            '__phpunit_invocationMocker' => PHPUnit\Framework\MockObject\InvocationHandler Object &00000000000002be0000000000000000 (
+-                                'matchers' => Array &9 (
+-                                    0 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002bc0000000000000000 (
+-                                        'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002c10000000000000000 (
+-                                            'invocations' => Array &10 ()
+-                                        )
+-                                        'afterMatchBuilderId' => null
+-                                        'afterMatchBuilderIsInvoked' => false
+-                                        'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &00000000000002b60000000000000000 (
+-                                            'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &00000000000002b50000000000000000 (
+-                                                'exporter' => null
+-                                                'methodName' => 'getSites'
+-                                            )
+-                                        )
+-                                        'parametersRule' => null
+-                                        'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &00000000000002b30000000000000000 (
+-                                            'value' => Array &11 (
+-                                                0 => Mock_stdClass_c0cae62d Object &00000000000002c30000000000000000 (
+-                                                    '__phpunit_originalObject' => null
+-                                                    '__phpunit_returnValueGeneration' => true
+-                                                    '__phpunit_invocationMocker' => PHPUnit\Framework\MockObject\InvocationHandler Object &00000000000002c50000000000000000 (
+-                                                        'matchers' => Array &12 (
+-                                                            0 => PHPUnit\Framework\MockObject\Matcher Object &00000000000002c20000000000000000 (
+-                                                                'invocationRule' => PHPUnit\Framework\MockObject\Rule\AnyInvokedCount Object &00000000000002cc0000000000000000 (
+-                                                                    'invocations' => Array &13 ()
+-                                                                )
+-                                                                'afterMatchBuilderId' => null
+-                                                                'afterMatchBuilderIsInvoked' => false
+-                                                                'methodNameRule' => PHPUnit\Framework\MockObject\Rule\MethodName Object &00000000000002c00000000000000000 (
+-                                                                    'constraint' => PHPUnit\Framework\MockObject\MethodNameConstraint Object &00000000000002bf0000000000000000 (
+-                                                                        'exporter' => null
+-                                                                        'methodName' => 'getId'
+-                                                                    )
+-                                                                )
+-                                                                'parametersRule' => null
+-                                                                'stub' => PHPUnit\Framework\MockObject\Stub\ReturnStub Object &00000000000002bd0000000000000000 (
+-                                                                    'value' => 10
+-                                                                )
+-                                                            )
+-                                                        )
+-                                                        'matcherMap' => Array &14 ()
+-                                                        'configurableMethods' => Array &15 (
+-                                                            0 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002c90000000000000000
+-                                                        )
+-                                                        'returnValueGeneration' => true
+-                                                        'deferredError' => null
+-                                                    )
+-                                                )
+-                                            )
+-                                        )
+-                                    )
+-                                )
+-                                'matcherMap' => Array &16 ()
+-                                'configurableMethods' => Array &17 (
+-                                    0 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002b80000000000000000 (
+-                                        'name' => 'getSites'
+-                                        'returnType' => SebastianBergmann\Type\UnknownType Object &00000000000002b90000000000000000 ()
+-                                    )
+-                                )
+-                                'returnValueGeneration' => true
+-                                'deferredError' => null
+-                            )
+-                        )
+-                    )
+-                )
+-            )
+-            'matcherMap' => Array &18 ()
+-            'configurableMethods' => Array &19 (
+-                0 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002aa0000000000000000 (
+-                    'name' => 'getId'
+-                    'returnType' => SebastianBergmann\Type\UnknownType Object &00000000000002af0000000000000000 ()
+-                )
+-                1 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002a90000000000000000 (
+-                    'name' => 'getOwner'
+-                    'returnType' => SebastianBergmann\Type\UnknownType Object &00000000000002ad0000000000000000 ()
+-                )
+-                2 => PHPUnit\Framework\MockObject\ConfigurableMethod Object &00000000000002a80000000000000000 (
+-                    'name' => 'getItem'
+-                    'returnType' => SebastianBergmann\Type\UnknownType Object &00000000000002ab0000000000000000 ()
+-                )
+-            )
+-            'returnValueGeneration' => true
+-            'deferredError' => null
+-        )
+-    )
+-)
++Array &0 ()
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Module/FileIngestQuotaTest.php:189
+
+FAILURES!
+Tests: 1, Assertions: 2, Failures: 1.

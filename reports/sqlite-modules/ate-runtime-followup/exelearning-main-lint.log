@@ -1,0 +1,3 @@
+Architecture records OK — 7 records, 1 changes.
+vendor/bin/phpcs src/ config/ scripts/ Module.php --standard=PSR2 --colors -n
+Time: 393ms; Memory: 12MB

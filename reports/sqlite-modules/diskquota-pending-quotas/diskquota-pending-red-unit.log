@@ -1,0 +1,36 @@
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+FFFF..E....E                                                      12 / 12 (100%)
+
+Time: 00:00.020, Memory: 8.00 MB
+
+There were 2 errors:
+
+1) DiskQuotaTest\Module\FileIngestQuotaTest::testPersistedFilesAreNotCountedTwiceOrDeleted
+Error: Call to undefined method DiskQuota\Listener\UploadQuotaListener::cleanupUnpersistedFiles()
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Module/FileIngestQuotaTest.php:86
+
+2) DiskQuotaTest\Module\FileIngestQuotaTest::testFailedItemHydrationCleansOnlyItsNewFilesAndReleasesTheirBytes
+Error: Call to undefined method DiskQuota\Listener\UploadQuotaListener::cleanupFailedHydration()
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Module/FileIngestQuotaTest.php:124
+
+--
+
+There were 4 failures:
+
+1) DiskQuotaTest\Module\FileIngestQuotaTest::testRealFileSizeOverridesUntrustedMetadata with data set #0 ('user')
+Failed asserting that exception of type "Omeka\Api\Exception\ValidationException" is thrown.
+
+2) DiskQuotaTest\Module\FileIngestQuotaTest::testRealFileSizeOverridesUntrustedMetadata with data set #1 ('site')
+Failed asserting that exception of type "Omeka\Api\Exception\ValidationException" is thrown.
+
+3) DiskQuotaTest\Module\FileIngestQuotaTest::testPendingFilesCannotExceedTheQuotaTogether with data set #0 ('user')
+Failed asserting that exception of type "Omeka\Api\Exception\ValidationException" is thrown.
+
+4) DiskQuotaTest\Module\FileIngestQuotaTest::testPendingFilesCannotExceedTheQuotaTogether with data set #1 ('site')
+Failed asserting that exception of type "Omeka\Api\Exception\ValidationException" is thrown.
+
+ERRORS!
+Tests: 12, Assertions: 32, Errors: 2, Failures: 4.

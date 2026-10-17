@@ -1,0 +1,72 @@
+php -d pcov.directory=. -d pcov.exclude='~/(vendor|test)/~' vendor/bin/phpunit -c test/phpunit.xml --coverage-clover coverage.xml --coverage-text
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+.......................DiskQuota: Checking file upload with size: 10485760 bytes for user ID: 1
+DiskQuota: Upload rejected. File size: 10 MB, Used: 95 MB, Limit: 100 MB
+.DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+...DiskQuota: Adding site quota fieldset for site ID: 10
+DiskQuota: Retrieved site quota for site ID 10: 1000
+DiskQuota: Set form field value to 1000
+.DiskQuota: Adding site quota fieldset for site ID: 10
+DiskQuota: Retrieved site quota for site ID 10: 1000
+.DiskQuota: Retrieved site quota for site ID 10: 1000
+.DiskQuota: Adding site quota fieldset for site ID: 40
+DiskQuota: Retrieved site quota for site ID 40: 1000
+DiskQuota: Set form field value to 1000
+.DiskQuota: Retrieved site quota for site ID 40: 1000
+..............DiskQuota: Saved site quota: 123 for site ID: 7
+.DiskQuota: Saved site quota: 0 for site ID: 7
+....DiskQuota: No quota value found in form data for site ID: 7
+..DiskQuota: Saved site quota: 123 for site ID: 7
+.DiskQuota: Saved site quota: 0 for site ID: 7
+....DiskQuota: No quota value found in form data for site ID: 7
+..DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+..DiskQuota: Upload rejected for site 20. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.  63 / 100 ( 63%)
+DiskQuota: Upload rejected for site 10. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+...DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+.DiskQuota: Upload rejected for site 30. File size: 0 MB, Used: 0 MB, Limit: 0 MB
+....DiskQuota: site 10 quota 501 MB (default 1000 MB)
+.DiskQuota: site 10 quota 501 MB (default 1000 MB)
+.DiskQuota: site 10 quota 501 MB (default 1000 MB)
+DiskQuota: site 10 quota 501 MB (default 1000 MB)
+DiskQuota: Upload rejected for site 10. File size: 1 MB, Used: 500 MB, Limit: 501 MB
+.DiskQuota: site 10 quota 0 MB (default 1000 MB)
+......DiskQuota: site 77 quota 200 MB (default 1000 MB)
+.DiskQuota: site 1 quota 0 MB (default 0 MB)
+...................                           100 / 100 (100%)
+
+Time: 00:01.282, Memory: 18.00 MB
+
+OK (100 tests, 228 assertions)
+
+Generating code coverage report in Clover XML format ... done [00:00.011]
+
+
+Code Coverage Report:
+  2026-10-09 10:12:18
+
+ Summary:
+  Classes: 50.00% (4/8)
+  Methods: 81.82% (36/44)
+  Lines:   97.26% (532/547)
+
+DiskQuota\Form\ConfigForm
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 94/ 94)
+DiskQuota\Form\QuotaFieldset
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)
+DiskQuota\Listener\SiteQuotaListener
+  Methods:  75.00% ( 6/ 8)   Lines:  97.14% (102/105)
+DiskQuota\Listener\UploadQuotaListener
+  Methods:  71.43% ( 5/ 7)   Lines:  95.29% ( 81/ 85)
+DiskQuota\Listener\UserQuotaListener
+  Methods: 100.00% ( 7/ 7)   Lines: 100.00% ( 84/ 84)
+DiskQuota\Module
+  Methods:  71.43% ( 5/ 7)   Lines:  98.08% (102/104)
+DiskQuota\Service\DiskQuotaManager
+  Methods:  71.43% ( 5/ 7)   Lines:  85.71% ( 36/ 42)
+DiskQuota\Service\UploadSizeResolver
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 25/ 25)
+php test/check-coverage.php coverage.xml 90
+Line coverage: 97.26% (532/547); required: 90%

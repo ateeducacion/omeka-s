@@ -1,0 +1,46 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: ATE module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'ExeLearning' v4.0.6-rc.2 installed.
+PASS: published module installed and active
+PASS: real multipart elpx upload stored
+PASS: creation hook extracted course and persisted hash
+PASS: preview flag persisted in media JSON
+PASS: preview HTML extracted
+PASS: published real project preview content intact
+PASS: actual renderer produces iframe for course
+PASS: standard Omeka media rendering produces course iframe
+PASS: teacher mode setting 0 persists in JSON
+PASS: teacher mode setting 1 persists in JSON
+PASS: saved replacement hash persists
+PASS: updated preview content saved
+PASS: old extraction removed after successful replacement
+PASS: invalid replacement rejected
+PASS: invalid save preserves original and preview
+PASS: media deletion removes extracted preview
+PASS: media deletion persisted
+AUDIT_CHECKS=17
+AUDIT_FAILURES=0
+AUDIT_RESULT=PASS
+[Fri Oct  9 10:12:18 2026] PHP 8.4.17 Development Server (http://127.0.0.1:8765) started
+[Fri Oct  9 10:12:19 2026] 127.0.0.1:42478 Accepted
+[Fri Oct  9 10:12:20 2026] 127.0.0.1:42478 Closing

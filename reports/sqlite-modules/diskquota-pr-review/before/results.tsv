@@ -1,0 +1,3 @@
+scenario	module	container_exit	functional_result
+sqlite	DiskQuota	1	FAIL
+mysql	DiskQuota	1	FAIL

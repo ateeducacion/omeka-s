@@ -1,0 +1,29 @@
+(1/2) Installing readline (8.3.1-r0)
+(2/2) Installing bash (5.3.3-r1)
+  Executing bash-5.3.3-r1.post-install
+Executing busybox-1.37.0-r30.trigger
+OK: 187.8 MiB in 154 packages
+[0;32mOmeka S v4.3.0-alpha installed.[0m
+[0;37mAdministrator email: admin@example.com[0m
+[0;37mAdministrator password: audit-test-password[0m
+[0;37mInstallation title: DiskQuota integration[0m
+[0;37mTime zone: UTC[0m
+[0;37mLocale: en_US[0m
+[0;32mModule 'DiskQuota' v0.0.0 installed.[0m
+RuntimeException: Quota bypass: new parent with contradictory o:item
+AUDIT_RESULT=FAIL
+curl: (22) The requested URL returned error: 500
+[Fri Oct  9 13:28:59 2026] PHP 8.4.17 Development Server (http://127.0.0.1:8765) started
+[Fri Oct  9 13:28:59 2026] 127.0.0.1:35610 Accepted
+[Fri Oct  9 13:28:59 2026] 127.0.0.1:35610 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Oct  9 13:28:59 2026] 127.0.0.1:35610 Closing
+[Fri Oct  9 13:28:59 2026] 127.0.0.1:35614 Accepted
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: site 1 quota 1000 MB (default 1000 MB)
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 13:29:00 2026] DiskQuota: site 2 quota 0 MB (default 1000 MB)
+[Fri Oct  9 13:29:00 2026] 127.0.0.1:35614 Closing

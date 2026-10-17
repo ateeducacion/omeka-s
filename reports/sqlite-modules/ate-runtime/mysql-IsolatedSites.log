@@ -1,0 +1,86 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: ATE module audit
+Time zone: UTC
+Locale: en_US
+AUDIT_DEPENDENCY=Common
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Common' v3.4.93 installed.
+AUDIT_DEPENDENCY=Log
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Log' v3.4.40 installed.
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'IsolatedSites' v1.0.8 installed.
+PASS: published module installed and active
+PASS: granted sites read from real database
+PASS: no site permissions returns empty list
+PASS: api items restricted to granted site or owner
+PASS: api media restricted through parent item
+PASS: api sites restricted to granted site
+PASS: api item sets restricted
+PASS: api assets restricted to owner
+PASS: admin/item items restricted to granted site or owner
+PASS: admin/item media restricted through parent item
+PASS: admin/item sites restricted to granted site
+PASS: admin/item item sets restricted
+PASS: admin/item assets restricted to owner
+PASS: editing another site item denied
+PASS: item set assignment excludes unauthorized site
+PASS: item set site assignment can be removed
+PASS: user without sites sees own items only
+PASS: user without sites sees own item media only
+PASS: user without sites sees no sites
+PASS: administrator sees every item
+PASS: administrator sees every site
+AUDIT_CHECKS=21
+AUDIT_FAILURES=0
+AUDIT_RESULT=PASS
+[Fri Oct  9 09:27:42 2026] PHP 8.4.17 Development Server (http://127.0.0.1:8765) started
+[Fri Oct  9 09:27:43 2026] 127.0.0.1:46852 Accepted
+[Fri Oct  9 09:27:44 2026] 127.0.0.1:46852 Closing

@@ -1,0 +1,403 @@
+Run PHPMD scanning	Set up job	﻿2026-10-12T10:56:18.5896816Z Current runner version: '2.337.0'
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5924251Z ##[group]Runner Image Provisioner
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5925752Z Hosted Compute Agent
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5926402Z Version: 20261002.596
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5927133Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5928213Z Build Date: 2026-10-02T22:28:27Z
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5929341Z Worker ID: {78ebea17-d242-48c2-9708-594fda7abee2}
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5930292Z Region: westus
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5930890Z Cloud: Azure
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5931495Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5932968Z ##[group]Operating System
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5933738Z Ubuntu
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5934302Z 24.04.5
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5935101Z LTS
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5935707Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5936281Z ##[group]Runner Image
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5936896Z Image: ubuntu-24.04
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5937534Z Version: 20261004.327.1
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5938647Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5940544Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5941543Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5943099Z ##[group]GITHUB_TOKEN Permissions
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5945411Z Actions: read
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5946189Z Contents: read
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5946770Z Metadata: read
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5947469Z SecurityEvents: write
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5948122Z ##[endgroup]
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5950176Z Secret source: Actions
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5951267Z Cache mode: write
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.5951974Z Prepare workflow directory
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.6292833Z Prepare all required actions
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.6344020Z Getting action download info
+Run PHPMD scanning	Set up job	2026-10-12T10:56:18.9947875Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Run PHPMD scanning	Set up job	2026-10-12T10:56:19.0865083Z Download action repository 'shivammathur/setup-php@v2' (SHA:eb7c497e18156a6bbabfef1d3a82760b9eda3962)
+Run PHPMD scanning	Set up job	2026-10-12T10:56:19.3969921Z Download action repository 'github/codeql-action@v4' (SHA:24c54180a607b1449ed407dd24f251e4e9147c8d)
+Run PHPMD scanning	Set up job	2026-10-12T10:56:20.0165092Z Complete job name: Run PHPMD scanning
+Run PHPMD scanning	Checkout code	﻿2026-10-12T10:56:20.0950997Z ##[group]Run actions/checkout@v7
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0951959Z with:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0952475Z   repository: ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0956829Z   token: ***
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0957305Z   ssh-strict: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0957759Z   ssh-user: git
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0958226Z   persist-credentials: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0958730Z   clean: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0959189Z   sparse-checkout-cone-mode: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0959732Z   fetch-depth: 1
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0960178Z   fetch-tags: false
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0960651Z   show-progress: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0961119Z   lfs: false
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0961570Z   submodules: false
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0962079Z   set-safe-directory: true
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0962614Z   allow-unsafe-pr-checkout: false
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.0963477Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.1965605Z Syncing repository: ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.1968429Z ##[group]Getting Git version info
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.1969802Z Working directory is '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota'
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.1971790Z [command]/usr/bin/git version
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2025105Z git version 2.55.0
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2057087Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2065388Z Temporarily overriding HOME='/home/runner/work/_temp/674938e4-82ad-455e-aa3b-aee5ebcafc34' before making global git config changes
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2068502Z Adding repository directory to the temporary git global config as a safe directory
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2071264Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2122037Z Deleting the contents of '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota'
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2125328Z ##[group]Determining repository object format
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2127958Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2129654Z ##[group]Initializing the repository
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2131763Z [command]/usr/bin/git init /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2240367Z hint: Using 'master' as the name for the initial branch. This default branch name
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2242282Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2243430Z hint: to use in all of your new repositories, which will suppress this warning,
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2244312Z hint: call:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2245199Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2245910Z hint: 	git config --global init.defaultBranch <name>
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2246648Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2247337Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2248398Z hint: 'development'. The just-created branch can be renamed via this command:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2249269Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2249799Z hint: 	git branch -m <name>
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2250451Z hint:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2251193Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2257428Z Initialized empty Git repository in /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2268252Z [command]/usr/bin/git remote add origin https://github.com/ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2319335Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2321010Z ##[group]Disabling automatic garbage collection
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2323471Z [command]/usr/bin/git config --local gc.auto 0
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2358933Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2360595Z ##[group]Setting up auth
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2361725Z Removing SSH command configuration
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2365605Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2410328Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2762554Z Removing HTTP extra header
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2770995Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.2812590Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3063954Z Removing includeIf entries pointing to credentials config files
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3076840Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3115574Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3346189Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3387781Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path /home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3422146Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3460492Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3497596Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3529060Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3529877Z ##[group]Fetching the repository
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.3536048Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9781fc460ccbca8010744ef25f0aa5d658e097e1:refs/remotes/pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8721444Z From https://github.com/ateeducacion/omeka-s-DiskQuota
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8722774Z  * [new ref]         9781fc460ccbca8010744ef25f0aa5d658e097e1 -> pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8727448Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8729246Z ##[group]Determining the checkout info
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8731479Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8732803Z [command]/usr/bin/git sparse-checkout disable
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8860788Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8864953Z ##[group]Checking out the ref
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8870424Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/32/merge
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8955534Z Note: switching to 'refs/remotes/pull/32/merge'.
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8956147Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8956554Z You are in 'detached HEAD' state. You can look around, make experimental
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8957523Z changes and commit them, and you can discard any commits you make in this
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8958448Z state without impacting any branches by switching back to a branch.
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8958988Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8959358Z If you want to create a new branch to retain commits you create, you may
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8960207Z do so (now or later) by using -c with the switch command. Example:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8960704Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8960932Z   git switch -c <new-branch-name>
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8961283Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8961500Z Or undo this operation with:
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8961830Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8962022Z   git switch -
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8962317Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8962722Z Turn off this advice by setting config variable advice.detachedHead to false
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8963327Z 
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8964045Z HEAD is now at 9781fc4 Merge deb7ad4b6c58e8ff754a201d61fa56c8de8feed0 into ebce0f0913ba66f9effdf035b482263040e9c804
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.8967008Z ##[endgroup]
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.9026245Z [command]/usr/bin/git log -1 --format=%H
+Run PHPMD scanning	Checkout code	2026-10-12T10:56:20.9056696Z 9781fc460ccbca8010744ef25f0aa5d658e097e1
+Run PHPMD scanning	Setup PHP	﻿2026-10-12T10:56:20.9321212Z ##[group]Run shivammathur/setup-php@v2
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9321859Z with:
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9322282Z   coverage: none
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9322729Z   tools: phpmd
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9323171Z   ini-file: production
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9327313Z   github-token: ***
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9327792Z ##[endgroup]
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:20.9786020Z [command]/usr/bin/bash /home/runner/work/_actions/shivammathur/setup-php/v2/src/scripts/run.sh
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:21.0189381Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:21.0190566Z ^[[90;1m==> ^[[0m^[[37;1mSetup PHP^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:24.4413719Z ^[[32;1m✓ ^[[0m^[[34;1mPHP ^[[0m^[[90;1mInstalled PHP 8.1.34^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:24.4415203Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:24.4416353Z ^[[90;1m==> ^[[0m^[[37;1mSetup Tools^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:24.7529560Z ^[[32;1m✓ ^[[0m^[[34;1mcomposer ^[[0m^[[90;1mAdded composer 2.10.3^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.5958840Z ^[[32;1m✓ ^[[0m^[[34;1mphpmd ^[[0m^[[90;1mAdded phpmd 3.0.0^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.5959661Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.5960179Z ^[[90;1m==> ^[[0m^[[37;1mSetup Coverage^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.8451163Z ^[[32;1m✓ ^[[0m^[[34;1mnone ^[[0m^[[90;1mDisabled Xdebug and PCOV^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.8452399Z 
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.8453085Z ^[[90;1m==> ^[[0m^[[37;1mSponsor setup-php^[[0m
+Run PHPMD scanning	Setup PHP	2026-10-12T10:56:25.8457410Z ^[[32;1m✓ ^[[0m^[[34;1msetup-php ^[[0m^[[90;1mhttps://setup-php.com/sponsor^[[0m
+Run PHPMD scanning	Run PHPMD	﻿2026-10-12T10:56:25.8669343Z ##[group]Run phpmd analyze --format sarif --ruleset codesize --reportfile-sarif phpmd-results.sarif .
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8670319Z ^[[36;1mphpmd analyze --format sarif --ruleset codesize --reportfile-sarif phpmd-results.sarif .^[[0m
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8919801Z shell: /usr/bin/bash -e {0}
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8920196Z env:
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8920549Z   COMPOSER_PROCESS_TIMEOUT: 0
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8920910Z   COMPOSER_NO_INTERACTION: 1
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8921276Z   COMPOSER_NO_AUDIT: 1
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:25.8921909Z ##[endgroup]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.2573605Z   0/40 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.3123068Z   4/40 [▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░]  10%
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.3416070Z  16/40 [▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░]  40%
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.3654466Z  40/40 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4247856Z {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4248486Z     "version": "2.1.0",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4249528Z     "$schema": "https:\/\/raw.githubusercontent.com\/oasis-tcs\/sarif-spec\/master\/Schemata\/sarif-schema-2.1.0.json",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4250643Z     "runs": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4250960Z         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4251256Z             "tool": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4251842Z                 "driver": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4252219Z                     "name": "PHPMD",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4252852Z                     "informationUri": "https:\/\/phpmd.org",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4253691Z                     "version": "3.0.0",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4254215Z                     "rules": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4255325Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4255820Z                             "id": "CodeSizeRules\/ExcessiveClassComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4285518Z ##[warning]The class UploadQuotaListener has an overall complexity of 57 which is very high. The configured complexity threshold is 50.
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4297193Z                             "name": "ExcessiveClassComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4297876Z                             "shortDescription": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4298583Z                                 "text": "Code Size Rules: ExcessiveClassComplexity"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4299255Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4299731Z                             "messageStrings": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4300301Z                                 "default": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4301382Z                                     "text": "The class {0} has an overall complexity of {1} which is very high. The configured complexity threshold is {2}."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4302436Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4302883Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4303327Z                             "help": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4305959Z                                 "text": "The Weighted Method Count (WMC) of a class is a good indicator of how much time and effort is required to modify and maintain this class. The WMC metric is defined as the sum of complexities of all methods declared in a class. A large number of methods also means that this class has a greater potential impact on derived classes.",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4312684Z                                 "markdown": "The Weighted Method Count (WMC) of a class is a good indicator of how much time and effort is required to modify and maintain this class. The WMC metric is defined as the sum of complexities of all methods declared in a class. A large number of methods also means that this class has a greater potential impact on derived classes.\n\n### Example\n\n```php\nclass Foo {\n    public function bar() {\n        if ($a == $b)  {\n            if ($a1 == $b1) {\n                fiddle();\n            } elseif ($a2 == $b2) {\n                fiddle();\n            } else {\n            }\n        }\n    }\n    public function baz() {\n        if ($a == $b) {\n            if ($a1 == $b1) {\n                fiddle();\n            } elseif ($a2 == $b2) {\n                fiddle();\n            } else {\n            }\n        }\n    }\n    \/\/ Several other complex methods\n}\n```"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4317790Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4318668Z                             "helpUri": "https:\/\/phpmd.org\/rules\/codesize.html#excessiveclasscomplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4319552Z                             "properties": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4320122Z                                 "ruleSet": "Code Size Rules",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4320725Z                                 "priority": 3,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4321333Z                                 "since": "PHPMD 0.2.5"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4322199Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4322654Z                         },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4323089Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4323637Z                             "id": "CodeSizeRules\/CyclomaticComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4324346Z                             "name": "CyclomaticComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4325218Z                             "shortDescription": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4325913Z                                 "text": "Code Size Rules: CyclomaticComplexity"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4326549Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4327029Z                             "messageStrings": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4327587Z                                 "default": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4328576Z                                     "text": "The {0} {1}() has a Cyclomatic Complexity of {2}. The configured cyclomatic complexity threshold is {3}."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4329650Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4330119Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4330497Z                             "help": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4332755Z                                 "text": "Complexity is determined by the number of decision points in a method plus one for the method entry. The decision points are \u0027if\u0027, \u0027while\u0027, \u0027for\u0027, and \u0027case labels\u0027. Generally, 1-4 is low complexity, 5-7 indicates moderate complexity, 8-10 is high complexity,  and 11+ is very high complexity.",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4342181Z                                 "markdown": "Complexity is determined by the number of decision points in a method plus one for the method entry. The decision points are \u0027if\u0027, \u0027while\u0027, \u0027for\u0027, and \u0027case labels\u0027. Generally, 1-4 is low complexity, 5-7 indicates moderate complexity, 8-10 is high complexity,  and 11+ is very high complexity.\n\n### Example\n\n```php\n\/\/ Cyclomatic Complexity = 11\nclass Foo {\n1   public function example() {\n2       if ($a == $b) {\n3           if ($a1 == $b1) {\n                fiddle();\n4           } elseif ($a2 == $b2) {\n                fiddle();\n            } else {\n                fiddle();\n            }\n5       } elseif ($c == $d) {\n6           while ($c == $d) {\n                fiddle();\n            }\n7        } elseif ($e == $f) {\n8           for ($n = 0; $n \u003C $h; $n++) {\n                fiddle();\n            }\n        } else {\n            switch ($z) {\n9               case 1:\n                    fiddle();\n                    break;\n10              case 2:\n                    fiddle();\n                    break;\n11              case 3:\n                    fiddle();\n                    break;\n                default:\n                    fiddle();\n                    break;\n            }\n        }\n    }\n}\n```"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4348424Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4349158Z                             "helpUri": "https:\/\/phpmd.org\/rules\/codesize.html#cyclomaticcomplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4349895Z                             "properties": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4350404Z                                 "ruleSet": "Code Size Rules",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4350915Z                                 "priority": 3,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4351398Z                                 "since": "PHPMD 0.1"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4351862Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4352225Z                         },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4352571Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4353309Z                             "id": "CodeSizeRules\/NPathComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4353888Z                             "name": "NPathComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4354417Z                             "shortDescription": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4355233Z                                 "text": "Code Size Rules: NPathComplexity"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4355814Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4356301Z                             "messageStrings": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4357025Z                                 "default": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4357920Z                                     "text": "The {0} {1}() has an NPath complexity of {2}. The configured NPath complexity threshold is {3}."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4358762Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4359152Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4359535Z                             "help": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4361093Z                                 "text": "The NPath complexity of a method is the number of acyclic execution paths through that method. A threshold of 200 is generally considered the point where measures should be taken to reduce complexity.",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4364439Z                                 "markdown": "The NPath complexity of a method is the number of acyclic execution paths through that method. A threshold of 200 is generally considered the point where measures should be taken to reduce complexity.\n\n### Example\n\n```php\nclass Foo {\n    function bar() {\n        \/\/ lots of complicated code\n    }\n}\n```"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4366821Z                             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4367527Z                             "helpUri": "https:\/\/phpmd.org\/rules\/codesize.html#npathcomplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4368274Z                             "properties": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4368800Z                                 "ruleSet": "Code Size Rules",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4369470Z                                 "priority": 3,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4370117Z                                 "since": "PHPMD 0.1"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4370682Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4371112Z                         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4371492Z                     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4371838Z                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4372162Z             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4372534Z             "originalUriBaseIds": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4373006Z                 "WORKINGDIR": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4373777Z                     "uri": "file:\/\/\/home\/runner\/work\/omeka-s-DiskQuota\/omeka-s-DiskQuota\/"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4374770Z                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4375096Z             },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4375416Z             "results": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4375748Z                 {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4376215Z                     "ruleId": "CodeSizeRules\/ExcessiveClassComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4376783Z                     "ruleIndex": 0,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4377214Z                     "message": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4377625Z                         "id": "default",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4378071Z                         "arguments": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4378551Z                             "UploadQuotaListener",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4378972Z                             "57",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4379370Z                             "50"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4379737Z                         ],
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4380769Z                         "text": "The class UploadQuotaListener has an overall complexity of 57 which is very high. The configured complexity threshold is 50."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4381853Z                     },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4382212Z                     "locations": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4382634Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4383077Z                             "physicalLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4383634Z                                 "artifactLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4384291Z                                     "uri": "src\/Listener\/UploadQuotaListener.php",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4385363Z                                     "uriBaseId": "WORKINGDIR"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4385845Z                                 },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4386274Z                                 "region": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4386783Z                                     "startLine": 12,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4387304Z                                     "endLine": 230
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4387789Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4388174Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4388777Z                         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4389138Z                     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4389461Z                 },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4389775Z                 {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4390279Z                     "ruleId": "CodeSizeRules\/CyclomaticComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4390877Z                     "ruleIndex": 1,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4391319Z                     "message": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4391762Z                         "id": "default",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4392244Z                         "arguments": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4392692Z                             "method",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4393170Z                             "checkIngestFileQuota",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4393656Z                             "18",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4394068Z                             "10"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4394472Z                         ],
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4395786Z                         "text": "The method checkIngestFileQuota() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4396799Z                     },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4397081Z                     "locations": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4397337Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4397610Z                             "physicalLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4397962Z                                 "artifactLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4398390Z                                     "uri": "src\/Listener\/UploadQuotaListener.php",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4398817Z                                     "uriBaseId": "WORKINGDIR"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4399136Z                                 },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4399528Z                                 "region": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4400049Z                                     "startLine": 49,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4400590Z                                     "endLine": 101
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4401058Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4401484Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4401889Z                         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4402185Z                     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4402400Z                 },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4402602Z                 {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4402907Z                     "ruleId": "CodeSizeRules\/NPathComplexity",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4403276Z                     "ruleIndex": 2,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4403550Z                     "message": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4403823Z                         "id": "default",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4404126Z                         "arguments": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4404416Z                             "method",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4405018Z                             "checkIngestFileQuota",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4405341Z                             "10584",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4405607Z                             "200"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4405856Z                         ],
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4406519Z                         "text": "The method checkIngestFileQuota() has an NPath complexity of 10584. The configured NPath complexity threshold is 200."
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4407120Z                     },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4407355Z                     "locations": [
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4407618Z                         {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4407901Z                             "physicalLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4408247Z                                 "artifactLocation": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4408669Z                                     "uri": "src\/Listener\/UploadQuotaListener.php",
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4409091Z                                     "uriBaseId": "WORKINGDIR"
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4409592Z                                 },
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4409874Z                                 "region": {
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4410196Z                                     "startLine": 49,
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4410532Z                                     "endLine": 101
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4410835Z                                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4411098Z                             }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4411458Z                         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4411683Z                     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4411892Z                 }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4412091Z             ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4412280Z         }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4412457Z     ]
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4412635Z }
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4414723Z ##[warning]The method checkIngestFileQuota() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4417111Z ##[warning]The method checkIngestFileQuota() has an NPath complexity of 10584. The configured NPath complexity threshold is 200.
+Run PHPMD scanning	Run PHPMD	2026-10-12T10:56:26.4423320Z ##[error]Process completed with exit code 2.
+Run PHPMD scanning	Upload analysis results to GitHub	﻿2026-10-12T10:56:26.4522603Z ##[group]Run github/codeql-action/upload-sarif@v4
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4522961Z with:
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4523181Z   sarif_file: phpmd-results.sarif
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4523455Z   wait-for-processing: true
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4523804Z   checkout_path: /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4526823Z   token: ***
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4527051Z   matrix: null
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4527254Z env:
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4527453Z   COMPOSER_PROCESS_TIMEOUT: 0
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4527708Z   COMPOSER_NO_INTERACTION: 1
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4527945Z   COMPOSER_NO_AUDIT: 1
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.4528156Z ##[endgroup]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:26.7624456Z Job run UUID is b8fe5317-b831-4436-b021-d66a7106a98c.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:27.7295589Z Post-processing sarif files: ["phpmd-results.sarif"]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:27.7300551Z Validating phpmd-results.sarif
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:27.7470246Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:27.7674854Z ##[group]Uploading code scanning results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:27.7864144Z Uploading results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:28.9260072Z Successfully uploaded results
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:28.9260723Z ##[endgroup]
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:28.9264983Z ##[group]Waiting for processing to finish
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:34.1906915Z Analysis upload status is complete.
+Run PHPMD scanning	Upload analysis results to GitHub	2026-10-12T10:56:34.1907909Z ##[endgroup]
+Run PHPMD scanning	Post Upload analysis results to GitHub	﻿2026-10-12T10:56:34.7875862Z Post job cleanup.
+Run PHPMD scanning	Post Upload analysis results to GitHub	2026-10-12T10:56:35.0949824Z ##[group]Uploading combined SARIF debug artifact
+Run PHPMD scanning	Post Upload analysis results to GitHub	2026-10-12T10:56:35.0951750Z ##[endgroup]
+Run PHPMD scanning	Post Checkout code	﻿2026-10-12T10:56:35.1152662Z Post job cleanup.
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2059939Z [command]/usr/bin/git version
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2103316Z git version 2.55.0
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2142202Z Temporarily overriding HOME='/home/runner/work/_temp/a972897f-dafb-44da-b58d-dff6667392ed' before making global git config changes
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2143619Z Adding repository directory to the temporary git global config as a safe directory
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2149247Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2183085Z Removing SSH command configuration
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2189860Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2227326Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2478700Z Removing HTTP extra header
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2485954Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2530920Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2792731Z Removing includeIf entries pointing to credentials config files
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2801013Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2851030Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2852268Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2853134Z includeif.gitdir:/github/workspace/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2853915Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2868262Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2895493Z /home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2909063Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-55c23cc5\-1ec1\-4649\-8cc4\-6df104e1268b\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2956569Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2989376Z /home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.2999980Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-55c23cc5\-1ec1\-4649\-8cc4\-6df104e1268b\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3038880Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3065190Z /github/runner_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3072651Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-55c23cc5\-1ec1\-4649\-8cc4\-6df104e1268b\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3116110Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3141799Z /github/runner_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3150341Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-55c23cc5\-1ec1\-4649\-8cc4\-6df104e1268b\.config
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3188466Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Run PHPMD scanning	Post Checkout code	2026-10-12T10:56:35.3412779Z Removing credentials config '/home/runner/work/_temp/git-credentials-55c23cc5-1ec1-4649-8cc4-6df104e1268b.config'
+Run PHPMD scanning	Complete job	﻿2026-10-12T10:56:35.3560538Z Cleaning up orphan processes

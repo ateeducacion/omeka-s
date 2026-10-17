@@ -1,0 +1,4 @@
+cbb47f7e521cb71b8faaa9638e827a82ad9128204fb33e92d866890ff5289bc8  /tmp/omeka-pr-test-packages/DiskQuota.zip
+bcfae3ad4694bfed0cb4b7b9f0747e3221226ee10b7ea989061d433531c4b16b  /tmp/omeka-pr-test-packages/ExeLearning.zip
+2c83da87cc566896602a5243142afaa1d533a18460dd6df4d7b31e639b3bac20  /tmp/omeka-pr-test-packages/Common.zip
+510803c7a402b98ad86de81648889ae3e4f5b07d26ca87b02d6c0dc19047172f  /tmp/omeka-pr-test-packages/Log.zip

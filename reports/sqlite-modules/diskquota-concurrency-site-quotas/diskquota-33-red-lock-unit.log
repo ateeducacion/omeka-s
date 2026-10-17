@@ -1,0 +1,40 @@
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+EEEEEE                                                              6 / 6 (100%)
+
+Time: 00:00.012, Memory: 8.00 MB
+
+There were 6 errors:
+
+1) DiskQuotaTest\Service\QuotaLockTest::testSqliteLockIsSharedAndReentrantUntilReleased
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:15
+
+2) DiskQuotaTest\Service\QuotaLockTest::testMysqlLockFailureRejectsTheWrite with data set #0 (0)
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:37
+
+3) DiskQuotaTest\Service\QuotaLockTest::testMysqlLockFailureRejectsTheWrite with data set #1 (null)
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:37
+
+4) DiskQuotaTest\Service\QuotaLockTest::testMysqlAcquiresOnlyOnceAndReleasesTheSameDatabaseLock
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:55
+
+5) DiskQuotaTest\Service\QuotaLockTest::testExistingDatabaseTransactionCannotUseAStaleQuotaSnapshot
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:69
+
+6) DiskQuotaTest\Service\QuotaLockTest::testUnsupportedDatabaseFailsClosed
+Error: Class "DiskQuota\Service\QuotaLock" not found
+
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Service/QuotaLockTest.php:76
+
+ERRORS!
+Tests: 6, Assertions: 0, Errors: 6.

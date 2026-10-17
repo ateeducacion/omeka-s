@@ -1,0 +1,16 @@
+PHPMD	pass	4s	https://github.com/ateeducacion/omeka-s-DiskQuota/runs/114805397031	
+Run PHPMD scanning	pass	22s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596214/job/114805303764	
+codecov/patch	pass	1s	https://app.codecov.io/gh/ateeducacion/omeka-s-DiskQuota/pull/33	
+lint_and_test	pass	30s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247587472/job/114805273964	
+lint_and_test	pass	41s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596002/job/114805302972	
+preview	pass	8s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596051/job/114805304070	
+sqlite_integration	pass	35s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247587472/job/114805274156	
+sqlite_integration	pass	50s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596002/job/114805304076	
+PHPMD	pass	4s	https://github.com/ateeducacion/omeka-s-DiskQuota/runs/114805397031	
+Run PHPMD scanning	pass	22s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596214/job/114805303764	
+codecov/patch	pass	1s	https://app.codecov.io/gh/ateeducacion/omeka-s-DiskQuota/pull/33	
+lint_and_test	pass	30s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247587472/job/114805273964	
+lint_and_test	pass	41s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596002/job/114805302972	
+preview	pass	8s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596051/job/114805304070	
+sqlite_integration	pass	35s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247587472/job/114805274156	
+sqlite_integration	pass	50s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/38247596002/job/114805304076	

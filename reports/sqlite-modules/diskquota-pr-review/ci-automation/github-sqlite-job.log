@@ -1,0 +1,704 @@
+sqlite_integration	Set up job	﻿2026-10-09T13:29:54.9369947Z Current runner version: '2.337.0'
+sqlite_integration	Set up job	2026-10-09T13:29:54.9393217Z ##[group]Runner Image Provisioner
+sqlite_integration	Set up job	2026-10-09T13:29:54.9393973Z Hosted Compute Agent
+sqlite_integration	Set up job	2026-10-09T13:29:54.9394467Z Version: 20261002.596
+sqlite_integration	Set up job	2026-10-09T13:29:54.9395097Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+sqlite_integration	Set up job	2026-10-09T13:29:54.9395689Z Build Date: 2026-10-02T22:28:27Z
+sqlite_integration	Set up job	2026-10-09T13:29:54.9396293Z Worker ID: {274726a6-bbf7-473d-9ec0-2d4b2a5f55c6}
+sqlite_integration	Set up job	2026-10-09T13:29:54.9396890Z Region: westus3
+sqlite_integration	Set up job	2026-10-09T13:29:54.9397375Z Cloud: Azure
+sqlite_integration	Set up job	2026-10-09T13:29:54.9397849Z ##[endgroup]
+sqlite_integration	Set up job	2026-10-09T13:29:54.9398973Z ##[group]Operating System
+sqlite_integration	Set up job	2026-10-09T13:29:54.9399461Z Ubuntu
+sqlite_integration	Set up job	2026-10-09T13:29:54.9399962Z 24.04.5
+sqlite_integration	Set up job	2026-10-09T13:29:54.9400391Z LTS
+sqlite_integration	Set up job	2026-10-09T13:29:54.9400861Z ##[endgroup]
+sqlite_integration	Set up job	2026-10-09T13:29:54.9401356Z ##[group]Runner Image
+sqlite_integration	Set up job	2026-10-09T13:29:54.9401835Z Image: ubuntu-24.04
+sqlite_integration	Set up job	2026-10-09T13:29:54.9402355Z Version: 20261004.327.1
+sqlite_integration	Set up job	2026-10-09T13:29:54.9403455Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+sqlite_integration	Set up job	2026-10-09T13:29:54.9404919Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+sqlite_integration	Set up job	2026-10-09T13:29:54.9405679Z ##[endgroup]
+sqlite_integration	Set up job	2026-10-09T13:29:54.9406633Z ##[group]GITHUB_TOKEN Permissions
+sqlite_integration	Set up job	2026-10-09T13:29:54.9408220Z Contents: read
+sqlite_integration	Set up job	2026-10-09T13:29:54.9408797Z Metadata: read
+sqlite_integration	Set up job	2026-10-09T13:29:54.9409259Z ##[endgroup]
+sqlite_integration	Set up job	2026-10-09T13:29:54.9411400Z Secret source: Actions
+sqlite_integration	Set up job	2026-10-09T13:29:54.9412245Z Cache mode: write
+sqlite_integration	Set up job	2026-10-09T13:29:54.9413016Z Prepare workflow directory
+sqlite_integration	Set up job	2026-10-09T13:29:54.9707724Z Prepare all required actions
+sqlite_integration	Set up job	2026-10-09T13:29:54.9758564Z Getting action download info
+sqlite_integration	Set up job	2026-10-09T13:29:55.2878581Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+sqlite_integration	Set up job	2026-10-09T13:29:55.3701420Z Download action repository 'shivammathur/setup-php@v2' (SHA:eb7c497e18156a6bbabfef1d3a82760b9eda3962)
+sqlite_integration	Set up job	2026-10-09T13:29:55.9902178Z Complete job name: sqlite_integration
+sqlite_integration	Run actions/checkout@v7	﻿2026-10-09T13:29:56.0556213Z ##[group]Run actions/checkout@v7
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0556999Z with:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0557387Z   persist-credentials: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0557884Z   path: module
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0558309Z   repository: ateeducacion/omeka-s-DiskQuota
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0561841Z   token: ***
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0562216Z   ssh-strict: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0562931Z   ssh-user: git
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0563307Z   clean: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0563688Z   sparse-checkout-cone-mode: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0564141Z   fetch-depth: 1
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0564512Z   fetch-tags: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0564911Z   show-progress: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0565295Z   lfs: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0565682Z   submodules: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0566067Z   set-safe-directory: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0566505Z   allow-unsafe-pr-checkout: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.0567209Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1416780Z Syncing repository: ateeducacion/omeka-s-DiskQuota
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1419352Z ##[group]Getting Git version info
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1420656Z Working directory is '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module'
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1422226Z [command]/usr/bin/git version
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1713685Z git version 2.55.0
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1735712Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1743118Z Temporarily overriding HOME='/home/runner/work/_temp/0a6414a4-090c-49a5-aee9-7ad843465d08' before making global git config changes
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1744948Z Adding repository directory to the temporary git global config as a safe directory
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1746626Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1794103Z ##[group]Determining repository object format
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1796123Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1797231Z ##[group]Initializing the repository
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1801538Z [command]/usr/bin/git init /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1903965Z hint: Using 'master' as the name for the initial branch. This default branch name
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1906093Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1907721Z hint: to use in all of your new repositories, which will suppress this warning,
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1909134Z hint: call:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1910083Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1910932Z hint: 	git config --global init.defaultBranch <name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1911805Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1912758Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1914058Z hint: 'development'. The just-created branch can be renamed via this command:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1915080Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1915642Z hint: 	git branch -m <name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1916983Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1917869Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1919457Z Initialized empty Git repository in /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git/
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1922215Z [command]/usr/bin/git remote add origin https://github.com/ateeducacion/omeka-s-DiskQuota
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1979787Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1981110Z ##[group]Disabling automatic garbage collection
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.1982137Z [command]/usr/bin/git config --local gc.auto 0
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2021365Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2023059Z ##[group]Setting up auth
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2023828Z Removing SSH command configuration
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2026134Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2065615Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2375762Z Removing HTTP extra header
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2379792Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2412816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2605606Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2609649Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2641672Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2843840Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2881819Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git.path /home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2925128Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2960503Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/module/.git.path /github/runner_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.2998106Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/module/.git/worktrees/*.path /github/runner_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.3026878Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.3027507Z ##[group]Fetching the repository
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.3033261Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cf7447d050ff79963566e796fa20f36d5c588984:refs/remotes/pull/31/merge
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9447821Z From https://github.com/ateeducacion/omeka-s-DiskQuota
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9449823Z  * [new ref]         cf7447d050ff79963566e796fa20f36d5c588984 -> pull/31/merge
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9453387Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9454662Z ##[group]Determining the checkout info
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9455863Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9456993Z [command]/usr/bin/git sparse-checkout disable
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9505379Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9536228Z ##[group]Checking out the ref
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9538481Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/31/merge
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9631493Z Note: switching to 'refs/remotes/pull/31/merge'.
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9632658Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9633208Z You are in 'detached HEAD' state. You can look around, make experimental
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9634514Z changes and commit them, and you can discard any commits you make in this
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9635933Z state without impacting any branches by switching back to a branch.
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9636904Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9637453Z If you want to create a new branch to retain commits you create, you may
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9638960Z do so (now or later) by using -c with the switch command. Example:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9640139Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9640684Z   git switch -c <new-branch-name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9641433Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9641894Z Or undo this operation with:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9643061Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9643612Z   git switch -
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9644173Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9645085Z Turn off this advice by setting config variable advice.detachedHead to false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9646355Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9647773Z HEAD is now at cf7447d Merge 693347861a076de7af204dc2e54e3cffb83e2896 into 2dc987a76ac3859c1340064e5765e4870baaad71
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9651889Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9684074Z [command]/usr/bin/git log -1 --format=%H
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9710073Z cf7447d050ff79963566e796fa20f36d5c588984
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9719239Z ##[group]Removing auth
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9720383Z Removing SSH command configuration
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9722521Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9754616Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:56.9966945Z Removing HTTP extra header
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0041058Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0050781Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0223940Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0226649Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0255811Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0259635Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0262869Z includeif.gitdir:/github/workspace/module/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0265151Z includeif.gitdir:/github/workspace/module/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0271066Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0288064Z /home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0298147Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-cd9655bf\-f546\-477f\-a499\-6c6cc37d78bc\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0334029Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0357677Z /home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0365112Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-cd9655bf\-f546\-477f\-a499\-6c6cc37d78bc\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0395918Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/module/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0419032Z /github/runner_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0428061Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/module/.git.path \/github\/runner_temp\/git\-credentials\-cd9655bf\-f546\-477f\-a499\-6c6cc37d78bc\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0464786Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/module/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0489938Z /github/runner_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.0532260Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/module/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-cd9655bf\-f546\-477f\-a499\-6c6cc37d78bc\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.1792879Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.1995531Z Removing credentials config '/home/runner/work/_temp/git-credentials-cd9655bf-f546-477f-a499-6c6cc37d78bc.config'
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2003715Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	﻿2026-10-09T13:29:57.2331965Z ##[group]Run actions/checkout@v7
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2333010Z with:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2333731Z   repository: ateeducacion/omeka-s
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2334717Z   ref: 74a5e131f1881e9d565cf346ff090155b7ee833b
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2335773Z   persist-credentials: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2336607Z   path: omeka
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2344110Z   token: ***
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2344815Z   ssh-strict: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2345540Z   ssh-user: git
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2346253Z   clean: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2346997Z   sparse-checkout-cone-mode: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2347885Z   fetch-depth: 1
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2349302Z   fetch-tags: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2350064Z   show-progress: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2350831Z   lfs: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2351545Z   submodules: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2352325Z   set-safe-directory: true
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2353271Z   allow-unsafe-pr-checkout: false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.2354183Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3054891Z Syncing repository: ateeducacion/omeka-s
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3057411Z ##[group]Getting Git version info
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3059386Z Working directory is '/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka'
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3094339Z [command]/usr/bin/git version
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3130136Z git version 2.55.0
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3146586Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3155171Z Temporarily overriding HOME='/home/runner/work/_temp/6d56b050-de29-4719-a5c0-979cd51dc47c' before making global git config changes
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3160328Z Adding repository directory to the temporary git global config as a safe directory
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3170140Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3188106Z ##[group]Determining repository object format
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3190322Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3192107Z ##[group]Initializing the repository
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3194317Z [command]/usr/bin/git init /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3240348Z hint: Using 'master' as the name for the initial branch. This default branch name
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3242376Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3245088Z hint: to use in all of your new repositories, which will suppress this warning,
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3247212Z hint: call:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3248412Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3249775Z hint: 	git config --global init.defaultBranch <name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3251414Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3253120Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3255582Z hint: 'development'. The just-created branch can be renamed via this command:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3257716Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3259030Z hint: 	git branch -m <name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3260474Z hint:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3262701Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3266049Z Initialized empty Git repository in /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git/
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3271705Z [command]/usr/bin/git remote add origin https://github.com/ateeducacion/omeka-s
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3276430Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3278230Z ##[group]Disabling automatic garbage collection
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.3279560Z [command]/usr/bin/git config --local gc.auto 0
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4591534Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4593465Z ##[group]Setting up auth
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4594805Z Removing SSH command configuration
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4597627Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4634438Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4830161Z Removing HTTP extra header
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4834873Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.4867917Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5061722Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5066067Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5097887Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5317389Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5364160Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git.path /home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5399098Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5435374Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/omeka/.git.path /github/runner_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5473180Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/omeka/.git/worktrees/*.path /github/runner_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5522603Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5524420Z ##[group]Fetching the repository
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:57.5528901Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 74a5e131f1881e9d565cf346ff090155b7ee833b
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5463624Z From https://github.com/ateeducacion/omeka-s
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5464144Z  * branch            74a5e131f1881e9d565cf346ff090155b7ee833b -> FETCH_HEAD
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5473064Z [command]/usr/bin/git rev-parse --verify --quiet 74a5e131f1881e9d565cf346ff090155b7ee833b^{object}
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5503816Z 74a5e131f1881e9d565cf346ff090155b7ee833b
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5507075Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5507535Z ##[group]Determining the checkout info
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5508251Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5512577Z [command]/usr/bin/git sparse-checkout disable
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5558484Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5593173Z ##[group]Checking out the ref
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.5597513Z [command]/usr/bin/git checkout --progress --force 74a5e131f1881e9d565cf346ff090155b7ee833b
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7952226Z Note: switching to '74a5e131f1881e9d565cf346ff090155b7ee833b'.
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7953118Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7953744Z You are in 'detached HEAD' state. You can look around, make experimental
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7954383Z changes and commit them, and you can discard any commits you make in this
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7955040Z state without impacting any branches by switching back to a branch.
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7955404Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7955643Z If you want to create a new branch to retain commits you create, you may
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7956182Z do so (now or later) by using -c with the switch command. Example:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7956493Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7956645Z   git switch -c <new-branch-name>
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7956925Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7957072Z Or undo this operation with:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7957280Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7957385Z   git switch -
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7957541Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7957799Z Turn off this advice by setting config variable advice.detachedHead to false
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7958187Z 
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7958485Z HEAD is now at 74a5e13 fix(sqlite): handle quoted table collations and SHOW INDEX metadata
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.7968596Z ##[endgroup]
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8008685Z [command]/usr/bin/git log -1 --format=%H
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8036593Z 74a5e131f1881e9d565cf346ff090155b7ee833b
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8045266Z ##[group]Removing auth
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8045527Z Removing SSH command configuration
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8048750Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8080272Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8281143Z Removing HTTP extra header
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8289650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8323198Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8524375Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8527756Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8555156Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8556047Z includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8556719Z includeif.gitdir:/github/workspace/omeka/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8557209Z includeif.gitdir:/github/workspace/omeka/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8563059Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8587639Z /home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8595974Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-328d9e79\-7a17\-4fdc\-af6b\-e471fb884889\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8631466Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8656755Z /home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8664489Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-328d9e79\-7a17\-4fdc\-af6b\-e471fb884889\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8699834Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/omeka/.git.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8728770Z /github/runner_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8734043Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/omeka/.git.path \/github\/runner_temp\/git\-credentials\-328d9e79\-7a17\-4fdc\-af6b\-e471fb884889\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8783325Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/omeka/.git/worktrees/*.path
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8831301Z /github/runner_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8837819Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/omeka/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-328d9e79\-7a17\-4fdc\-af6b\-e471fb884889\.config
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.8872878Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.9073744Z Removing credentials config '/home/runner/work/_temp/git-credentials-328d9e79-7a17-4fdc-af6b-e471fb884889.config'
+sqlite_integration	Run actions/checkout@v7	2026-10-09T13:29:59.9082717Z ##[endgroup]
+sqlite_integration	PHP setup	﻿2026-10-09T13:29:59.9208604Z ##[group]Run shivammathur/setup-php@v2
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9208864Z with:
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9209034Z   php-version: 8.1
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9209206Z   coverage: none
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9209455Z   extensions: mbstring, intl, curl, dom, fileinfo, pdo_sqlite, xml, zip
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9209771Z   tools: composer
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9209950Z   ini-file: production
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9211967Z   github-token: ***
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9212142Z ##[endgroup]
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9560030Z [command]/usr/bin/bash /home/runner/work/_actions/shivammathur/setup-php/v2/src/scripts/run.sh
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9915225Z 
+sqlite_integration	PHP setup	2026-10-09T13:29:59.9916323Z ^[[90;1m==> ^[[0m^[[37;1mSetup PHP^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4047859Z ^[[32;1m✓ ^[[0m^[[34;1mPHP ^[[0m^[[90;1mInstalled PHP 8.1.34^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4048310Z 
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4048838Z ^[[90;1m==> ^[[0m^[[37;1mSetup Extensions^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4454976Z ^[[32;1m✓ ^[[0m^[[34;1mmbstring ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4478303Z ^[[32;1m✓ ^[[0m^[[34;1mintl ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4506063Z ^[[32;1m✓ ^[[0m^[[34;1mcurl ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4531838Z ^[[32;1m✓ ^[[0m^[[34;1mdom ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4561414Z ^[[32;1m✓ ^[[0m^[[34;1mfileinfo ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4573305Z ^[[32;1m✓ ^[[0m^[[34;1mpdo_sqlite ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4600592Z ^[[32;1m✓ ^[[0m^[[34;1mxml ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4625797Z ^[[32;1m✓ ^[[0m^[[34;1mzip ^[[0m^[[90;1mEnabled^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4626089Z 
+sqlite_integration	PHP setup	2026-10-09T13:30:06.4626265Z ^[[90;1m==> ^[[0m^[[37;1mSetup Tools^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:07.0699457Z ^[[32;1m✓ ^[[0m^[[34;1mcomposer ^[[0m^[[90;1mAdded composer 2.10.3^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:07.0700206Z 
+sqlite_integration	PHP setup	2026-10-09T13:30:07.0700814Z ^[[90;1m==> ^[[0m^[[37;1mSetup Coverage^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:07.2644267Z ^[[32;1m✓ ^[[0m^[[34;1mnone ^[[0m^[[90;1mDisabled Xdebug and PCOV^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:07.2644577Z 
+sqlite_integration	PHP setup	2026-10-09T13:30:07.2644715Z ^[[90;1m==> ^[[0m^[[37;1mSponsor setup-php^[[0m
+sqlite_integration	PHP setup	2026-10-09T13:30:07.2645133Z ^[[32;1m✓ ^[[0m^[[34;1msetup-php ^[[0m^[[90;1mhttps://setup-php.com/sponsor^[[0m
+sqlite_integration	Install Omeka thumbnailer	﻿2026-10-09T13:30:07.3279496Z ##[group]Run sudo apt-get update && sudo apt-get install -y --no-install-recommends imagemagick
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.3280086Z ^[[36;1msudo apt-get update && sudo apt-get install -y --no-install-recommends imagemagick^[[0m
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4235245Z shell: /usr/bin/bash -e {0}
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4235505Z env:
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4235690Z   COMPOSER_PROCESS_TIMEOUT: 0
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4235910Z   COMPOSER_NO_INTERACTION: 1
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4236110Z   COMPOSER_NO_AUDIT: 1
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.4236292Z ##[endgroup]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.6435065Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.6524519Z Get:3 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7317683Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7332986Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7346905Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7358736Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7788500Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [531 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7963894Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [475 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.7994326Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.3 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.8022244Z Get:10 https://packages.microsoft.com/ubuntu/24.04/prod noble/main all Packages [640 B]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.8891508Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1375 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9006292Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [306 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9013193Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1702 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9096736Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9123222Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1761 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9213832Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [401 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9983409Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.0 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9990797Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:07.9995368Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1121 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0043168Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [228 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0533201Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1220 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0580693Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [245 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0594165Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1669 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0659035Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [383 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0677377Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [49.8 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:08.0683718Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:16.3081935Z Fetched 12.3 MB in 1s (9945 kB/s)
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:16.9672736Z Reading package lists...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:16.9929004Z Reading package lists...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.1670384Z Building dependency tree...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.1672989Z Reading state information...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3028086Z The following additional packages will be installed:
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3032647Z   imagemagick-6.q16
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3037002Z Suggested packages:
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3037467Z   imagemagick-6-doc autotrace cups-bsd | lpr | lprng enscript ffmpeg gimp
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3038577Z   gnuplot grads graphviz hp2xx html2ps libwmf-bin mplayer povray radiance
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3039274Z   sane-utils texlive-base-bin transfig libraw-bin
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3039652Z Recommended packages:
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3039921Z   ghostscript netpbm
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3174133Z The following NEW packages will be installed:
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3178092Z   imagemagick imagemagick-6.q16
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3326150Z 0 upgraded, 2 newly installed, 0 to remove and 30 not upgraded.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3326663Z Need to get 268 kB of archives.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3326997Z After this operation, 655 kB of additional disk space will be used.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.3327331Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.4144549Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 imagemagick-6.q16 amd64 8:6.9.12.98+dfsg1-5.2build2 [254 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.4793220Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 imagemagick amd64 8:6.9.12.98+dfsg1-5.2build2 [14.2 kB]
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.6939234Z Fetched 268 kB in 0s (1726 kB/s)
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7111588Z Selecting previously unselected package imagemagick-6.q16.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7241488Z (Reading database ... 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7246620Z (Reading database ... 5%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7247679Z (Reading database ... 10%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7249587Z (Reading database ... 15%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7251871Z (Reading database ... 20%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7254591Z (Reading database ... 25%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7255378Z (Reading database ... 30%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7256840Z (Reading database ... 35%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7258036Z (Reading database ... 40%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7258578Z (Reading database ... 45%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7260150Z (Reading database ... 50%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7261027Z (Reading database ... 55%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.7570539Z (Reading database ... 60%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:17.9110120Z (Reading database ... 65%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:18.1219618Z (Reading database ... 70%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:18.3726618Z (Reading database ... 75%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:18.6024997Z (Reading database ... 80%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:18.7358931Z (Reading database ... 85%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:18.8724709Z (Reading database ... 90%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0142303Z (Reading database ... 95%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0142873Z (Reading database ... 100%
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0143222Z (Reading database ... 204633 files and directories currently installed.)
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0184907Z Preparing to unpack .../imagemagick-6.q16_8%3a6.9.12.98+dfsg1-5.2build2_amd64.deb ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0252914Z Unpacking imagemagick-6.q16 (8:6.9.12.98+dfsg1-5.2build2) ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0622339Z Selecting previously unselected package imagemagick.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0739975Z Preparing to unpack .../imagemagick_8%3a6.9.12.98+dfsg1-5.2build2_amd64.deb ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.0746740Z Unpacking imagemagick (8:6.9.12.98+dfsg1-5.2build2) ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1056522Z Setting up imagemagick-6.q16 (8:6.9.12.98+dfsg1-5.2build2) ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1121221Z update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare (compare) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1160050Z update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare-im6 (compare-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1208277Z update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate (animate) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1249317Z update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate-im6 (animate-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1295823Z update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert (convert) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1338261Z update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert-im6 (convert-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1386670Z update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite (composite) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1593735Z update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite-im6 (composite-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1719766Z update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure (conjure) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1759047Z update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure-im6 (conjure-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1808829Z update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import (import) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1848195Z update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import-im6 (import-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1897637Z update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify (identify) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1938230Z update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify-im6 (identify-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.1987429Z update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream (stream) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2027282Z update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream-im6 (stream-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2075609Z update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display (display) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2115993Z update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display-im6 (display-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2176712Z update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage (montage) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2221640Z update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage-im6 (montage-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2274544Z update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify (mogrify) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2319165Z update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify-im6 (mogrify-im6) in auto mode
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.2388935Z Setting up imagemagick (8:6.9.12.98+dfsg1-5.2build2) ...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.9894245Z 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.9894901Z Running kernel seems to be up-to-date.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.9895183Z 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.9895279Z Restarting services...
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:19.9963052Z  systemctl restart php8.3-fpm.service
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1216298Z 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1217657Z No containers need to be restarted.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1217960Z 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1218124Z No user sessions are running outdated binaries.
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1218395Z 
+sqlite_integration	Install Omeka thumbnailer	2026-10-09T13:30:20.1218624Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+sqlite_integration	Install Omeka dependencies	﻿2026-10-09T13:30:20.9240714Z ##[group]Run composer install --no-dev --no-interaction --prefer-dist
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9241138Z ^[[36;1mcomposer install --no-dev --no-interaction --prefer-dist^[[0m
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9299694Z shell: /usr/bin/bash -e {0}
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9299900Z env:
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9300070Z   COMPOSER_PROCESS_TIMEOUT: 0
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9300276Z   COMPOSER_NO_INTERACTION: 1
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9300482Z   COMPOSER_NO_AUDIT: 1
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:20.9300658Z ##[endgroup]
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.1301506Z Installing dependencies from lock file
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.1333917Z Verifying lock file contents can be installed on current platform.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.1515702Z Warning: The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run `composer update` or `composer update <package name>`.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2186315Z Package operations: 81 installs, 0 updates, 0 removals
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2193633Z   - Downloading symfony/polyfill-php80 (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2196307Z   - Downloading symfony/polyfill-mbstring (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2198340Z   - Downloading symfony/polyfill-intl-normalizer (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2200166Z   - Downloading symfony/polyfill-intl-grapheme (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2201856Z   - Downloading symfony/polyfill-ctype (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2203850Z   - Downloading symfony/string (v6.4.26)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2205681Z   - Downloading symfony/deprecation-contracts (v3.6.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2207770Z   - Downloading psr/container (1.1.2)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2209745Z   - Downloading symfony/service-contracts (v3.6.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2211485Z   - Downloading symfony/console (v6.4.27)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2213586Z   - Downloading psr/cache (3.0.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2215892Z   - Downloading doctrine/deprecations (1.1.5)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2217657Z   - Downloading doctrine/event-manager (1.2.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2218623Z   - Downloading doctrine/persistence (3.4.3)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2219652Z   - Downloading doctrine/lexer (2.1.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2220674Z   - Downloading doctrine/instantiator (2.0.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2221713Z   - Downloading doctrine/inflector (2.1.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2222688Z   - Downloading doctrine/cache (1.13.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2223926Z   - Downloading doctrine/dbal (2.13.9)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2224972Z   - Downloading doctrine/common (3.5.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2226022Z   - Downloading symfony/polyfill-php84 (v1.33.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2226981Z   - Downloading doctrine/collections (2.4.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2227939Z   - Downloading doctrine/orm (2.20.8)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2229393Z   - Downloading beberlei/doctrineextensions (v1.5.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2230571Z   - Downloading nikic/php-parser (v5.6.2)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2231993Z   - Downloading brick/varexporter (0.6.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2233076Z   - Downloading composer/semver (3.4.4)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2234110Z   - Downloading doctrine/annotations (1.14.4)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2235534Z   - Downloading ezyang/htmlpurifier (v4.19.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2236821Z   - Downloading fileeye/pel (0.12.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2238198Z   - Downloading laminas/laminas-stdlib (3.20.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2239166Z   - Downloading laminas/laminas-authentication (2.18.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2240113Z   - Downloading laminas/laminas-dom (2.14.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2241156Z   - Downloading psr/http-message (2.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2242172Z   - Downloading laminas/laminas-servicemanager (3.23.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2243369Z   - Downloading laminas/laminas-validator (2.64.4)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2244363Z   - Downloading laminas/laminas-filter (2.41.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2245396Z   - Downloading laminas/laminas-inputfilter (2.33.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2246709Z   - Downloading webmozart/assert (1.12.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2247611Z   - Downloading laminas/laminas-hydrator (4.16.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2248590Z   - Downloading laminas/laminas-form (3.21.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2249609Z   - Downloading laminas/laminas-i18n-resources (2.12.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2250531Z   - Downloading laminas/laminas-json (3.7.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2251416Z   - Downloading laminas/laminas-math (3.8.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2252516Z   - Downloading laminas/laminas-router (3.15.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2253634Z   - Downloading laminas/laminas-translator (1.1.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2254580Z   - Downloading laminas/laminas-i18n (2.30.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2255631Z   - Downloading laminas/laminas-mvc-i18n (1.9.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2256624Z   - Downloading laminas/laminas-eventmanager (3.14.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2257577Z   - Downloading laminas/laminas-session (2.25.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2258541Z   - Downloading laminas/laminas-escaper (2.17.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2259500Z   - Downloading laminas/laminas-view (2.43.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2260913Z   - Downloading webimpress/safe-writer (2.2.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2261776Z   - Downloading omeka/sanimal-config (v3.11.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2262972Z   - Downloading laminas/laminas-modulemanager (2.18.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2263956Z   - Downloading laminas/laminas-uri (2.13.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2264930Z   - Downloading omeka/sanimal-loader (v2.12.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2265899Z   - Downloading laminas/laminas-http (2.22.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2266785Z   - Downloading omeka/sanimal-mvc (v3.8.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2267862Z   - Downloading laminas/laminas-mvc-plugin-prg (1.8.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2268867Z   - Downloading laminas/laminas-mvc-plugin-identity (1.7.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2269891Z   - Downloading laminas/laminas-mvc-plugin-flashmessenger (1.11.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2270821Z   - Downloading laminas/laminas-mvc-plugin-fileprg (1.7.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2271784Z   - Downloading laminas/laminas-navigation (2.21.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2272761Z   - Downloading laminas/laminas-permissions-acl (2.17.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2273865Z   - Downloading laminas/laminas-zendframework-bridge (1.8.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2276279Z   - Downloading ml/iri (1.1.4)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2277158Z   - Downloading ml/json-ld (1.2.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2278704Z   - Downloading omeka-s-themes/default (dev-develop aab30d1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2279584Z   - Downloading psr/log (1.1.4)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2280547Z   - Downloading omeka/sanimal-log (v2.17.2)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2281568Z   - Downloading symfony/polyfill-intl-idn (v1.38.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2282609Z   - Downloading omeka/sanimal-mime (v2.12.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2283649Z   - Downloading omeka/sanimal-mail (v2.25.2)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2285127Z   - Downloading zozlak/rdf-constants (1.2.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2286404Z   - Downloading sweetrdf/rdf-interface (3.2.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2287281Z   - Downloading sweetrdf/rdf-helpers (2.1.1)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:21.2288249Z   - Downloading sweetrdf/easyrdf (1.17.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.1814085Z   - Installing omeka/composer-addon-installer (2.0): Symlinking from application/data/composer-addon-installer
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.1917828Z   - Installing symfony/polyfill-php80 (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.1941982Z   - Installing symfony/polyfill-php72 (v1.31.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.1950088Z   - Installing symfony/polyfill-mbstring (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.1973765Z   - Installing symfony/polyfill-intl-normalizer (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2001455Z   - Installing symfony/polyfill-intl-grapheme (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2032283Z   - Installing symfony/polyfill-ctype (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2057877Z   - Installing symfony/string (v6.4.26): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2087199Z   - Installing symfony/deprecation-contracts (v3.6.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2116290Z   - Installing psr/container (1.1.2): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2145143Z   - Installing symfony/service-contracts (v3.6.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2173980Z   - Installing symfony/console (v6.4.27): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2203903Z   - Installing psr/cache (3.0.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2208162Z   - Installing doctrine/deprecations (1.1.5): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2211607Z   - Installing doctrine/event-manager (1.2.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2233158Z   - Installing doctrine/persistence (3.4.3): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2245721Z   - Installing doctrine/lexer (2.1.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2246287Z   - Installing doctrine/instantiator (2.0.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2246849Z   - Installing doctrine/inflector (2.1.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2247359Z   - Installing doctrine/cache (1.13.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2247828Z   - Installing doctrine/dbal (2.13.9): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2248305Z   - Installing doctrine/common (3.5.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2248852Z   - Installing symfony/polyfill-php84 (v1.33.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2249423Z   - Installing doctrine/collections (2.4.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2249938Z   - Installing doctrine/orm (2.20.8): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2250488Z   - Installing beberlei/doctrineextensions (v1.5.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2251082Z   - Installing nikic/php-parser (v5.6.2): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2251593Z   - Installing brick/varexporter (0.6.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2252084Z   - Installing composer/semver (3.4.4): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2252714Z   - Installing doctrine/annotations (1.14.4): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2253465Z   - Installing ezyang/htmlpurifier (v4.19.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2253938Z   - Installing fileeye/pel (0.12.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2254392Z   - Installing laminas/laminas-stdlib (3.20.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2254913Z   - Installing laminas/laminas-authentication (2.18.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2255448Z   - Installing laminas/laminas-dom (2.14.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2255893Z   - Installing psr/http-message (2.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2256377Z   - Installing laminas/laminas-servicemanager (3.23.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2256902Z   - Installing laminas/laminas-validator (2.64.4): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2257416Z   - Installing laminas/laminas-filter (2.41.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2257972Z   - Installing laminas/laminas-inputfilter (2.33.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2259129Z   - Installing webmozart/assert (1.12.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2261581Z   - Installing laminas/laminas-hydrator (4.16.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2273511Z   - Installing laminas/laminas-form (3.21.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2274325Z   - Installing laminas/laminas-i18n-resources (2.12.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2275130Z   - Installing laminas/laminas-json (3.7.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2275861Z   - Installing laminas/laminas-math (3.8.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2276457Z   - Installing laminas/laminas-router (3.15.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2277040Z   - Installing laminas/laminas-translator (1.1.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2277616Z   - Installing laminas/laminas-i18n (2.30.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2278173Z   - Installing laminas/laminas-mvc-i18n (1.9.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2278764Z   - Installing laminas/laminas-eventmanager (3.14.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2279604Z   - Installing laminas/laminas-session (2.25.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2281937Z   - Installing laminas/laminas-escaper (2.17.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2284230Z   - Installing laminas/laminas-view (2.43.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2286402Z   - Installing webimpress/safe-writer (2.2.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2288629Z   - Installing omeka/sanimal-config (v3.11.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2290744Z   - Installing laminas/laminas-modulemanager (2.18.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2292967Z   - Installing laminas/laminas-uri (2.13.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2307499Z   - Installing omeka/sanimal-loader (v2.12.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2307987Z   - Installing laminas/laminas-http (2.22.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2308422Z   - Installing omeka/sanimal-mvc (v3.8.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2308960Z   - Installing laminas/laminas-mvc-plugin-prg (1.8.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2309616Z   - Installing laminas/laminas-mvc-plugin-identity (1.7.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2310327Z   - Installing laminas/laminas-mvc-plugin-flashmessenger (1.11.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2311012Z   - Installing laminas/laminas-mvc-plugin-fileprg (1.7.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2311382Z   - Installing laminas/laminas-mvc-plugins (1.2.0)
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2314839Z   - Installing laminas/laminas-navigation (2.21.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2317040Z   - Installing laminas/laminas-permissions-acl (2.17.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2319331Z   - Installing laminas/laminas-zendframework-bridge (1.8.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2321366Z   - Installing ml/iri (1.1.4): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2323698Z   - Installing ml/json-ld (1.2.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2326177Z   - Installing omeka-s-themes/default (dev-develop aab30d1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2328720Z   - Installing psr/log (1.1.4): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2330872Z   - Installing omeka/sanimal-log (v2.17.2): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2333051Z   - Installing symfony/polyfill-intl-idn (v1.38.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2335156Z   - Installing omeka/sanimal-mime (v2.12.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2337221Z   - Installing omeka/sanimal-mail (v2.25.2): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2339261Z   - Installing zozlak/rdf-constants (1.2.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2341378Z   - Installing sweetrdf/rdf-interface (3.2.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2343709Z   - Installing sweetrdf/rdf-helpers (2.1.1): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:24.2345995Z   - Installing sweetrdf/easyrdf (1.17.0): Extracting archive
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3136672Z Package doctrine/annotations is abandoned, you should avoid using it. No replacement was suggested.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3137288Z Package doctrine/cache is abandoned, you should avoid using it. No replacement was suggested.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3137823Z Package laminas/laminas-dom is abandoned, you should avoid using it. Use symfony/dom-crawler instead.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3138338Z Package laminas/laminas-json is abandoned, you should avoid using it. No replacement was suggested.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3138852Z Package laminas/laminas-math is abandoned, you should avoid using it. No replacement was suggested.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3139397Z Package laminas/laminas-zendframework-bridge is abandoned, you should avoid using it. No replacement was suggested.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3139823Z Generating autoload files
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3197036Z 55 packages you are using are looking for funding.
+sqlite_integration	Install Omeka dependencies	2026-10-09T13:30:25.3197363Z Use the `composer fund` command to find out more!
+sqlite_integration	Install pinned Omeka CLI	﻿2026-10-09T13:30:25.3498953Z ##[group]Run curl --fail --location --silent --show-error https://github.com/GhentCDH/Omeka-S-Cli/releases/download/v0.18.0/omeka-s-cli.phar -o omeka-s-cli.phar
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3499807Z ^[[36;1mcurl --fail --location --silent --show-error https://github.com/GhentCDH/Omeka-S-Cli/releases/download/v0.18.0/omeka-s-cli.phar -o omeka-s-cli.phar^[[0m
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3500517Z ^[[36;1mecho '439b99e0e4122fd927a2143ce810e0e68b393f73a660188118b7392574302b34  omeka-s-cli.phar' | sha256sum --check^[[0m
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3558375Z shell: /usr/bin/bash -e {0}
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3558604Z env:
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3558775Z   COMPOSER_PROCESS_TIMEOUT: 0
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3558983Z   COMPOSER_NO_INTERACTION: 1
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3559174Z   COMPOSER_NO_AUDIT: 1
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.3559352Z ##[endgroup]
+sqlite_integration	Install pinned Omeka CLI	2026-10-09T13:30:25.7222091Z omeka-s-cli.phar: OK
+sqlite_integration	Run real SQLite upload regression	﻿2026-10-09T13:30:25.7252666Z ##[group]Run bash module/test/integration/run-sqlite.sh omeka omeka-s-cli.phar
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7253139Z ^[[36;1mbash module/test/integration/run-sqlite.sh omeka omeka-s-cli.phar^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7310768Z shell: /usr/bin/bash -e {0}
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7310974Z env:
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7311144Z   COMPOSER_PROCESS_TIMEOUT: 0
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7311351Z   COMPOSER_NO_INTERACTION: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7311557Z   COMPOSER_NO_AUDIT: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:25.7311742Z ##[endgroup]
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0494856Z ^[[0;32mOmeka S v4.3.0-alpha installed.^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0495368Z ^[[0;37mAdministrator email: admin@example.com^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0495718Z ^[[0;37mAdministrator password: audit-test-password^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0496051Z ^[[0;37mInstallation title: DiskQuota integration^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0496324Z ^[[0;37mTime zone: UTC^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.0496528Z ^[[0;37mLocale: en_US^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:26.2101566Z ^[[0;32mModule 'DiskQuota' v0.0.0 installed.^[[0m
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.8950573Z PASS: new parent with contradictory o:item
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.8951113Z PASS: existing parent with contradictory o:item
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.8951417Z PASS: matching o:item honors pending site assignment
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.8951710Z PASS: rejected uploads leave no orphan records or files
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.8951961Z AUDIT_RESULT=PASS
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9069557Z [Fri Oct  9 13:30:26 2026] PHP 8.1.34 Development Server (http://127.0.0.1:8765) started
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9070391Z [Fri Oct  9 13:30:26 2026] 127.0.0.1:44832 Accepted
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9071087Z [Fri Oct  9 13:30:26 2026] 127.0.0.1:44832 Closed without sending a request; it was probably just an unused speculative preconnection
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9071802Z [Fri Oct  9 13:30:26 2026] 127.0.0.1:44832 Closing
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9072204Z [Fri Oct  9 13:30:26 2026] 127.0.0.1:44838 Accepted
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9072877Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9073581Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9074174Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9074867Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9075493Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1000 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9076119Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9076925Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9077525Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9078037Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9078664Z [Fri Oct  9 13:30:27 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9079398Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9080000Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9080499Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9081138Z [Fri Oct  9 13:30:27 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9081817Z [Fri Oct  9 13:30:27 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9082565Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9083056Z [Fri Oct  9 13:30:27 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9083689Z [Fri Oct  9 13:30:27 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+sqlite_integration	Run real SQLite upload regression	2026-10-09T13:30:27.9084268Z [Fri Oct  9 13:30:27 2026] 127.0.0.1:44838 Closing
+sqlite_integration	Post Run actions/checkout@v7	﻿2026-10-09T13:30:27.9183418Z Post job cleanup.
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9894129Z [command]/usr/bin/git version
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9929696Z git version 2.55.0
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9956983Z Temporarily overriding HOME='/home/runner/work/_temp/5bcfa833-06a8-47b2-9ff7-3e3943597573' before making global git config changes
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9958031Z Adding repository directory to the temporary git global config as a safe directory
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9960455Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/omeka
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9989544Z Removing SSH command configuration
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:27.9994586Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0022718Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0224910Z Removing HTTP extra header
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0229187Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0262323Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0458241Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0464010Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.0490301Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Post Run actions/checkout@v7	﻿2026-10-09T13:30:28.0855429Z Post job cleanup.
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1546301Z [command]/usr/bin/git version
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1602907Z git version 2.55.0
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1633349Z Temporarily overriding HOME='/home/runner/work/_temp/e0cf0dd0-9d71-459c-93a5-3b295763d7ee' before making global git config changes
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1634331Z Adding repository directory to the temporary git global config as a safe directory
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1635237Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/omeka-s-DiskQuota/omeka-s-DiskQuota/module
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1660681Z Removing SSH command configuration
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1666060Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1694958Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1897833Z Removing HTTP extra header
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1903788Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.1933550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.2159468Z Removing includeIf entries pointing to credentials config files
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.2165248Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sqlite_integration	Post Run actions/checkout@v7	2026-10-09T13:30:28.2196446Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sqlite_integration	Complete job	﻿2026-10-09T13:30:28.2521634Z Cleaning up orphan processes

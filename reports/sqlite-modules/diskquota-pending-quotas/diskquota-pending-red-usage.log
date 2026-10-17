@@ -1,0 +1,19 @@
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+DiskQuota: Error calculating user disk usage: Usage query unavailable
+FDiskQuota: site 1 quota 1 MB (default 1000 MB)
+DiskQuota: Error calculating site disk usage: Usage query unavailable
+F                                                                  2 / 2 (100%)
+
+Time: 00:00.014, Memory: 8.00 MB
+
+There were 2 failures:
+
+1) DiskQuotaTest\Service\DiskQuotaManagerTest::testUsageQueryFailureCannotApproveAnUpload with data set #0 ('user')
+Failed asserting that exception of type "RuntimeException" is thrown.
+
+2) DiskQuotaTest\Service\DiskQuotaManagerTest::testUsageQueryFailureCannotApproveAnUpload with data set #1 ('site')
+Failed asserting that exception of type "RuntimeException" is thrown.
+
+FAILURES!
+Tests: 2, Assertions: 2, Failures: 2.

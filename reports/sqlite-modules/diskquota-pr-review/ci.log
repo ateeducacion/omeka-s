@@ -1,0 +1,9 @@
+Analyze (actions)	pass	43s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928628124/job/113813571929	
+Analyze (javascript-typescript)	pass	46s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928628124/job/113813572300	
+CodeQL	pass	2s	https://github.com/ateeducacion/omeka-s-DiskQuota/runs/113813776151	
+PHPMD	pass	2s	https://github.com/ateeducacion/omeka-s-DiskQuota/runs/113813637664	
+Run PHPMD scanning	pass	16s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928632913/job/113813580331	
+codecov/patch	pass	1s	https://app.codecov.io/gh/ateeducacion/omeka-s-DiskQuota/pull/31	
+lint_and_test	pass	22s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928627732/job/113813564301	
+lint_and_test	pass	42s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928632918/job/113813580084	
+preview	pass	5s	https://github.com/ateeducacion/omeka-s-DiskQuota/actions/runs/37928641393/job/113813607565	

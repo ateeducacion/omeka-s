@@ -1,0 +1,3 @@
+scenario	module	container_exit	functional_result
+sqlite	DiskQuota	0	PASS
+mysql	DiskQuota	0	PASS

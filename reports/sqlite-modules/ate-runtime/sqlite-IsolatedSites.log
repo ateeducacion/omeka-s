@@ -1,0 +1,42 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: ATE module audit
+Time zone: UTC
+Locale: en_US
+AUDIT_DEPENDENCY=Common
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'Common' v3.4.93 installed.
+AUDIT_DEPENDENCY=Log
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+SQLite cannot add a foreign key with ALTER TABLE; define it in CREATE TABLE or rebuild the table in a migration.

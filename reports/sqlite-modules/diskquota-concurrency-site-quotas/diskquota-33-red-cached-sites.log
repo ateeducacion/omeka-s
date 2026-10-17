@@ -1,0 +1,18 @@
+PHPUnit 9.6.33 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)
+
+Time: 00:00.017, Memory: 8.00 MB
+
+There was 1 failure:
+
+1) DiskQuotaTest\Module\SiteMembershipTest::testCachedSitesCannotBypassAConcurrentSiteAssignment
+Expectation failed for method name is "isSiteQuotaExceeded" when invoked 1 time(s)
+Parameter 0 for invocation DiskQuota\Service\DiskQuotaManager::isSiteQuotaExceeded(10, 100) does not match expected value.
+Failed asserting that 10 matches expected 20.
+
+/private/tmp/omeka-diskquota-pr/src/Listener/UploadQuotaListener.php:44
+/private/tmp/omeka-diskquota-pr/test/DiskQuotaTest/Module/SiteMembershipTest.php:107
+
+FAILURES!
+Tests: 1, Assertions: 0, Failures: 1.

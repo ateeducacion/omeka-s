@@ -1,0 +1,22 @@
+{
+    "version": "2.1.0",
+    "$schema": "https:\/\/raw.githubusercontent.com\/oasis-tcs\/sarif-spec\/master\/Schemata\/sarif-schema-2.1.0.json",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "PHPMD",
+                    "informationUri": "https:\/\/phpmd.org",
+                    "version": "3.0.0",
+                    "rules": []
+                }
+            },
+            "originalUriBaseIds": {
+                "WORKINGDIR": {
+                    "uri": "file:\/\/\/private\/tmp\/omeka-diskquota-pr\/"
+                }
+            },
+            "results": []
+        }
+    ]
+}

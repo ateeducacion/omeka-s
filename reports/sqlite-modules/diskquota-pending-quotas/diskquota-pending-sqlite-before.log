@@ -1,0 +1,108 @@
+(1/2) Installing readline (8.3.1-r0)
+(2/2) Installing bash (5.3.3-r1)
+  Executing bash-5.3.3-r1.post-install
+Executing busybox-1.37.0-r30.trigger
+OK: 187.8 MiB in 154 packages
+[0;32mOmeka S v4.3.0-alpha installed.[0m
+[0;37mAdministrator email: admin@example.com[0m
+[0;37mAdministrator password: audit-test-password[0m
+[0;37mInstallation title: DiskQuota integration[0m
+[0;37mTime zone: UTC[0m
+[0;37mLocale: en_US[0m
+[0;32mModule 'DiskQuota' v0.0.0 installed.[0m
+PASS: new parent with contradictory o:item
+PASS: existing parent with contradictory o:item
+PASS: matching o:item honors pending site assignment
+PASS: rejected uploads leave no orphan records or files
+AUDIT_RESULT=PASS
+FAIL: selected file size ignores the smaller first multipart file
+FAIL: selected file size ignores the smaller first multipart file leaves no orphan records/files
+FAIL: site quota includes pending uploads in the same item
+FAIL: site quota includes pending uploads in the same item leaves no orphan records/files
+FAIL: user quota includes pending uploads in the same item
+FAIL: user quota includes pending uploads in the same item leaves no orphan records/files
+Omeka\Api\Exception\ValidationException: 
+AUDIT_RESULT=FAIL
+{
+    "o:media": [
+        {
+            "file": [
+                "Upload rejected: site quota exceeded. File: 0.78 MB, Used: 5.17 MB, Limit: 1 MB"
+            ]
+        }
+    ]
+}
+curl: (22) The requested URL returned error: 500
+FAIL: URL with unknown size obeys site quota
+FAIL: URL with unknown size obeys site quota leaves no original file or media record
+FAIL: forged URL size cannot bypass site quota
+FAIL: forged URL size cannot bypass site quota leaves no original file or media record
+FAIL: URL with unknown size obeys user quota
+FAIL: URL with unknown size obeys user quota leaves no original file or media record
+PASS: URL without an original does not consume original-file quota
+PASS: unlimited quotas allow real URL ingestion
+AUDIT_RESULT=FAIL
+curl: (22) The requested URL returned error: 500
+[Mon Oct 12 10:09:01 2026] PHP 8.4.17 Development Server (http://127.0.0.1:8765) started
+[Mon Oct 12 10:09:01 2026] 127.0.0.1:59096 Accepted
+[Mon Oct 12 10:09:01 2026] 127.0.0.1:59096 Closed without sending a request; it was probably just an unused speculative preconnection
+[Mon Oct 12 10:09:01 2026] 127.0.0.1:59096 Closing
+[Mon Oct 12 10:09:01 2026] 127.0.0.1:59104 Accepted
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1048576 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1000 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+[Mon Oct 12 10:09:02 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: site 1 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:02 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 1 MB, Limit: 1 MB
+[Mon Oct 12 10:09:02 2026] 127.0.0.1:59104 Closing
+[Mon Oct 12 10:09:02 2026] 127.0.0.1:59112 Accepted
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: site 3 quota 0 MB (default 1000 MB)
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: site 3 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: Checking file upload with size: 409600 bytes for user ID: 1
+[Mon Oct 12 10:09:03 2026] DiskQuota: site 4 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 4 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 4 quota 0 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 4 quota 0 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 819200 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 4 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 4 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Upload rejected for site 4. File size: 0.78 MB, Used: 5.17 MB, Limit: 1 MB
+[Mon Oct 12 10:09:04 2026] 127.0.0.1:59112 Closing
+[Mon Oct 12 10:09:04 2026] 127.0.0.1:59140 Accepted
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 1 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 1 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: site 6 quota 1 MB (default 1000 MB)
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] DiskQuota: Checking file upload with size: 0 bytes for user ID: 1
+[Mon Oct 12 10:09:04 2026] 127.0.0.1:59140 Closing

@@ -1,0 +1,79 @@
+Omeka S v4.3.0-alpha installed.
+Administrator email: admin@example.com
+Administrator password: audit-test-password
+Installation title: ATE module audit
+Time zone: UTC
+Locale: en_US
+
+Box Requirements Checker
+========================
+
+> Using PHP 8.4.17
+> PHP is using the following php.ini file:
+  /etc/php84/php.ini
+
+> Checking Box requirements:
+  ..........
+
+
+ [OK] Your system is ready to run the application.
+
+
+Omeka S found at /var/www/html
+Module 'DiskQuota' v1.0.4 installed.
+PASS: published module installed and active
+PASS: user usage sums originals only
+PASS: site usage joins item_site correctly
+PASS: empty site usage is zero
+PASS: user quota persists in MiB
+PASS: site quota persists in MiB
+PASS: user quota boundary 0
+PASS: site quota boundary 0
+PASS: user quota boundary 1048575
+PASS: site quota boundary 1048575
+PASS: user quota boundary 1048576
+PASS: site quota boundary 1048576
+PASS: user quota boundary 1048577
+PASS: site quota boundary 1048577
+PASS: actual upload rejected by user quota
+PASS: zero user quota is unlimited
+PASS: zero site quota is unlimited
+PASS: real multipart upload accepted with unlimited quota
+PASS: user usage includes accepted upload
+PASS: site usage includes accepted upload
+PASS: default user quota fallback
+PASS: default site quota fallback
+FAIL: actual upload rejected by site quota
+AUDIT_CHECKS=23
+AUDIT_FAILURES=1
+AUDIT_RESULT=FAIL
+[Fri Oct  9 09:27:17 2026] PHP 8.4.17 Development Server (http://127.0.0.1:8765) started
+[Fri Oct  9 09:27:18 2026] 127.0.0.1:53910 Accepted
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 1000 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 1000 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: Upload rejected. File size: 0 MB, Used: 2 MB, Limit: 2 MB
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 3 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: Upload rejected. File size: 0 MB, Used: 2 MB, Limit: 2 MB
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 0 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 0 MB (default 1000 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 5 MB (default 5 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 2 MB (default 5 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: site 1 quota 2 MB (default 5 MB)
+[Fri Oct  9 09:27:18 2026] DiskQuota: Upload rejected for site 1. File size: 0 MB, Used: 2 MB, Limit: 2 MB
+[Fri Oct  9 09:27:18 2026] DiskQuota: Checking file upload with size: 1024 bytes for user ID: 1
+[Fri Oct  9 09:27:18 2026] 127.0.0.1:53910 Closing
